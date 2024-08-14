@@ -55,14 +55,14 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-black bg-opacity-80 shadow-md z-50">
-      <div className="flex w-full h-20 md:h-24 max-w-[1520px] px-[50px] mx-auto items-center justify-between md:whitespace-nowrap">
+      <div className="flex w-full h-20 md:h-24 max-w-[1520px] px-[50px] mx-auto items-center justify-between lg:whitespace-nowrap">
         {/* Logo */}
         <div className="text-xl font-bold text-white">
           <a href="#home">SBVA</a>
         </div>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex space-x-[60px] md:whitespace-nowrap">
+        <nav className="hidden lg:flex space-x-[60px] md:whitespace-nowrap">
           <button
             onClick={() => scrollToSection("overview")}
             className={`text-[18px] font-medium ${
@@ -126,7 +126,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Language Switch (visible on md and up) */}
-        <div className="hidden md:flex items-center space-x-4 md:whitespace-nowrap">
+        <div className="hidden lg:flex items-center space-x-4 lg:whitespace-nowrap">
           <button
             className={`text-[18px] font-medium ${
               language === "KR" ? "text-white" : "text-gray-400"
@@ -147,7 +147,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <button className="text-white focus:outline-none">
             <svg
               className="w-6 h-6"
