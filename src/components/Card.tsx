@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({
   // 언어에 따라 설명을 선택합니다.
   const description = language === "JP" ? descriptionjp : descriptionkr;
   return (
-    <div className="relative flex flex-col w-[300px] 3xl:w-[260px] h-[380px] bg-[#1F1F1F] rounded-lg  ">
+    <div className="relative flex flex-col w-[300px] 3xl:w-[260px] h-[380px] bg-[#1F1F1F] border-2 border-transparent hover:cursor-pointer hover:border-[#444444] group">
       {/* 상단 이미지 영역 */}
       <div className="h-[140px] bg-[#171717] flex justify-center items-center">
         <img
@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({
         <span className="text-lg font-medium">{description}</span>
 
         {/* 버튼 */}
-        <button className="absolute bottom-4 left-4 p-2 rounded-full text-[#979797] hover:text-[#00E300] duration-300 flex items-center justify-center ">
+        <button className="absolute bottom-4 left-4 p-2 rounded-full text-[#979797] group-hover:text-[#00E300] duration-300 flex items-center justify-center ">
           <svg
             width="24"
             height="24"
