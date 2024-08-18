@@ -20,10 +20,7 @@ const App: React.FC = () => {
           muted
           loop
         >
-          <source
-            src="/assets/video.mp4" // 실제 동영상 URL
-            type="video/mp4"
-          />
+          <source src={require("./assets/video.mp4")} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* 중앙에 배치된 텍스트 */}
@@ -73,7 +70,7 @@ const App: React.FC = () => {
           </div>{" "}
           <div className="w-full overflow-hidden mt-12">
             <img
-              src="/assets/img.png" // 실제 이미지 경로로 교체
+              src={require("./assets/img.png")}
               alt="Overview Image"
               className="w-full h-full object-cover"
             />
@@ -506,7 +503,7 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="SPEAKERS & PANELS"
-          className="h-[1800px] w-[360px] lg:w-[1000px] flex flex-col items-center justify-start py-16"
+          className="h-[1900px] w-[360px] lg:w-[1000px] flex flex-col items-center justify-start py-16"
         >
           <h2 className="text-3xl relative  lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12">
             SPEAKERS & PANELS
@@ -537,7 +534,7 @@ const App: React.FC = () => {
           </h2>
           <div className="w-full overflow-hidden">
             <img
-              src="/assets/aboutimg.png" // 실제 이미지 경로로 교체
+              src={require("./assets/aboutimg.png")} // 실제 이미지 경로로 교체
               alt="Overview Image"
               className="w-full h-full object-cover"
             />

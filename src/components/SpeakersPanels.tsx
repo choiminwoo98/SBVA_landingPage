@@ -1,3 +1,4 @@
+import React from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import SpeakerCard from "./SpeakersCard";
 
@@ -85,14 +86,45 @@ const SpeakersAndPanels: React.FC = () => {
             </span>
             <div className="flex-grow border-t border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-7">
+          <div className="grid grid-cols-2 lg:grid-cols-3 3xl:flex justify-between text-white flex-wrap gap-y-7">
             {speakers.map((speaker, index) => (
-              <SpeakerCard
-                key={index}
-                image={`assets/${speaker.krname}.png`}
-                name={language === "KR" ? speaker.krname : speaker.jpname}
-                role={speaker.role}
-              />
+              <React.Fragment key={index}>
+                <SpeakerCard
+                  image={speaker.krname}
+                  name={language === "KR" ? speaker.krname : speaker.jpname}
+                  role={speaker.role}
+                />
+                {index < speakers.length - 1 && (
+                  <div className="hidden 3xl:flex items-center justify-center pb-16 px-4">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.4">
+                        <mask
+                          id="mask0_175_200"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="40"
+                          height="40"
+                        >
+                          <rect width="40" height="40" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_175_200)">
+                          <path
+                            d="M19.295 20.705H10V19.295H19.295V10H20.705V19.295H30V20.705H20.705V30H19.295V20.705Z"
+                            fill="white"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                )}
+              </React.Fragment>
             ))}
           </div>
         </div>
@@ -101,11 +133,11 @@ const SpeakersAndPanels: React.FC = () => {
             <span className="text-[#00E300] text-lg font-medium">Keynote</span>
             <div className="flex-grow border-t border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-7">
+          <div className="grid grid-cols-2 lg:grid-cols-3 3xl:flex justify-between text-white flex-wrap gap-y-7">
             {speakers2.map((speaker, index) => (
               <SpeakerCard
                 key={index}
-                image={`assets/${speaker.krname}.png`}
+                image={speaker.krname}
                 name={language === "KR" ? speaker.krname : speaker.jpname}
                 role={speaker.role}
               />
@@ -119,19 +151,78 @@ const SpeakersAndPanels: React.FC = () => {
             </span>
             <div className="flex-grow border-t border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-7">
+          <div className="grid grid-cols-2 lg:grid-cols-3 3xl:flex justify-between text-white flex-wrap gap-y-7">
             {speakers3.map((speaker, index) => (
-              <SpeakerCard
-                key={index}
-                image={`assets/${speaker.krname}.png`}
-                name={language === "KR" ? speaker.krname : speaker.jpname}
-                role={speaker.role}
-                panel={language === "KR" ? speaker.panel : speaker.jppanel}
-              />
+              <React.Fragment key={index}>
+                <SpeakerCard
+                  image={speaker.krname}
+                  name={language === "KR" ? speaker.krname : speaker.jpname}
+                  role={speaker.role}
+                />
+                {index != 2 && index < speakers3.length - 1 && (
+                  <div className="hidden 3xl:flex items-center justify-center pb-16 px-4">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.4">
+                        <mask
+                          id="mask0_175_200"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="40"
+                          height="40"
+                        >
+                          <rect width="40" height="40" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_175_200)">
+                          <path
+                            d="M19.295 20.705H10V19.295H19.295V10H20.705V19.295H30V20.705H20.705V30H19.295V20.705Z"
+                            fill="white"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                )}
+              </React.Fragment>
             ))}
+            <div className="hidden invisible 3xl:flex items-center justify-center pb-16 px-4">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g opacity="0.4">
+                  <mask
+                    id="mask0_175_200"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="40"
+                    height="40"
+                  >
+                    <rect width="40" height="40" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_175_200)">
+                    <path
+                      d="M19.295 20.705H10V19.295H19.295V10H20.705V19.295H30V20.705H20.705V30H19.295V20.705Z"
+                      fill="white"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div className="w-[260px] invisible"></div>
           </div>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 };
