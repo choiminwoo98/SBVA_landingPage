@@ -1,5 +1,4 @@
 {
-  "homepage": "http://choiminwoo98.github.io/SBVA_landingPage",
   "name": "sbva-landing-page",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +10,7 @@
     "@types/node": "^16.18.105",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "express": "^4.19.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -21,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node ./web.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

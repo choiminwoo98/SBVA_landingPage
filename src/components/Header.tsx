@@ -59,15 +59,18 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-black bg-opacity-80 shadow-md z-50">
-      <div className="flex w-full h-20 md:h-24 max-w-[1520px] px-[50px] mx-auto items-center justify-between lg:whitespace-nowrap">
+    <header className="fixed top-0 w-screen left-0 right-0 bg-black bg-opacity-80 shadow-md z-50 font-poppins">
+      <div className="flex w-full h-20 md:h-24 max-w-[1520px] px-5 lg:px-10 3xl:px-[80px] mx-auto items-center justify-between lg:whitespace-nowrap">
         {/* Logo */}
-        <div className="text-xl font-bold text-white">
-          <a href="#home" className="hidden lg:block">
+        <div
+          className="text-xl font-bold text-white cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <a className="hidden lg:block">
             <span className="block">2024 SBVA</span>
             <span className="block">TOKYO FORUM</span>
           </a>
-          <a href="#home" className="lg:hidden block">
+          <a className="lg:hidden block">
             2024 <span className="hidden lg:block ">&nbsp;SBVA</span> TOKYO
             FORUM
           </a>
@@ -217,7 +220,7 @@ const Header: React.FC = () => {
 
       {/* Overlay Background */}
       <div
-        className={`fixed 3xl:hidden inset-0 bg-black bg-opacity-50 z-30 transition-opacity ${
+        className={`fixed  3xl:hidden inset-0 bg-black bg-opacity-50 z-30 transition-opacity ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleMenu}

@@ -10,10 +10,10 @@ import SpeakersAndPanels from "./components/SpeakersPanels";
 const App: React.FC = () => {
   const { language } = useLanguage(); // 추가된 코드
   return (
-    <div className="App bg-black">
+    <div className="App bg-black font-sans">
       {/* Header */}
       <Header />
-      <div className="relative flex flex-col h-[800px] items-center justify-center overflow-hidden">
+      <div className="relative flex flex-col h-[800px] items-center justify-center overflow-hidden font-poppins">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
@@ -42,10 +42,10 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="OVERVIEW"
-          className="h-[1579px] w-full lg:w-[1000px] 3xl:w-[1100px] flex flex-col items-center justify-center py-16"
+          className="h-fit w-full lg:w-[1000px] 3xl:w-[1100px] flex flex-col items-center justify-start py-[120px] 3xl:py-[150px]"
         >
           <div className="px-5">
-            <h2 className="text-3xl relative lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12">
+            <h2 className="text-3xl relative lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12 font-poppins">
               OVERVIEW
             </h2>
             <div className="text-white lg:w-11/12 text-lg lg:text-[22px] flex flex-col space-y-7">
@@ -302,9 +302,9 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="PROGRAM"
-          className="h-[2318px] w-[360px] lg:w-[1000px] flex flex-col items-center justify-start py-16"
+          className="h-[2318px] w-[360px] lg:w-[1000px] flex flex-col items-center justify-start "
         >
-          <h2 className="text-3xl relative  lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12">
+          <h2 className="text-3xl relative  lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12 font-poppins">
             PROGRAM
           </h2>
 
@@ -588,9 +588,9 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="SPEAKERS & PANELS"
-          className="h-[1900px] w-[360px] lg:w-[1000px] flex flex-col items-center justify-start py-16"
+          className="h-[1900px] w-[360px] lg:w-[1000px] flex flex-col items-center overflow-hidden justify-start "
         >
-          <h2 className="text-3xl relative  lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12">
+          <h2 className="text-3xl relative  lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12 font-poppins">
             SPEAKERS & PANELS
           </h2>
           <SpeakersAndPanels />
@@ -600,7 +600,7 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="SBVA PORTFOLIO PITCHING"
-          className="h-[900px] lg:h-[1100px] w-[360px] lg:w-[1100px] gap-5 flex flex-col items-start justify-center"
+          className="h-fit lg:h-[1100px] w-[360px] lg:w-[1100px] gap-5 flex flex-col items-start justify-start pt-[120px] 3xl:pt-[150px] font-poppins"
         >
           <h2 className="text-3xl font-bold lg:text-6xl pb-5 pl-3 text-white">
             SBVA PORTFOLIO PITCHING
@@ -612,9 +612,9 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="ABOUT SBVA"
-          className="h-[1050px] w-[360px] lg:w-[1100px] flex flex-col items-center justify-start "
+          className="h-[1150px] lg:h-[1350px] w-[360px] lg:w-[1100px] flex flex-col items-center justify-start pt-[120px] 3xl:pt-[150px] pb-[120px]"
         >
-          <h2 className="text-3xl relative px-5 lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12">
+          <h2 className="text-3xl relative px-5 lg:text-6xl text-white font-bold mb-8 text-left w-full font-poppins">
             ABOUT SBVA
           </h2>
           <div className="w-full h-full overflow-hidden">
@@ -666,7 +666,7 @@ const App: React.FC = () => {
             </a>
           </div>{" "}
           <a
-            className=" fixed bottom-0 right-0 w-20 h-20 bg-[#181818] text-white fill-white hover:fill-[#00E300] shadow-lg flex items-center justify-center space-x-2 cursor-pointer hidden 3xl:flex"
+            className=" fixed bottom-0 right-0 w-20 h-20 bg-[#181818] text-white fill-white hover:fill-[#00E300] shadow-lg flex items-center justify-center space-x-2 cursor-pointer hidden 3xl:flex "
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });

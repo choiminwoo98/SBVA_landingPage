@@ -12,7 +12,7 @@ const cardData = [
     descriptionkr:
       "스푼라디오는 실시간 +개인 오디오 방송 플랫폼을+ 운영합니다.",
     descriptionjp:
-      "Spoonは、リアルタイムの+ オーディオ放送プラットフォーム 「Spoon」と、短尺ドラマの+ プラットフォーム「Vigloo」+ を運営しています。",
+      "Spoonは、リアルタイムの +オーディオ放送プラット+フォーム 「Spoon」、短尺ドラマ+プラットフォーム「Vigloo」+を運営しています。",
   },
   {
     title: "Healthcare",
@@ -20,7 +20,7 @@ const cardData = [
     descriptionkr:
       "닥터나우는 원격진료 상담,+ 처방약 배달, AI 진단 등을 제공+하는 디지털 헬스케어 플랫폼+입니다.",
     descriptionjp:
-      "ドクターナウは、リモート診療+相談、処方薬の配達、AI診断な+どのサービスを提供するデジタ+ルヘルスケアプラットフォーム+です。",
+      "ドクターナウは、リモート診療+相談・処方薬の配達・AI診断等+のサービスを提供するデジタル+ヘルスケアプラットフォームで+す。",
   },
   {
     title: "Enterprise",
@@ -28,7 +28,7 @@ const cardData = [
     descriptionkr:
       "업스테이지는 인공지능 분야의 기업을 지원하기 위한 맞춤형+ AI 서비스를 제공합니다.",
     descriptionjp:
-      "Upstageは、法人向けに+カスタマイズしたLLMを+提供する人工知能企業です。",
+      "Upstageは、法人向けに+カスタマイズしたLLMを+提供する韓国一流の+人工知能企業です。",
   },
   {
     title: "Retail",
@@ -36,7 +36,7 @@ const cardData = [
     descriptionkr:
       "비주얼은 국내 유일 주얼리 +버티컬 커머스 플랫폼+ ‘아몬즈‘를 운영합니다.",
     descriptionjp:
-      "Bejewelは、韓国唯一の+ジュエリーに特化したEC+プラットフォームである+「アモンズ」を運営しています。",
+      "Bejewelは、韓国最大の+ジュエリーに特化したEC+プラットフォームである+「アモンズ」を運営しています。",
   },
   {
     title: "Enterprise",
@@ -44,7 +44,7 @@ const cardData = [
     descriptionkr:
       "가우디오랩은 뛰어난 오디오+ 경험을 제공하기 위한 기술 및 솔루션을 개발하는 AI/Spatial Audio 전문 기업입니다.",
     descriptionjp:
-      "GAUDI Labは、AIを活用し優れたオーディオ体験を+提供するSpatial Audio専門の技術会社です。",
+      "GAUDIO Labは、AI技術を活用し+優れたオーディオ体験を+提供するSpatial Audio専門の+技術会社です。",
   },
   {
     title: "EdTech",
@@ -52,7 +52,7 @@ const cardData = [
     descriptionkr:
       "매스프레소는 개인 맞춤형+ 학습 플랫폼 ‘QUANDA’를+ 운영합니다.",
     descriptionjp:
-      "MATHPRESSOは、AI技術を活用したオンライン学習+プラットフォーム「QUANDA」+を運営しています。",
+      "MATHPRESSOは、AI技術を+活用したオンライン学習+プラットフォーム「QUANDA」+を運営しています。",
   },
 
   {
@@ -69,7 +69,7 @@ const cardData = [
     descriptionkr:
       "로앤컴퍼니는 첨단 기술을 통해 법률 서비스의 패러다임을 혁신하는 국내 1위 리걸테크 기업입니다.",
     descriptionjp:
-      "Law＆Companyは、最先端のIT+技術を活用し、法律相談サービ+スのパラダイムを革新している+韓国のリーガルテック企業で+す。",
+      "Law＆Companyは、最先端のIT+技術を活用し、法律相談サービス+のパラダイムを革新している+韓国のリーガルテック企業です。",
   },
 ];
 
