@@ -68,12 +68,13 @@ const Header: React.FC = () => {
             <span className="block">TOKYO FORUM</span>
           </a>
           <a href="#home" className="lg:hidden block">
-            2024 SBVA TOKYO FORUM
+            2024 <span className="hidden lg:block ">&nbsp;SBVA</span> TOKYO
+            FORUM
           </a>
         </div>
 
         {/* Navigation Links (Hidden on mobile) */}
-        <nav className="hidden lg:flex xl:space-x-[60px] space-x-3 md:whitespace-nowrap">
+        <nav className="hidden 3xl:flex xl:space-x-[60px] font-medium space-x-3 md:whitespace-nowrap">
           {[
             "OVERVIEW",
             "PROGRAM",
@@ -86,7 +87,7 @@ const Header: React.FC = () => {
               onClick={() => scrollToSection(section)}
               className={`text-[18px] font-medium  ${
                 activeSection === section
-                  ? "text-[#00E300]"
+                  ? "text-[#00E300] font-bold"
                   : activeSection === null
                   ? "text-white"
                   : "text-gray-400 hover:text-white"
@@ -101,7 +102,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Language Switch (Visible on larger screens) */}
-        <div className="hidden lg:flex items-center space-x-4 lg:whitespace-nowrap">
+        <div className="hidden 3xl:flex items-center space-x-4 lg:whitespace-nowrap">
           <button
             className={`text-[18px] font-medium ${
               language === "KR"
@@ -126,24 +127,20 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="lg:hidden flex items-center">
+        <div className="3xl:hidden flex items-center">
           <button
-            className="text-white focus:outline-none"
+            className="fill-white hover:fill-[#00E300] focus:outline-none"
             onClick={toggleMenu}
           >
             <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+              width="24"
+              height="20"
+              viewBox="0 0 24 20"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
+              <path d="M3 4.5H19V6.5H3V4.5Z" />
+              <path d="M3 11H21V13H3V11Z" />
+              <path d="M3 17.5H17V19.5H3V17.5Z" />
             </svg>
           </button>
         </div>
@@ -151,7 +148,7 @@ const Header: React.FC = () => {
 
       {/* Full-Screen Menu */}
       <nav
-        className={`lg:hidden fixed top-0 left-0 w-full h-fit bg-black transform ${
+        className={`3xl:hidden fixed top-0 left-0 w-full h-fit bg-black transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out z-40`}
       >
@@ -159,7 +156,10 @@ const Header: React.FC = () => {
           {/* Top Section: Logo and Close Button */}
           <div className="flex items-center justify-between p-6">
             <div className="text-xl font-bold text-white">
-              <a href="#home">2024 SBVA TOKYO FORUM</a>
+              <a href="#home" className="flex">
+                2024 <span className="hidden lg:block ">&nbsp;SBVA</span>
+                &nbsp;TOKYO FORUM
+              </a>
             </div>
             <button onClick={toggleMenu} className="text-white text-3xl">
               &times;
@@ -217,7 +217,7 @@ const Header: React.FC = () => {
 
       {/* Overlay Background */}
       <div
-        className={`fixed lg:hidden inset-0 bg-black bg-opacity-50 z-30 transition-opacity ${
+        className={`fixed 3xl:hidden inset-0 bg-black bg-opacity-50 z-30 transition-opacity ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleMenu}

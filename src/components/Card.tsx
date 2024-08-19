@@ -22,16 +22,21 @@ const Card: React.FC<CardProps> = ({
       {/* 상단 이미지 영역 */}
       <div className="h-[140px] bg-[#171717] flex justify-center items-center">
         <img
-          src="https://via.placeholder.com/260x140.png?text=Image"
+          src={require(`../assets/${image}`)}
           alt="Card Image"
-          className="object-cover w-[100px] h-[80px]"
+          className="object-cover "
         />
       </div>
 
       {/* 하단 콘텐츠 영역 */}
       <div className="flex flex-col p-4 flex-grow text-white space-y-3">
-        <span className="text-sm font-medium text-[#979797]">{title}</span>
-        <span className="text-lg font-medium">{description}</span>
+        <span className="text-[13px] font-medium text-[#979797]">{title}</span>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: description.replaceAll("+", "<br />"),
+          }}
+          className="font-medium"
+        />
 
         {/* 버튼 */}
         <button className="absolute bottom-4 left-4 p-2 rounded-full text-[#979797] group-hover:text-[#00E300] duration-300 flex items-center justify-center ">
