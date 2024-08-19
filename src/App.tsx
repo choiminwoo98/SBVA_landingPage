@@ -465,7 +465,7 @@ const App: React.FC = () => {
                       </div>
                       <div className="flex gap-3 items-center">
                         <span className="whitespace-nowrap">
-                          {language === "KR" ? "Tomoko Numata" : "海老原 秀幸"}
+                          {language === "KR" ? "Tomoko Numata" : "沼田 朋子"}
                         </span>
                         <span className="text-[#777777] text-sm lg:text-base">
                           Chief Capitalist · JAFCO
@@ -479,7 +479,10 @@ const App: React.FC = () => {
                       </div>
                       <div className="flex gap-3 items-center">
                         <span className="whitespace-nowrap">
-                          Hideyuki Ebihara
+                          {" "}
+                          {language === "KR"
+                            ? "Hideyuki Ebihara"
+                            : "海老原 秀幸"}
                         </span>
                         <span className="text-[#777777] text-sm lg:text-base">
                           Partner · PKSHA CAPITAL

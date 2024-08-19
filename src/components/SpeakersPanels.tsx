@@ -161,7 +161,7 @@ const SpeakersAndPanels: React.FC = () => {
                   image={speaker.krname}
                   name={language === "KR" ? speaker.krname : speaker.jpname}
                   role={speaker.role}
-                  panel={speaker.panel}
+                  panel={language === "KR" ? speaker.panel : speaker.jppanel}
                 />
                 {index != 2 && index < speakers3.length - 1 && (
                   <div className="hidden 3xl:flex items-center justify-center pb-16 px-4">
