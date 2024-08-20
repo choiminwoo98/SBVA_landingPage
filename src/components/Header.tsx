@@ -59,20 +59,20 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 w-screen left-0 right-0 bg-black bg-opacity-80 shadow-md z-50 font-poppins">
+    <header
+      className={`text-[18px] font-medium ${
+        isMenuOpen ? "" : "backdrop-blur-sm"
+      } fixed top-0 w-screen left-0 right-0 bg-black bg-opacity-70 hadow-md z-50 font-poppins`}
+    >
       <div className="flex w-full h-20 md:h-24 max-w-[1520px] px-5 lg:px-10 3xl:px-[80px] mx-auto items-center justify-between lg:whitespace-nowrap">
         {/* Logo */}
         <div
           className="text-xl font-bold text-white cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <a className="hidden lg:block">
+          <a className="flex">
             <span className="block">2024 SBVA</span>
-            <span className="block">TOKYO FORUM</span>
-          </a>
-          <a className="lg:hidden block">
-            2024 <span className="hidden lg:block ">&nbsp;SBVA</span> TOKYO
-            FORUM
+            <span className="block">&nbsp;TOKYO FORUM</span>
           </a>
         </div>
 
@@ -132,7 +132,7 @@ const Header: React.FC = () => {
         {/* Mobile Menu Button */}
         <div className="3xl:hidden flex items-center">
           <button
-            className="fill-white hover:fill-[#00E300] focus:outline-none"
+            className="fill-[#00E300] focus:outline-none"
             onClick={toggleMenu}
           >
             <svg
@@ -160,8 +160,7 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between p-6">
             <div className="text-xl font-bold text-white">
               <a href="#home" className="flex">
-                2024 <span className="hidden lg:block ">&nbsp;SBVA</span>
-                &nbsp;TOKYO FORUM
+                2024 SBVA TOKYO FORUM
               </a>
             </div>
             <button onClick={toggleMenu} className="text-white text-3xl">

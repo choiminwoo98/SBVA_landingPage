@@ -95,34 +95,62 @@ const SliderComponent: React.FC = () => {
     arrows: false,
     slidesToScroll: 1,
     infinite: false,
-    slidesToShow: 1.1,
+    slidesToShow: 3.2,
     speed: 500,
     responsive: [
       {
-        breakpoint: 500,
+        breakpoint: 360,
         settings: {
           slidesToShow: 1.1,
-          centerPadding: "60px",
+          centerPadding: "30px",
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 450,
         settings: {
-          slidesToShow: 1.1,
-          centerPadding: "60px",
+          slidesToShow: 1.2,
+          centerPadding: "30px",
         },
       },
       {
-        breakpoint: 1680,
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 1.5,
+          centerPadding: "30px",
+        },
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1.8,
+          centerPadding: "30px",
+        },
+      },
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 2.1,
+          centerPadding: "30px",
+        },
+      },
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 2.3,
+          centerPadding: "30px",
+        },
+      },
+      {
+        breakpoint: 1500,
         settings: {
           slidesToShow: 3.1,
-          centerPadding: "60px",
+          centerPadding: "30px",
         },
       },
     ],
   };
   return (
-    <div className="relative w-full">
+    <div className="relative w-full pl-5">
       {isLargeScreen ? (
         <div className="grid grid-cols-4 gap-4">
           {cardData.map((data, index) => (

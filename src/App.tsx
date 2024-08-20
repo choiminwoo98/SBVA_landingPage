@@ -13,12 +13,14 @@ const App: React.FC = () => {
     <div className="App bg-black font-sans">
       {/* Header */}
       <Header />
+      <div className="block h-20 md:h-24"></div>
       <div className="relative flex flex-col h-[800px] items-center justify-center overflow-hidden font-poppins">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           muted
           loop
+          controls={false} // This ensures that the player controls are removed
         >
           <source src={require("./assets/video.mp4")} type="video/mp4" />
           Your browser does not support the video tag.
@@ -58,13 +60,13 @@ const App: React.FC = () => {
                   <br className="hidden lg:block"></br>
                   {language === "KR"
                     ? "국내 유망 스타트업과 일본 굴지의 벤처캐피털 및 기업 간 네트워킹을 제공하는 행사입니다."
-                    : "韓国の有望なスタートアップと日本の著名なベンチャーキャピタルや企業間のネットワーキングの場を提供するために企画されました."}
+                    : "韓国の有望なスタートアップと日本の著名なベンチャーキャピタルや企業間のネットワーキングの場を提供するために企画されました。"}
                 </span>
               </div>
               <div>
                 {language === "KR"
                   ? " 한일 스타트업 및 벤처투자 산업 전반을 아우르는 실질적인 교류와 기회의 장을 지향하고자 양국의 훌륭한 창업자, 투자자 등 150여 분을 한정해 초대드리오니 많은 관심과 참여를 부탁드립니다."
-                  : "本イベントは、日韓のスタートアップおよびベンチャー投資産業における実質的な交流と協業機会の創出を目指し、両国の優れた創業者や投資家、業界専門家など、約150名を限定してお招きいたします. ご多忙のところ恐縮ではございますが、ぜひご参加いただけますようお願い申し上げます."}
+                  : "本イベントは、日韓のスタートアップおよびベンチャー投資産業における実質的な交流と協業機会の創出を目指し、両国の優れた創業者や投資家、業界専門家など、約150名を限定してお招きいたします。 ご多忙のところ恐縮ではございますが、ぜひご参加いただけますようお願い申し上げます。"}
               </div>
             </div>
           </div>{" "}
@@ -72,7 +74,7 @@ const App: React.FC = () => {
             <img
               src={require("./assets/img.png")}
               alt="Overview Image"
-              className="w-full h-full object-cover"
+              className="w-full h-[214px] sm:h-full object-cover"
             />
           </div>
           <div className="w-full  mt-16 text-white px-5 lg:px-0">
@@ -302,22 +304,24 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="PROGRAM"
-          className="h-[2318px] w-[360px] lg:w-[1000px] flex flex-col items-center justify-start "
+          className="h-[2318px] w-[360px] lg:w-[1000px] flex flex-col items-center justify-start px-5 "
         >
           <h2 className="text-3xl relative  lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12 font-poppins">
             PROGRAM
           </h2>
 
           <div
-            className={`border-l-[1px] relative h-[1950px] lg:h-[1900px] border-white border-opacity-20  mt-0 pt-0 py-10 space-y-12 text-white ${
-              language === "KR" ? "lg:right-4" : "lg:-right-7"
+            className={`border-l-[1px] relative  lg:h-[1900px] border-white border-opacity-20  mt-0 pt-0 py-10 space-y-12 text-white ${
+              language === "KR"
+                ? "lg:right-4 h-[2000px]"
+                : "lg:-right-7 h-[1950px]"
             }`}
           >
             <div className="relative">
               <div className="absolute -left-1.5 bg-[#00E300] h-3 w-3 rounded-full "></div>
               <div className="pl-7 ">
                 <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 lg:right-48 font-medium lg:text-xl">
+                  <span className="relative bottom-2 lg:right-44 font-medium lg:text-xl">
                     14:00~14:15
                   </span>
                   <div className="flex flex-col relative lg:bottom-14">
@@ -333,7 +337,7 @@ const App: React.FC = () => {
                   <div className="relative lg:bottom-12 lg:text-xl">
                     <div>
                       <span>JP Lee</span>
-                      <span className="text-[#777777] text-sm lg:text-base">
+                      <span className="text-[#777777] text-sm relative lg:text-base">
                         &nbsp; &nbsp; CEO & Managing Partner · SBVA
                       </span>
                     </div>
@@ -343,7 +347,7 @@ const App: React.FC = () => {
               <div className="relative -left-1.5 top-20 bg-[#00E300] h-3 w-3 rounded-full "></div>
               <div className="pl-7 relative top-[70px]">
                 <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 lg:right-48 font-medium lg:text-xl">
+                  <span className="relative bottom-2 lg:right-44 font-medium lg:text-xl">
                     14:15~14:40
                   </span>
                   <div className="flex flex-col relative lg:bottom-[58px]">
@@ -361,7 +365,7 @@ const App: React.FC = () => {
                     <div className="relative lg:bottom-12 lg:text-xl flex flex-col gap-2">
                       <div>
                         <span>JP Lee</span>
-                        <span className="text-[#777777] text-sm lg:text-base">
+                        <span className="text-[#777777] text-sm relative lg:text-base">
                           &nbsp; &nbsp; CEO & Managing Partner · SBVA
                         </span>
                       </div>
@@ -369,13 +373,13 @@ const App: React.FC = () => {
                         <span>
                           {language === "KR" ? "Uchiyama" : "内山 雄太"}
                         </span>
-                        <span className="text-[#777777] text-sm lg:text-base">
+                        <span className="text-[#777777] text-sm relative lg:text-base">
                           &nbsp; &nbsp; CEO · SODA
                         </span>
                       </div>
                       <div>
                         <span>Kim Youngki</span>
-                        <span className="text-[#777777] text-sm lg:text-base">
+                        <span className="text-[#777777] text-sm relative lg:text-base">
                           &nbsp; &nbsp; CFO · KREAM
                         </span>
                       </div>
@@ -386,7 +390,7 @@ const App: React.FC = () => {
               <div className="relative -left-1.5 top-40 bg-[#00E300] h-3 w-3 rounded-full "></div>
               <div className="pl-7 relative top-[150px]">
                 <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 lg:right-48 font-medium lg:text-xl">
+                  <span className="relative bottom-2 lg:right-44 font-medium lg:text-xl">
                     14:50~15:10
                   </span>
                   <div className="flex flex-col relative lg:bottom-[58px]">
@@ -401,11 +405,11 @@ const App: React.FC = () => {
                   </div>
                   <div className="relative lg:bottom-12 lg:text-xl">
                     <div className="flex">
-                      <div className="flex gap-3 items-center">
+                      <div className="flex gap-3 ">
                         <span className="whitespace-nowrap">
                           {language === "KR" ? "Miki Fukazawa " : "深澤 実樹"}
                         </span>
-                        <span className="text-[#777777] text-sm lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-1 relative top-1 lg:text-base">
                           VP · Head of Alliance & Investment Strategy Division,
                           SoftBank
                         </span>
@@ -417,7 +421,7 @@ const App: React.FC = () => {
               <div className="relative -left-1.5 top-60 bg-[#00E300] h-3 w-3 rounded-full "></div>
               <div className="pl-7 relative top-[230px]">
                 <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 lg:right-48 lg:text-xl">
+                  <span className="relative bottom-2 lg:right-44 lg:text-xl">
                     15:10~16:00
                   </span>
                   <div className="flex flex-col relative lg:bottom-[58px]">
@@ -432,59 +436,59 @@ const App: React.FC = () => {
                   </div>
                   <div className="relative lg:bottom-12 lg:text-xl">
                     <div className="flex flex-col gap-2">
-                      <div className="flex gap-3 items-center">
+                      <div className="flex gap-3">
                         <span className="whitespace-nowrap text-[#00E300] text-sm">
                           {language === "KR" ? "Panels" : "スピーカー"}
                         </span>
                       </div>
-                      <div className="flex gap-3 items-center">
+                      <div className="flex gap-3">
                         <span className="whitespace-nowrap">
                           {language === "KR"
                             ? "Kentaro Sakakibara"
                             : "榊原 健太郎"}
                         </span>
-                        <span className="text-[#777777] text-sm lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
                           CEO · SAMURAI INCUBATE
                         </span>
                       </div>
-                      <div className="flex gap-3 items-center">
+                      <div className="flex gap-3">
                         <span className="whitespace-nowrap">
                           {language === "KR" ? "Doh Hogil" : "都 虎吉"}
                         </span>
-                        <span className="text-[#777777] text-sm lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
                           General Partner · Global Brain
                         </span>
                       </div>
-                      <div className="flex gap-3 items-center">
+                      <div className="flex gap-3">
                         <span className="whitespace-nowrap">
                           {language === "KR" ? "Takashi Kitao" : "北尾 崇"}
                         </span>
-                        <span className="text-[#777777] text-sm lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-1  lg:text-base">
                           Partner/Director · Cyber Agent Capital
                         </span>
                       </div>
-                      <div className="flex gap-3 items-center">
+                      <div className="flex gap-3">
                         <span className="whitespace-nowrap">
                           {language === "KR" ? "Tomoko Numata" : "沼田 朋子"}
                         </span>
-                        <span className="text-[#777777] text-sm lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
                           Chief Capitalist · JAFCO
                         </span>
                       </div>
-                      <div className="flex gap-3 items-center">
+                      <div className="flex gap-3">
                         <span className="whitespace-nowrap text-[#00E300] text-sm">
                           {" "}
                           {language === "KR" ? "Moderator" : "モデレーター"}
                         </span>
                       </div>
-                      <div className="flex gap-3 items-center">
+                      <div className="flex gap-3">
                         <span className="whitespace-nowrap">
                           {" "}
                           {language === "KR"
                             ? "Hideyuki Ebihara"
                             : "海老原 秀幸"}
                         </span>
-                        <span className="text-[#777777] text-sm lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
                           Partner · PKSHA CAPITAL
                         </span>
                       </div>
@@ -495,7 +499,7 @@ const App: React.FC = () => {
               <div className="relative -left-1.5 top-80 bg-[#00E300] h-3 w-3 rounded-full "></div>
               <div className="pl-7 relative top-[310px]">
                 <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 lg:right-48 font-medium lg:text-xl">
+                  <span className="relative bottom-2 lg:right-44 font-medium lg:text-xl">
                     16:00~17:30
                   </span>
                   <div className="flex flex-col relative lg:bottom-[58px]">
@@ -510,7 +514,7 @@ const App: React.FC = () => {
                   </div>
                   <div className="relative lg:bottom-12 lg:text-xl">
                     <div>
-                      <div className="flex gap-3 items-center">
+                      <div className="flex gap-3">
                         <span className="whitespace-nowrap">
                           {language === "KR"
                             ? "SBVA 포트폴리오 8개사 대표"
@@ -524,7 +528,7 @@ const App: React.FC = () => {
               <div className="relative -left-1.5 top-[400px] bg-[#00E300] h-3 w-3 rounded-full "></div>
               <div className="pl-7 relative top-[390px]">
                 <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 lg:right-48 lg:text-xl">
+                  <span className="relative bottom-2 lg:right-44 lg:text-xl">
                     17:30~17:40
                   </span>
                   <div className="flex flex-col relative lg:bottom-[58px]">
@@ -539,9 +543,9 @@ const App: React.FC = () => {
                   </div>
                   <div className="relative lg:bottom-12 lg:text-xl">
                     <div>
-                      <div className="flex gap-3 items-center">
+                      <div className="flex gap-3">
                         <span className="whitespace-nowrap">JP Lee</span>{" "}
-                        <span className="text-[#777777] text-sm lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
                           CEO & Managing Partner · SBVA{" "}
                         </span>
                       </div>
@@ -552,7 +556,7 @@ const App: React.FC = () => {
               <div className="relative -left-1.5 top-[450px] bg-[#00E300] h-3 w-3 rounded-full "></div>
               <div className="pl-7 relative top-[440px]">
                 <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 lg:right-48 font-medium lg:text-xl">
+                  <span className="relative bottom-2 lg:right-44 font-medium lg:text-xl">
                     17:40~20:00
                   </span>
                   <div className="flex flex-col relative lg:bottom-[60px]">
@@ -567,7 +571,7 @@ const App: React.FC = () => {
               <div className="relative -left-1.5 top-[490px] bg-[#00E300] h-3 w-3 rounded-full "></div>
               <div className="pl-7 relative top-[480px]">
                 <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 lg:right-48 font-medium lg:text-xl">
+                  <span className="relative bottom-2 lg:right-44 font-medium lg:text-xl">
                     20:00~22:00
                   </span>
                   <div className="flex flex-col relative lg:bottom-[60px]">
@@ -588,9 +592,9 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="SPEAKERS & PANELS"
-          className="h-[1900px] w-[360px] lg:w-[1000px] flex flex-col items-center overflow-hidden justify-start "
+          className="h-[300px] w-full lg:w-[1000px] flex flex-col items-center overflow-hidden justify-start "
         >
-          <h2 className="text-3xl relative  lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12 font-poppins">
+          <h2 className="text-3xl relative px-5 lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12 font-poppins">
             SPEAKERS & PANELS
           </h2>
           <SpeakersAndPanels />
@@ -600,9 +604,9 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="SBVA PORTFOLIO PITCHING"
-          className="h-fit lg:h-[1100px] w-[360px] lg:w-[1100px] gap-5 flex flex-col items-start justify-start pt-[120px] 3xl:pt-[150px] font-poppins"
+          className="h-fit w-full lg:w-[1100px] gap-5 flex flex-col items-start justify-start pt-[120px] 3xl:pt-[150px] font-poppins"
         >
-          <h2 className="text-3xl font-bold lg:text-6xl pb-5 pl-3 text-white">
+          <h2 className="text-3xl font-bold lg:text-6xl pb-5 pl-5 text-white">
             SBVA PORTFOLIO PITCHING
           </h2>
           <SliderComponent />
@@ -612,19 +616,24 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="ABOUT SBVA"
-          className="h-[1150px] lg:h-[1350px] w-[360px] lg:w-[1100px] flex flex-col items-center justify-start pt-[120px] 3xl:pt-[150px] pb-[120px]"
+          className="h-[1150px] lg:h-[1150px] w-full lg:w-[1100px] flex flex-col items-center justify-start pt-[120px] 3xl:pt-[150px] pb-[120px]"
         >
           <h2 className="text-3xl relative px-5 lg:text-6xl text-white font-bold mb-8 text-left w-full font-poppins">
             ABOUT SBVA
           </h2>
-          <div className="w-full h-full overflow-hidden">
-            <img
-              src={require("./assets/aboutimg.png")} // 실제 이미지 경로로 교체
-              alt="Overview Image"
-              className="w-full h-full object-contain lg:object-cover"
-            />
+          <div className="w-screen h-[700px] flex justify-center overflow-hidden">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/GS8F0r0kI4s"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full lg:w-[1100px] lg:h-[450px] object-cover"
+            ></iframe>
           </div>
-          <div className="w-full h-[80px] flex items-center px-5 justify-start ">
+          <div className="w-full flex items-center   px-5 py-12 justify-start">
             <div className="w-20 border-t-4 border-[#00E300]"></div>
           </div>
           <div className="text-white px-5 text-lg lg:text-[22 px] font-medium flex flex-col space-y-10">
