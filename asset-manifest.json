@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/SBVA_landingPage/static/css/main.dd464930.css",
-    "main.js": "/SBVA_landingPage/static/js/main.5a1d8e4b.js",
+    "main.css": "/SBVA_landingPage/static/css/main.5c114e7e.css",
+    "main.js": "/SBVA_landingPage/static/js/main.30ef42b8.js",
     "static/js/453.d24df9f2.chunk.js": "/SBVA_landingPage/static/js/453.d24df9f2.chunk.js",
     "static/media/video.mp4": "/SBVA_landingPage/static/media/video.050fcb770a5be5e5bc73.mp4",
     "static/media/aboutimg.png": "/SBVA_landingPage/static/media/aboutimg.8b160161b9d36d1065e7.png",
@@ -22,12 +22,12 @@
     "index.html": "/SBVA_landingPage/index.html",
     "static/media/menu-svgrepo-com.svg": "/SBVA_landingPage/static/media/menu-svgrepo-com.b81fe811a45963b15e3e.svg",
     "static/media/Frame 14293.svg": "/SBVA_landingPage/static/media/Frame 14293.e129aba7f156b1486d4b.svg",
-    "main.dd464930.css.map": "/SBVA_landingPage/static/css/main.dd464930.css.map",
-    "main.5a1d8e4b.js.map": "/SBVA_landingPage/static/js/main.5a1d8e4b.js.map",
+    "main.5c114e7e.css.map": "/SBVA_landingPage/static/css/main.5c114e7e.css.map",
+    "main.30ef42b8.js.map": "/SBVA_landingPage/static/js/main.30ef42b8.js.map",
     "453.d24df9f2.chunk.js.map": "/SBVA_landingPage/static/js/453.d24df9f2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd464930.css",
-    "static/js/main.5a1d8e4b.js"
+    "static/css/main.5c114e7e.css",
+    "static/js/main.30ef42b8.js"
   ]
 }
