@@ -29,7 +29,7 @@ const SpeakersAndPanels: React.FC = () => {
       image: "https://via.placeholder.com/150", // 이미지 URL 교체
       krname: "Miki Fukazawa",
       jpname: "深澤 実樹",
-      role: "VP/Head of Alliance &+ Investment Strategy · SoftBank",
+      role: "VP/Head of Alliance &+ Investment Strategy Div. · SoftBank",
     },
   ];
   const speakers3 = [

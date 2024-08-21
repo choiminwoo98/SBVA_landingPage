@@ -97,9 +97,10 @@ const Header: React.FC = () => {
           className="text-xl font-bold text-white cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <a className="flex">
+          <a className="flex 3xl:flex-col">
             <span className="block">2024 SBVA</span>
-            <span className="block">&nbsp;TOKYO FORUM</span>
+            <span className="3xl:block hidden"> TOKYO FORUM</span>
+            <span className="block 3xl:hidden">&nbsp; TOKYO FORUM</span>
           </a>
         </div>
 
@@ -134,7 +135,7 @@ const Header: React.FC = () => {
         {/* Language Switch (Visible on larger screens) */}
         <div className="hidden 3xl:flex items-center space-x-4 lg:whitespace-nowrap">
           <button
-            className={`text-[18px] font-medium ${
+            className={`text-[18px] ${
               language === "JP"
                 ? "text-white"
                 : "text-gray-400 hover:text-[#00E300]"
@@ -143,9 +144,9 @@ const Header: React.FC = () => {
           >
             JP
           </button>
-          <span className="text-gray-400 text-[18px] font-medium">|</span>
+          <span className="text-gray-400 text-[18px] font-thin">|</span>
           <button
-            className={`text-[18px] font-medium ${
+            className={`text-[18px] ${
               language === "KR"
                 ? "text-white"
                 : "text-gray-400 hover:text-[#00E300]"
@@ -213,7 +214,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Menu Items */}
-          <div className="flex flex-col items-start pl-6 space-y-8 text-white text-2xl  font-medium">
+          <div className="flex flex-col items-start pl-6 space-y-8 text-white text-2xl font-medium ">
             {[
               "OVERVIEW",
               "PROGRAM",
@@ -237,7 +238,7 @@ const Header: React.FC = () => {
           {/* Bottom Section: Language Switch */}
           <div className="flex items-center justify-start gap-2 p-6 text-white text-xl">
             <button
-              className={`text-[18px] font-medium ${
+              className={`text-[18px] font-normal ${
                 language === "JP"
                   ? "text-white"
                   : "text-gray-400 hover:text-[#00E300]"
@@ -246,9 +247,9 @@ const Header: React.FC = () => {
             >
               JP
             </button>
-            <span className="text-gray-400 text-[18px] font-medium">|</span>{" "}
+            <span className="text-gray-400 text-[18px] font-thin">|</span>{" "}
             <button
-              className={`text-[18px] font-medium ${
+              className={`text-[18px] font-normal ${
                 language === "KR"
                   ? "text-white"
                   : "text-gray-400 hover:text-[#00E300]"

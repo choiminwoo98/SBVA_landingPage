@@ -46,13 +46,14 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="OVERVIEW"
-          className="h-fit w-full lg:w-[1000px] 3xl:w-[1100px] flex flex-col items-center justify-start py-[120px] 3xl:py-[150px]"
+          //4 페이지
+          className="h-fit w-full lg:w-[1000px] 3xl:w-[1100px] flex flex-col items-center justify-start py-[120px] lg:pb-[150px] 3xl:pb-[250px]  3xl:py-[150px]"
         >
           <div className="px-5 lg:px-0 w-full">
-            <h2 className="text-3xl relative lg:text-6xl text-white font-bold text-left w-full pb-[50px] font-poppins">
+            <h2 className="text-3xl relative lg:text-6xl text-white font-bold text-left w-full pb-[50px] lg:pb-[80px] font-poppins">
               OVERVIEW
             </h2>
-            <div className="text-white text-lg lg:text-[22px] font-medium flex flex-col space-y-7">
+            <div className="text-white text-lg lg:text-[22px]  font-medium flex flex-col space-y-7">
               <div>
                 {" "}
                 {language === "KR"
@@ -62,8 +63,8 @@ const App: React.FC = () => {
                   {language === "KR" ? (
                     <>
                       <br className="hidden lg:block" />
-                      &nbsp;국내 유망 스타트업과 일본 굴지의 벤처캐피털 및 기업
-                      간 네트워킹을 제공하는 <br className="hidden lg:block" />
+                      국내 유망 스타트업과 일본 굴지의 벤처캐피털 및 기업 간
+                      네트워킹을 제공하는 <br className="hidden lg:block" />
                       행사입니다.
                     </>
                   ) : (
@@ -100,7 +101,7 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>{" "}
-          <div className="w-full overflow-hidden mt-12 ">
+          <div className="w-full overflow-hidden mt-[50px] lg:mt-[80px] ">
             <img
               src={require("./assets/img.png")}
               alt="Overview Image"
@@ -108,12 +109,12 @@ const App: React.FC = () => {
             />
           </div>
           <div className="w-full  mt-16 text-white px-5 lg:px-0">
-            <table className="w-full text-lg lg:text-[22px] hidden lg:table font-medium ">
+            <table className="w-full relative right-4 text-lg lg:text-[22px] hidden lg:table font-medium ">
               <tbody>
                 <tr className="relative">
                   <td
                     className={`py-2 relative text-end pr-6 ${
-                      language === "KR" ? "" : "w-32"
+                      language === "KR" ? "" : "w-36"
                     }`}
                   >
                     {language === "KR" ? "행사명" : "イベント名"}
@@ -164,18 +165,28 @@ const App: React.FC = () => {
                     <div className="absolute inset-y-0 left-0 w-px bg-white bg-opacity-20"></div>
                   </td>
                 </tr>
-                <tr className="relative ">
-                  <td className="py-2  text-end pr-6 ">
+                <tr className="relative">
+                  <td className=" align-top  text-end pr-6 ">
                     {" "}
                     {language === "KR" ? "목적" : "目的"}
                   </td>
                   <td className="relative pl-[30px]">
-                    <span>
-                      {language === "KR"
-                        ? "일본 스타트업 생태계에 대한 이해 및 양국 스타트업, VC, 기업 간 네트워킹"
-                        : " 日本のスタートアップエコシステムに対する理解促進および日韓のスタートアップ、VC、企業間のネットワーキング"}
+                    <span className="block ">
+                      {language === "KR" ? (
+                        <>
+                          일본 스타트업 생태계에 대한 이해 및 양국 스타트업, VC,{" "}
+                          <br />
+                          기업 간 네트워킹
+                        </>
+                      ) : (
+                        <>
+                          日本のスタートアップエコシステムに対する理解促進および
+                          <br />
+                          日韓のスタートアップ、VC、 企業間のネットワーキング
+                        </>
+                      )}
                     </span>
-                    <div className="absolute inset-y-0 left-0 w-px bg-white bg-opacity-20"></div>
+                    <div className="absolute top-0 left-0 w-px h-full bg-white bg-opacity-20"></div>
                   </td>
                 </tr>
                 <tr className="relative ">
@@ -224,7 +235,7 @@ const App: React.FC = () => {
             </table>
             <div className="flex flex-col space-y-3 text-lg lg:hidden ">
               <div className="flex flex-col lg:flex-row  ">
-                <span className="font-bold w-2/12 text-sm text-[#777777]">
+                <span className="font-bold w-full text-sm text-[#777777]">
                   {language === "KR" ? "행사명" : "イベント名"}
                 </span>
                 <span className="w-full text-lg font-medium">
@@ -232,7 +243,7 @@ const App: React.FC = () => {
                 </span>
               </div>
               <div className="flex flex-col lg:flex-row ">
-                <span className="font-bold w-2/12 text-sm text-[#777777]">
+                <span className="font-bold w-full text-sm text-[#777777]">
                   {language === "KR" ? "일시" : "開催日時"}
                 </span>
                 <span className="w-full text-lg font-medium">
@@ -242,7 +253,7 @@ const App: React.FC = () => {
                 </span>
               </div>
               <div className="flex flex-col lg:flex-row ">
-                <span className="font-bold w-2/12 text-sm text-[#777777]">
+                <span className="font-bold w-full text-sm text-[#777777]">
                   {language === "KR" ? "장소" : "開催場所"}
                 </span>
                 <div className="flex w-fit justify-center text-center items-center cursor-pointer group">
@@ -263,17 +274,17 @@ const App: React.FC = () => {
                 </div>
               </div>
               <div className="flex flex-col lg:flex-row ">
-                <span className="font-bold w-2/12 text-sm text-[#777777]">
+                <span className="font-bold w-full text-sm text-[#777777]">
                   {language === "KR" ? "목적" : "目的"}
                 </span>
                 <span className="w-full text-lg font-medium">
                   {language === "KR"
                     ? "일본 스타트업 생태계에 대한 이해 및 양국 스타트업, VC, 기업 간 네트워킹"
-                    : " 日本のスタートアップエコシステムに対する理解促進および日韓のスタートアップ、VC、企業間のネットワーキング"}
+                    : "日本のスタートアップエコシステムに対する理解促進および日韓のスタートアップ、VC、企業間のネットワーキング"}
                 </span>
               </div>
               <div className="flex flex-col lg:flex-row ">
-                <span className="font-bold w-2/12 text-sm text-[#777777]">
+                <span className="font-bold w-full text-sm text-[#777777]">
                   {language === "KR" ? "주최" : "主催"}
                 </span>
                 <span className="w-full pt-2">
@@ -316,7 +327,7 @@ const App: React.FC = () => {
           <div className="w-full px-4 flex justify-center pt-16 ">
             <a
               href="#"
-              className="flex w-fit px-[80px] text-white flex-col justify-center items-center font-bold text-2xl lg:text-[34px] 3xl:text-[38px] border-2 py-5 lg:py-10 gap-2 border-[#00E300] hover:bg-[#00E300] hover:text-black"
+              className="flex w-fit px-[17px] lg:px-[80px] text-white flex-col justify-center items-center font-bold text-2xl lg:text-[34px] 3xl:text-[38px] border-2 py-5 lg:py-10 gap-2 border-[#00E300] hover:bg-[#00E300] hover:text-black"
             >
               <span className="lg:hidden">2024 SBVA Tokyo Forum</span>
               <span className="hidden lg:block">
@@ -334,21 +345,21 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="PROGRAM"
-          className={`w-full px-5 lg:w-[1000px] flex flex-col items-center justify-start lg:mb-16 ${
+          className={`w-full px-5 lg:w-[1000px] flex flex-col items-center justify-start lg:mb-32 ${
             language === "KR"
               ? "h-[2300px] lg:h-[2150px]"
               : "h-[2460px] lg:h-[2160px] "
           }`}
         >
-          <h2 className="text-3xl relative lg:text-6xl text-white font-bold mb-8 text-left w-[360px] lg:w-full pb-12 font-poppins">
+          <h2 className="text-3xl lg:px-0 relative lg:text-6xl text-white font-bold mb-8 text-left w-[360px] lg:w-full pb-12 font-poppins">
             PROGRAM
           </h2>
 
           <div
             className={`border-l-[1px] relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
               language === "KR"
-                ? "right-5 lg:right-4 h-[2030px] lg:h-[1900px]"
-                : "lg:-right-[120px] h-[2160px] lg:h-[1970px]"
+                ? "right-0 lg:-right-9 h-[2000px] lg:h-[1900px]"
+                : "lg:-right-[60px] h-[2130px] lg:h-[1970px]"
             }`}
           >
             <div className="relative ">
@@ -470,7 +481,7 @@ const App: React.FC = () => {
                         </span>
                         <span className="text-[#777777] text-sm relative top-1 lg:text-base">
                           VP/Head of Alliance &<br className="lg:hidden" />{" "}
-                          Investment Strategy · SoftBank
+                          Investment Strategy Div · SoftBank
                           <br className="lg:hidden" /> SoftBank
                         </span>
                       </div>
@@ -572,9 +583,9 @@ const App: React.FC = () => {
               <div className="pl-7 relative top-[310px]">
                 <div className="flex flex-col space-y-5">
                   <span className="relative bottom-2 lg:right-44 font-medium lg:text-xl">
-                    16:00~17:30
+                    16:10~17:30
                   </span>
-                  <div className="flex flex-col relative lg:bottom-[58px]">
+                  <div className="flex flex-col relative lg:bottom-[58px] ">
                     <span className="text-[#00E300]  font-medium lg:text-xl">
                       SBVA Portfolio Pitching
                     </span>
@@ -584,8 +595,7 @@ const App: React.FC = () => {
                       ) : (
                         <>
                           SBVAが選定したポートフォリ
-                          <br className="lg:hidden" />オ 企業 ８社のピッチン{" "}
-                          <br className="lg:hidden" />グ ネットワーキング
+                          <br className="lg:hidden" />オ 企業 ８社のピッチング{" "}
                         </>
                       )}
                     </span>
@@ -643,13 +653,9 @@ const App: React.FC = () => {
                     17:40~20:00
                   </span>
                   <div className="flex flex-col relative lg:bottom-[60px]">
-                    <span className="text-2xl w-full overflow-auto lg:text-[30px] font-bold">
+                    <span className="text-2xl w-full  lg:text-[30px] font-bold">
                       {language === "KR" ? (
-                        <>
-                          Dinner & Networking
-                          <br className="lg:hidden" />
-                          미래 협력 방향
-                        </>
+                        <>Dinner & Networking</>
                       ) : (
                         <>
                           ディナー＆
@@ -699,7 +705,7 @@ const App: React.FC = () => {
           id="SBVA PORTFOLIO PITCHING"
           className="h-fit w-full lg:w-[1100px] gap-5 flex flex-col items-start justify-start pt-[120px] 3xl:pt-[150px] font-poppins"
         >
-          <h2 className="text-3xl font-bold lg:text-6xl pb-5 pl-5 text-white">
+          <h2 className="text-3xl font-bold lg:text-6xl pb-[50px] pl-5 lg:pb-[66px] lg:pl-10 text-white">
             SBVA PORTFOLIO PITCHING
           </h2>
           <SliderComponent />
