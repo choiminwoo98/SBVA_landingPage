@@ -14,21 +14,23 @@ const App: React.FC = () => {
       {/* Header */}
       <Header />
       <div className="block h-20 md:h-24"></div>
-      <div className="relative flex flex-col h-[800px] items-center justify-center overflow-hidden font-poppins">
+      <div className="relative flex flex-col h-[580px] lg:h-[768px] 3xl:h-[800px] items-center justify-center overflow-hidden font-poppins">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           muted
           loop
+          playsInline
           controls={false} // This ensures that the player controls are removed
         >
           <source src={require("./assets/video.mp4")} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video>{" "}
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         {/* 중앙에 배치된 텍스트 */}
-        <div className="relative z-10 text-center flex flex-col text-[66px] lg:text-[70px] 3xl:text-[120px] font-bold  items-center justify-center text-white">
+        <div className="relative z-10 text-center flex flex-col text-[66px] lg:text-[70px] 3xl:text-[120px] font-bold  items-center justify-center text-white leading-80 lg:leading-[90px] 3xl:leading-[130px]">
           <span>2024</span>
-          <h1 className="w-3/4 lg:w-full mb-4 text-[#00E300]">
+          <h1 className="w-3/4 lg:w-full mb-4 text-[#00E300] leading-80">
             SBVA TOKYO FORUM
           </h1>
         </div>
@@ -46,27 +48,55 @@ const App: React.FC = () => {
           id="OVERVIEW"
           className="h-fit w-full lg:w-[1000px] 3xl:w-[1100px] flex flex-col items-center justify-start py-[120px] 3xl:py-[150px]"
         >
-          <div className="px-5">
-            <h2 className="text-3xl relative lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12 font-poppins">
+          <div className="px-5 lg:px-0 w-full">
+            <h2 className="text-3xl relative lg:text-6xl text-white font-bold text-left w-full pb-[50px] font-poppins">
               OVERVIEW
             </h2>
-            <div className="text-white lg:w-11/12 text-lg lg:text-[22px] flex flex-col space-y-7">
+            <div className="text-white text-lg lg:text-[22px] font-medium flex flex-col space-y-7">
               <div>
                 {" "}
                 {language === "KR"
                   ? " 2024 Tokyo Forum은 일본 스타트업 생태계에 대한 심도 있는 이해를 돕고,"
                   : "「2024 Tokyo Forum」は、日本のスタートアップエコシステムに対する深い理解を促進し、"}
                 <span className="text-[#00E300]">
-                  <br className="hidden lg:block"></br>
-                  {language === "KR"
-                    ? "국내 유망 스타트업과 일본 굴지의 벤처캐피털 및 기업 간 네트워킹을 제공하는 행사입니다."
-                    : "韓国の有望なスタートアップと日本の著名なベンチャーキャピタルや企業間のネットワーキングの場を提供するために企画されました。"}
+                  {language === "KR" ? (
+                    <>
+                      <br className="hidden lg:block" />
+                      &nbsp;국내 유망 스타트업과 일본 굴지의 벤처캐피털 및 기업
+                      간 네트워킹을 제공하는 <br className="hidden lg:block" />
+                      행사입니다.
+                    </>
+                  ) : (
+                    <>
+                      <br className="hidden lg:block" />
+                      &nbsp;韓国の有望なスタートアップと日本の著名なベンチャーキャピタルや企業間の
+                      <br className="hidden lg:block" />
+                      ネットワーキングの場を提供するために企画されました。
+                    </>
+                  )}
                 </span>
               </div>
               <div>
-                {language === "KR"
-                  ? " 한일 스타트업 및 벤처투자 산업 전반을 아우르는 실질적인 교류와 기회의 장을 지향하고자 양국의 훌륭한 창업자, 투자자 등 150여 분을 한정해 초대드리오니 많은 관심과 참여를 부탁드립니다."
-                  : "本イベントは、日韓のスタートアップおよびベンチャー投資産業における実質的な交流と協業機会の創出を目指し、両国の優れた創業者や投資家、業界専門家など、約150名を限定してお招きいたします。 ご多忙のところ恐縮ではございますが、ぜひご参加いただけますようお願い申し上げます。"}
+                {language === "KR" ? (
+                  <>
+                    한일 스타트업 및 벤처투자 산업 전반을 아우르는 실질적인
+                    교류와 기회의 장을 <br className="hidden lg:block" />
+                    지향하고자 양국의 훌륭한 창업자, 투자자 등 150여 분을 한정해
+                    초대드리오니
+                    <br className="hidden lg:block" />
+                    많은 관심과 참여를 부탁드립니다.
+                  </>
+                ) : (
+                  <>
+                    本イベントは、日韓のスタートアップおよびベンチャー投資産業における実質的な交流と
+                    <br className="hidden lg:block" />
+                    協業機会の創出を目指し、両国の優れた創業者や投資家、業界専門家など、
+                    <br className="hidden lg:block" />
+                    約150名を限定してお招きいたします。
+                    <br className="hidden lg:block" />
+                    ご多忙のところ恐縮ではございますが、ぜひご参加いただけますようお願い申し上げます。
+                  </>
+                )}
               </div>
             </div>
           </div>{" "}
@@ -286,7 +316,7 @@ const App: React.FC = () => {
           <div className="w-full px-4 flex justify-center pt-16 ">
             <a
               href="#"
-              className="flex w-full max-w-[938px] text-white flex-col justify-center items-center font-bold text-2xl lg:text-[34px] 3xl:text-[38px] border-2 px-4 py-5 lg:py-10 gap-2 border-[#00E300] hover:bg-[#00E300] hover:text-black"
+              className="flex w-fit px-[80px] text-white flex-col justify-center items-center font-bold text-2xl lg:text-[34px] 3xl:text-[38px] border-2 py-5 lg:py-10 gap-2 border-[#00E300] hover:bg-[#00E300] hover:text-black"
             >
               <span className="lg:hidden">2024 SBVA Tokyo Forum</span>
               <span className="hidden lg:block">
@@ -304,20 +334,24 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="PROGRAM"
-          className="h-[2318px] w-[360px] lg:w-[1000px] flex flex-col items-center justify-start px-5 "
+          className={`w-full px-5 lg:w-[1000px] flex flex-col items-center justify-start lg:mb-16 ${
+            language === "KR"
+              ? "h-[2300px] lg:h-[2150px]"
+              : "h-[2460px] lg:h-[2160px] "
+          }`}
         >
-          <h2 className="text-3xl relative  lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12 font-poppins">
+          <h2 className="text-3xl relative lg:text-6xl text-white font-bold mb-8 text-left w-[360px] lg:w-full pb-12 font-poppins">
             PROGRAM
           </h2>
 
           <div
-            className={`border-l-[1px] relative  lg:h-[1900px] border-white border-opacity-20  mt-0 pt-0 py-10 space-y-12 text-white ${
+            className={`border-l-[1px] relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
               language === "KR"
-                ? "lg:right-4 h-[2000px]"
-                : "lg:-right-7 h-[1950px]"
+                ? "right-5 lg:right-4 h-[2030px] lg:h-[1900px]"
+                : "lg:-right-[120px] h-[2160px] lg:h-[1970px]"
             }`}
           >
-            <div className="relative">
+            <div className="relative ">
               <div className="absolute -left-1.5 bg-[#00E300] h-3 w-3 rounded-full "></div>
               <div className="pl-7 ">
                 <div className="flex flex-col space-y-5">
@@ -329,16 +363,22 @@ const App: React.FC = () => {
                       Opening Remarks
                     </span>
                     <span className="text-2xl lg:text-[30px] font-bold pt-2">
-                      {language === "KR"
-                        ? "SBVA와 SBVA의 투자 전략에 대한 이해"
-                        : "SBVAとSBVAの投資戦略"}
+                      {language === "KR" ? (
+                        <>
+                          SBVA와 SBVA의 투자 전략에
+                          <br className="lg:hidden" />
+                          대한 이해
+                        </>
+                      ) : (
+                        <>SBVAとSBVAの投資戦略</>
+                      )}
                     </span>
                   </div>
                   <div className="relative lg:bottom-12 lg:text-xl">
                     <div>
                       <span>JP Lee</span>
                       <span className="text-[#777777] text-sm relative lg:text-base">
-                        &nbsp; &nbsp; CEO & Managing Partner · SBVA
+                        &nbsp; &nbsp; CEO/Managing Partner · SBVA
                       </span>
                     </div>
                   </div>
@@ -356,9 +396,17 @@ const App: React.FC = () => {
                     </span>
                     <span className="text-2xl lg:text-[30px] font-bold pt-2">
                       {" "}
-                      {language === "KR"
-                        ? "SBVA의 성공적인 일본 투자 사례 소개"
-                        : "日本におけるSBVAの投資 成功事例"}
+                      {language === "KR" ? (
+                        <>
+                          SBVA의 성공적인 일본 투자 <br className="lg:hidden" />{" "}
+                          사례 소개
+                        </>
+                      ) : (
+                        <>
+                          日本におけるSBVAの投資 <br className="lg:hidden" />
+                          成功事例
+                        </>
+                      )}
                     </span>
                   </div>
                   <div>
@@ -378,7 +426,7 @@ const App: React.FC = () => {
                         </span>
                       </div>
                       <div>
-                        <span>Kim Youngki</span>
+                        <span>Youngki Kim</span>
                         <span className="text-[#777777] text-sm relative lg:text-base">
                           &nbsp; &nbsp; CFO · KREAM
                         </span>
@@ -398,9 +446,20 @@ const App: React.FC = () => {
                       Keynote
                     </span>
                     <span className="text-2xl lg:text-[30px] font-bold pt-2">
-                      {language === "KR"
-                        ? "소프트뱅크가 기대하는 스타트업과의 미래 협력 방향"
-                        : "ソフトバンクが期待する スタートアップとの理想的な協業"}
+                      {language === "KR" ? (
+                        <>
+                          소프트뱅크가 기대하는
+                          <br className="lg:hidden" /> 스타트업과의 미래 협력
+                          방향
+                        </>
+                      ) : (
+                        <>
+                          ソフトバンクが期待する
+                          <br /> スタートアップとの理想
+                          <br className="lg:hidden" />
+                          的な協業
+                        </>
+                      )}
                     </span>
                   </div>
                   <div className="relative lg:bottom-12 lg:text-xl">
@@ -409,9 +468,10 @@ const App: React.FC = () => {
                         <span className="whitespace-nowrap">
                           {language === "KR" ? "Miki Fukazawa " : "深澤 実樹"}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-1 relative top-1 lg:text-base">
-                          VP · Head of Alliance & Investment Strategy Division,
-                          SoftBank
+                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
+                          VP/Head of Alliance &<br className="lg:hidden" />{" "}
+                          Investment Strategy · SoftBank
+                          <br className="lg:hidden" /> SoftBank
                         </span>
                       </div>
                     </div>
@@ -429,9 +489,20 @@ const App: React.FC = () => {
                       Panel Discussion
                     </span>
                     <span className="text-2xl lg:text-[30px] font-bold pt-2">
-                      {language === "KR"
-                        ? "일본 현지 VC를 통해 듣는 업계 동향, 투자/Exit 전략"
-                        : "日本現地のVCが語る業界の最新動向や 投資およびExit戦略"}
+                      {language === "KR" ? (
+                        <>
+                          일본 현지 VC를 통해 듣는
+                          <br className="lg:hidden" /> 업계 동향, 투자/Exit 전략
+                        </>
+                      ) : (
+                        <>
+                          日本現地のVCが語る業界 <br className="lg:hidden" />
+                          の最新動向や <br className="hidden lg:block" />{" "}
+                          投資および
+                          <br className="lg:hidden" />
+                          Exit戦略
+                        </>
+                      )}
                     </span>
                   </div>
                   <div className="relative lg:bottom-12 lg:text-xl">
@@ -448,12 +519,12 @@ const App: React.FC = () => {
                             : "榊原 健太郎"}
                         </span>
                         <span className="text-[#777777] text-sm relative top-1 lg:text-base">
-                          CEO · SAMURAI INCUBATE
+                          CEO · SAMURAI <br className="lg:hidden" /> INCUBATE
                         </span>
                       </div>
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap">
-                          {language === "KR" ? "Doh Hogil" : "都 虎吉"}
+                          {language === "KR" ? "Hogil Doh" : "都 虎吉"}
                         </span>
                         <span className="text-[#777777] text-sm relative top-1 lg:text-base">
                           General Partner · Global Brain
@@ -464,7 +535,8 @@ const App: React.FC = () => {
                           {language === "KR" ? "Takashi Kitao" : "北尾 崇"}
                         </span>
                         <span className="text-[#777777] text-sm relative top-1  lg:text-base">
-                          Partner/Director · Cyber Agent Capital
+                          Partner/Director · <br className="lg:hidden" />
+                          Cyber Agent Capital
                         </span>
                       </div>
                       <div className="flex gap-3">
@@ -507,9 +579,15 @@ const App: React.FC = () => {
                       SBVA Portfolio Pitching
                     </span>
                     <span className="text-2xl lg:text-[30px] font-bold pt-2">
-                      {language === "KR"
-                        ? "SBVA 포트폴리오 8개사 피칭"
-                        : "SBVAが選定したポートフォリオ企業８社のピッチング"}
+                      {language === "KR" ? (
+                        <>SBVA 포트폴리오 8개사 피칭</>
+                      ) : (
+                        <>
+                          SBVAが選定したポートフォリ
+                          <br className="lg:hidden" />オ 企業 ８社のピッチン{" "}
+                          <br className="lg:hidden" />グ ネットワーキング
+                        </>
+                      )}
                     </span>
                   </div>
                   <div className="relative lg:bottom-12 lg:text-xl">
@@ -517,7 +595,7 @@ const App: React.FC = () => {
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap">
                           {language === "KR"
-                            ? "SBVA 포트폴리오 8개사 대표"
+                            ? "국내 포트폴리오 8개사"
                             : "韓国生まれのスタートアップ企業８社"}
                         </span>
                       </div>
@@ -536,9 +614,14 @@ const App: React.FC = () => {
                       Closing Remarks{" "}
                     </span>
                     <span className="text-2xl lg:text-[30px] font-bold pt-2 ">
-                      {language === "KR"
-                        ? "SBVA의 일본 투자 포부"
-                        : "SBVAの抱負とご協力のお願い"}
+                      {language === "KR" ? (
+                        <>SBVA의 일본 투자 포부</>
+                      ) : (
+                        <>
+                          SBVA <br className="lg:hidden" />
+                          の抱負とご協力のお願い
+                        </>
+                      )}
                     </span>
                   </div>
                   <div className="relative lg:bottom-12 lg:text-xl">
@@ -546,7 +629,7 @@ const App: React.FC = () => {
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap">JP Lee</span>{" "}
                         <span className="text-[#777777] text-sm relative top-1 lg:text-base">
-                          CEO & Managing Partner · SBVA{" "}
+                          CEO/Managing Partner · SBVA{" "}
                         </span>
                       </div>
                     </div>
@@ -560,10 +643,20 @@ const App: React.FC = () => {
                     17:40~20:00
                   </span>
                   <div className="flex flex-col relative lg:bottom-[60px]">
-                    <span className="text-2xl lg:text-[30px] font-bold">
-                      {language === "KR"
-                        ? "Dinner & Networking"
-                        : "ディナー＆ネットワーキング"}
+                    <span className="text-2xl w-full overflow-auto lg:text-[30px] font-bold">
+                      {language === "KR" ? (
+                        <>
+                          Dinner & Networking
+                          <br className="lg:hidden" />
+                          미래 협력 방향
+                        </>
+                      ) : (
+                        <>
+                          ディナー＆
+                          <br className="lg:hidden" />
+                          ネットワーキング
+                        </>
+                      )}
                     </span>
                   </div>
                 </div>
@@ -592,7 +685,7 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="SPEAKERS & PANELS"
-          className="h-[300px] w-full lg:w-[1000px] flex flex-col items-center overflow-hidden justify-start "
+          className="h-full w-full lg:w-[1000px] flex flex-col items-center overflow-hidden justify-start "
         >
           <h2 className="text-3xl relative px-5 lg:text-6xl text-white font-bold mb-8 text-left w-full pb-12 font-poppins">
             SPEAKERS & PANELS
@@ -616,22 +709,23 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="ABOUT SBVA"
-          className="h-[1150px] lg:h-[1150px] w-full lg:w-[1100px] flex flex-col items-center justify-start pt-[120px] 3xl:pt-[150px] pb-[120px]"
+          className="h-[1150px] lg:h-[1300px] w-full lg:w-[1100px] flex flex-col items-center justify-start pt-[120px] 3xl:pt-[150px] pb-[120px]"
         >
-          <h2 className="text-3xl relative px-5 lg:text-6xl text-white font-bold mb-8 text-left w-full font-poppins">
+          <h2 className="text-3xl relative lg:text-6xl text-white font-bold mb-8 text-left w-full font-poppins">
             ABOUT SBVA
           </h2>
-          <div className="w-screen h-[700px] flex justify-center overflow-hidden">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/GS8F0r0kI4s"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full lg:w-[1100px] lg:h-[450px] object-cover"
-            ></iframe>
+          <div className="w-screen flex justify-center">
+            <div className="relative w-full aspect-video max-w-[1100px]">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/GS8F0r0kI4s"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full object-cover"
+              ></iframe>
+            </div>
           </div>
           <div className="w-full flex items-center   px-5 py-12 justify-start">
             <div className="w-20 border-t-4 border-[#00E300]"></div>

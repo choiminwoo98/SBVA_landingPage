@@ -23,6 +23,9 @@ module.exports = {
         sans: ["Pretendard", "sans-serif"], // Set Pretendard as the default sans-serif font
         poppins: ["Poppins", "sans-serif"], // Add Poppins as an option
       },
+      lineHeight: {
+        80: "80px", // Add custom line-height value
+      },
     },
   },
   plugins: [],

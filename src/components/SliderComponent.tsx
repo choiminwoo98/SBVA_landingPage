@@ -50,7 +50,7 @@ const cardData = [
     title: "EdTech",
     image: "image6.png",
     descriptionkr:
-      "매스프레소는 개인 맞춤형+ 학습 플랫폼 ‘QUANDA’를+ 운영합니다.",
+      "매스프레소는 개인 맞춤형+ 학습 플랫폼 ‘QANDA’를+ 운영합니다.",
     descriptionjp:
       "MATHPRESSOは、AI技術を+活用したオンライン学習+プラットフォーム「QUANDA」+を運営しています。",
   },
@@ -59,7 +59,7 @@ const cardData = [
     title: "Enterprise",
     image: "image7.png",
     descriptionkr:
-      "마크비전은 AI 기반 온라인 상 위조 상품 및 불법 콘텐츠+ 모니터링 자동 서비스를+ 제공합니다.",
+      "마크비전은 AI 기반 온라인상+ 위조 상품 및 불법 콘텐츠+ 모니터링 자동 서비스를+ 제공합니다.",
     descriptionjp:
       "MarqVisionは、AI技術を+ベースとし、オンライン上の +偽造品や違法コンテンツの +自動モニタリング +サービスを提供しています。",
   },
@@ -90,67 +90,69 @@ const SliderComponent: React.FC = () => {
     };
   }, []);
   const sliderSettings = {
-    className: "center",
-    centerMode: false,
+    className: "slider-left",
+
     arrows: false,
+    centerMode: true,
     slidesToScroll: 1,
     infinite: false,
     slidesToShow: 3.2,
     speed: 500,
+    initialSlide: 1, // 슬라이더 시작 위치를 첫 번째 슬라이드로 설정
     responsive: [
       {
         breakpoint: 360,
         settings: {
           slidesToShow: 1.1,
-          centerPadding: "30px",
+          centerPadding: "10px", // 작은 화면에서도 왼쪽 카드가 살짝 보이도록 설정
         },
       },
       {
         breakpoint: 450,
         settings: {
-          slidesToShow: 1.2,
-          centerPadding: "30px",
+          slidesToShow: 1.1,
+          centerPadding: "18px",
         },
       },
       {
         breakpoint: 550,
         settings: {
           slidesToShow: 1.5,
-          centerPadding: "30px",
+          centerPadding: "5px",
         },
       },
       {
         breakpoint: 650,
         settings: {
-          slidesToShow: 1.8,
-          centerPadding: "30px",
+          slidesToShow: 1.5,
+          centerPadding: "40px",
         },
       },
       {
         breakpoint: 750,
         settings: {
-          slidesToShow: 2.1,
-          centerPadding: "30px",
+          slidesToShow: 1.8,
+          centerPadding: "35px",
         },
       },
       {
         breakpoint: 1100,
         settings: {
           slidesToShow: 2.3,
-          centerPadding: "30px",
+          centerPadding: "25px",
         },
       },
       {
         breakpoint: 1500,
         settings: {
-          slidesToShow: 3.1,
-          centerPadding: "30px",
+          slidesToShow: 3,
+          centerPadding: "50px",
         },
       },
     ],
   };
   return (
-    <div className="relative w-full pl-5">
+    <div className="relative w-full">
       {isLargeScreen ? (
         <div className="grid grid-cols-4 gap-4">
           {cardData.map((data, index) => (

@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { scroller } from "react-scroll";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const Header: React.FC = () => {
   const { language, setLanguage } = useLanguage();
-
   const [activeSection, setActiveSection] = React.useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -58,13 +57,41 @@ const Header: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const [scrollDirection, setScrollDirection] = useState("up");
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollTop > lastScrollTop && currentScrollTop > 90) {
+      setScrollDirection("down");
+    } else {
+      setScrollDirection("up");
+    }
+
+    setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollTop]);
+
   return (
     <header
-      className={`text-[18px] font-medium ${
-        isMenuOpen ? "" : "backdrop-blur-sm"
-      } fixed top-0 w-screen left-0 right-0 bg-black bg-opacity-70 hadow-md z-50 font-poppins`}
+      className={`text-[18px] font-medium fixed top-0 w-screen left-0 right-0  hadow-md z-50 font-poppins`}
     >
-      <div className="flex w-full h-20 md:h-24 max-w-[1520px] px-5 lg:px-10 3xl:px-[80px] mx-auto items-center justify-between lg:whitespace-nowrap">
+      <div
+        className={`flex w-full h-20 md:h-24 max-w-[1520px] bg-black bg-opacity-70 px-5 lg:px-10 3xl:px-[80px] mx-auto items-center justify-between lg:whitespace-nowrap transition-transform duration-500 ease-in-out ${
+          scrollDirection === "down"
+            ? "transform -translate-y-full"
+            : "transform translate-y-0"
+        } ${!isMenuOpen ? "backdrop-blur-sm" : ""}`}
+      >
         {/* Logo */}
         <div
           className="text-xl font-bold text-white cursor-pointer"
@@ -88,12 +115,12 @@ const Header: React.FC = () => {
             <button
               key={section}
               onClick={() => scrollToSection(section)}
-              className={`text-[18px] font-medium  ${
+              className={`text-[18px]  ${
                 activeSection === section
                   ? "text-[#00E300] font-bold"
                   : activeSection === null
-                  ? "text-white"
-                  : "text-gray-400 hover:text-white"
+                  ? "text-white font-medium "
+                  : "text-[#666666] font-medium hover:text-white"
               } cursor-pointer hover:text-[#00E300]`}
             >
               {section
@@ -108,17 +135,6 @@ const Header: React.FC = () => {
         <div className="hidden 3xl:flex items-center space-x-4 lg:whitespace-nowrap">
           <button
             className={`text-[18px] font-medium ${
-              language === "KR"
-                ? "text-white"
-                : "text-gray-400 hover:text-[#00E300]"
-            } `}
-            onClick={() => setLanguage("KR")}
-          >
-            KR
-          </button>
-          <span className="text-gray-400 text-[18px] font-medium">|</span>
-          <button
-            className={`text-[18px] font-medium ${
               language === "JP"
                 ? "text-white"
                 : "text-gray-400 hover:text-[#00E300]"
@@ -127,6 +143,17 @@ const Header: React.FC = () => {
           >
             JP
           </button>
+          <span className="text-gray-400 text-[18px] font-medium">|</span>
+          <button
+            className={`text-[18px] font-medium ${
+              language === "KR"
+                ? "text-white"
+                : "text-gray-400 hover:text-[#00E300]"
+            } `}
+            onClick={() => setLanguage("KR")}
+          >
+            KR
+          </button>{" "}
         </div>
 
         {/* Mobile Menu Button */}
@@ -151,7 +178,7 @@ const Header: React.FC = () => {
 
       {/* Full-Screen Menu */}
       <nav
-        className={`3xl:hidden fixed top-0 left-0 w-full h-fit bg-black transform ${
+        className={`3xl:hidden h-full fixed top-0 left-0 w-full  bg-black transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out z-40`}
       >
@@ -163,13 +190,30 @@ const Header: React.FC = () => {
                 2024 SBVA TOKYO FORUM
               </a>
             </div>
-            <button onClick={toggleMenu} className="text-white text-3xl">
-              &times;
+            <button onClick={toggleMenu} className="text-white ">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.0703 2.55295L2.99981 20.6235"
+                  stroke="white"
+                  stroke-width="2.22222"
+                />
+                <path
+                  d="M21.0703 20.6259L2.99981 2.55535"
+                  stroke="white"
+                  stroke-width="2.22222"
+                />
+              </svg>
             </button>
           </div>
 
           {/* Menu Items */}
-          <div className="flex flex-col flex-grow items-start pl-6 space-y-8 text-white text-2xl font-bold">
+          <div className="flex flex-col items-start pl-6 space-y-8 text-white text-2xl  font-medium">
             {[
               "OVERVIEW",
               "PROGRAM",
@@ -194,17 +238,6 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-start gap-2 p-6 text-white text-xl">
             <button
               className={`text-[18px] font-medium ${
-                language === "KR"
-                  ? "text-white"
-                  : "text-gray-400 hover:text-[#00E300]"
-              } `}
-              onClick={() => setLanguage("KR")}
-            >
-              KR
-            </button>
-            <span className="text-gray-400 text-[18px] font-medium">|</span>
-            <button
-              className={`text-[18px] font-medium ${
                 language === "JP"
                   ? "text-white"
                   : "text-gray-400 hover:text-[#00E300]"
@@ -212,6 +245,17 @@ const Header: React.FC = () => {
               onClick={() => setLanguage("JP")}
             >
               JP
+            </button>
+            <span className="text-gray-400 text-[18px] font-medium">|</span>{" "}
+            <button
+              className={`text-[18px] font-medium ${
+                language === "KR"
+                  ? "text-white"
+                  : "text-gray-400 hover:text-[#00E300]"
+              } `}
+              onClick={() => setLanguage("KR")}
+            >
+              KR
             </button>
           </div>
         </div>

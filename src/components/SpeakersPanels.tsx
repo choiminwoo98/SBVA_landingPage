@@ -84,7 +84,7 @@ const SpeakersAndPanels: React.FC = () => {
             <span className="text-[#00E300] text-lg lg:text-[30px]  font-medium">
               Fireside Chat
             </span>
-            <div className="flex-grow border-t border-white opacity-20"></div>
+            <div className="flex-grow border-t relative left-5 lg:left-10 border-white opacity-20"></div>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 3xl:flex justify-between text-white flex-wrap gap-y-7">
             {speakers.map((speaker, index) => (
@@ -130,10 +130,10 @@ const SpeakersAndPanels: React.FC = () => {
         </div>
         <div className="flex flex-col space-y-7">
           <div className="flex items-c pl-5 space-x-4">
-            <span className="text-[#00E300] text-lg lg:text-[30px] font-medium">
+            <span className="text-[#00E300] text-lg lg:text-[30px] lg:pt-8 font-medium">
               Keynote
             </span>
-            <div className="flex-grow border-t border-white opacity-20"></div>
+            <div className="flex-grow border-t relative left-5 lg:left-10 top-3 lg:top-11 border-white opacity-20"></div>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 3xl:flex justify-between text-white flex-wrap gap-y-7">
             {speakers2.map((speaker, index) => (
@@ -149,10 +149,10 @@ const SpeakersAndPanels: React.FC = () => {
         </div>{" "}
         <div className="flex flex-col space-y-7">
           <div className="flex items-c pl-5 space-x-4">
-            <span className="text-[#00E300] text-lg lg:text-[30px] font-medium">
+            <span className="text-[#00E300] text-lg lg:text-[30px] lg:pt-8 font-medium">
               Panel Discussion{" "}
             </span>
-            <div className="flex-grow border-t border-white opacity-20"></div>
+            <div className="flex-grow border-t relative left-5 lg:left-10 top-3 lg:top-11 border-white opacity-20"></div>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 3xl:flex justify-between text-white flex-wrap gap-y-7">
             {speakers3.map((speaker, index) => (

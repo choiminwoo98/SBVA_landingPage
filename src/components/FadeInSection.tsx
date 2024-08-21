@@ -30,7 +30,7 @@ const FadeInSection: React.FC<FadeInSectionProps> = ({ children }) => {
 
   return (
     <div
-      className={`flex justify-center transition-opacity duration-1000 ease-in-out transform ${
+      className={`flex justify-center transition-opacity duration-[2000ms] ease-in-out transform ${
         isVisible
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-50 scale-95"

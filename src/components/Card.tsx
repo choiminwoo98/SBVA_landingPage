@@ -30,12 +30,14 @@ const Card: React.FC<CardProps> = ({
 
       {/* 하단 콘텐츠 영역 */}
       <div className="flex flex-col p-4 flex-grow text-white space-y-3">
-        <span className="text-[13px] font-medium text-[#979797]">{title}</span>
+        <span className="text-[13px] lg:text-[14px] font-medium text-[#979797]">
+          {title}
+        </span>
         <p
           dangerouslySetInnerHTML={{
             __html: description.replaceAll("+", "<br />"),
           }}
-          className="font-medium"
+          className="font-medium text-white lg:text-lg"
         />
 
         {/* 버튼 */}
