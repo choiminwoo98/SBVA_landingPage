@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/SBVA_landingPage/static/css/main.3bdc3d52.css",
-    "main.js": "/SBVA_landingPage/static/js/main.d11b1190.js",
+    "main.css": "/SBVA_landingPage/static/css/main.34d03f62.css",
+    "main.js": "/SBVA_landingPage/static/js/main.fb3950e6.js",
     "static/js/453.d24df9f2.chunk.js": "/SBVA_landingPage/static/js/453.d24df9f2.chunk.js",
     "static/media/video.mp4": "/SBVA_landingPage/static/media/video.050fcb770a5be5e5bc73.mp4",
     "static/media/aboutimg.png": "/SBVA_landingPage/static/media/aboutimg.8b160161b9d36d1065e7.png",
@@ -10,11 +10,11 @@
     "static/media/Hogil Doh.png": "/SBVA_landingPage/static/media/Hogil Doh.fa5d64266bdbd799b7bc.png",
     "static/media/Kentaro Sakakibara.png": "/SBVA_landingPage/static/media/Kentaro Sakakibara.8f846ca1ad4e1df0e96e.png",
     "static/media/Tomoko Numata.png": "/SBVA_landingPage/static/media/Tomoko Numata.64b6a0cd0e907713d719.png",
+    "static/media/Miki Fukazawa.png": "/SBVA_landingPage/static/media/Miki Fukazawa.0211e5cceff67196e9a8.png",
     "static/media/JP Lee.png": "/SBVA_landingPage/static/media/JP Lee.31a2bf7e85bd0ea8de33.png",
     "static/media/Takashi Kitao.png": "/SBVA_landingPage/static/media/Takashi Kitao.cb43ced1047893d9c989.png",
     "static/media/Youngki Kim.png": "/SBVA_landingPage/static/media/Youngki Kim.4faeb2c8c53d618df6c1.png",
     "static/media/Hideyuki Ebihara.png": "/SBVA_landingPage/static/media/Hideyuki Ebihara.d42de0786303f62066ce.png",
-    "static/media/Miki Fukazawa.png": "/SBVA_landingPage/static/media/Miki Fukazawa.7631eb603a35f8b49144.png",
     "static/media/slick.svg": "/SBVA_landingPage/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/SBVA_landingPage/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/SBVA_landingPage/static/media/slick.c94f7671dcc99dce43e2.ttf",
@@ -22,12 +22,12 @@
     "index.html": "/SBVA_landingPage/index.html",
     "static/media/menu-svgrepo-com.svg": "/SBVA_landingPage/static/media/menu-svgrepo-com.b81fe811a45963b15e3e.svg",
     "static/media/Frame 14293.svg": "/SBVA_landingPage/static/media/Frame 14293.e129aba7f156b1486d4b.svg",
-    "main.3bdc3d52.css.map": "/SBVA_landingPage/static/css/main.3bdc3d52.css.map",
-    "main.d11b1190.js.map": "/SBVA_landingPage/static/js/main.d11b1190.js.map",
+    "main.34d03f62.css.map": "/SBVA_landingPage/static/css/main.34d03f62.css.map",
+    "main.fb3950e6.js.map": "/SBVA_landingPage/static/js/main.fb3950e6.js.map",
     "453.d24df9f2.chunk.js.map": "/SBVA_landingPage/static/js/453.d24df9f2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bdc3d52.css",
-    "static/js/main.d11b1190.js"
+    "static/css/main.34d03f62.css",
+    "static/js/main.fb3950e6.js"
   ]
 }
