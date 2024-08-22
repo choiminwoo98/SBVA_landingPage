@@ -831,7 +831,7 @@ const App: React.FC = () => {
           </div>
           <div className="w-full flex space-x-1 px-5 lg:px-0 py-10 text-lg font-normal items-center">
             <a
-              className="text-white hover:text-[#00E300] fill-[#00E300] hover:fill-white group flex justify-center gap-1 items-center"
+              className="text-white hover:text-[#00E300] fill-[#00E300] hover:fill-white group flex justify-center gap-1 cursor-pointer items-center"
               onClick={() => {
                 window.open("https://sbvacorp.com/en", "_blank"); // Replace with your desired URL
               }}

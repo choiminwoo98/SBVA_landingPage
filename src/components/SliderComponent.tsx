@@ -46,7 +46,7 @@ const cardData = [
     title: "Enterprise",
     image: "image5.png",
     descriptionkr:
-      "가우디오랩은 뛰어난 오디오+ 경험을 제공하기 위한 기술 및+ 솔루션을 개발하는 AI/Spatial Audio 전문 기업입니다.",
+      "가우디오랩은 뛰어난 오디오+ 경험을 제공하기 위한 기술 및+ 솔루션을 개발하는 +AI/Spatial Audio 전문 기업입니다.",
     descriptionjp:
       "GAUDIO Labは、AI技術を活用し+優れたオーディオ体験を+提供するSpatial Audio専門の+技術会社です。",
     url: "https://www.gaudiolab.com/experience",
