@@ -6,19 +6,26 @@ interface CardProps {
   image: string;
   descriptionkr: string;
   descriptionjp: string;
+  url: string;
 }
 const Card: React.FC<CardProps> = ({
   title,
   image,
   descriptionkr,
   descriptionjp,
+  url,
 }) => {
   const { language } = useLanguage(); // 컨텍스트에서 현재 언어를 가져옵니다.
 
   // 언어에 따라 설명을 선택합니다.
   const description = language === "JP" ? descriptionjp : descriptionkr;
   return (
-    <div className="relative flex flex-col w-[300px] 3xl:w-[260px] h-[380px] bg-[#1F1F1F] border-2 border-transparent hover:cursor-pointer hover:border-[#444444] group">
+    <div
+      className="relative flex flex-col w-[300px] xl:w-[263px] h-[380px] bg-[#1F1F1F] border-2 border-transparent hover:cursor-pointer hover:border-[#444444] group"
+      onClick={() => {
+        window.open(url, "_blank"); // Replace with your desired URL
+      }}
+    >
       {/* 상단 이미지 영역 */}
       <div className="h-[140px] bg-[#171717] flex justify-center items-center">
         <img
@@ -29,19 +36,19 @@ const Card: React.FC<CardProps> = ({
       </div>
 
       {/* 하단 콘텐츠 영역 */}
-      <div className="flex flex-col p-4 flex-grow text-white space-y-3">
-        <span className="text-[13px] lg:text-[14px] font-medium text-[#979797]">
+      <div className="flex flex-col pl-5 py-4 flex-grow text-white space-y-3">
+        <span className="text-[13px] lg:text-[14px] font-medium text-[rgb(151,151,151)]">
           {title}
         </span>
         <p
           dangerouslySetInnerHTML={{
             __html: description.replaceAll("+", "<br />"),
           }}
-          className="font-medium text-3xl text-white "
+          className="font-normal  text-white"
         />
 
         {/* 버튼 */}
-        <button className="absolute bottom-4 left-4 p-2 rounded-full text-[#979797] group-hover:text-[#00E300] duration-300 flex items-center justify-center ">
+        <button className="absolute bottom-4 left-2 p-2 rounded-full text-[#979797] group-hover:text-[#00E300] duration-300 flex items-center justify-center ">
           <svg
             width="24"
             height="24"

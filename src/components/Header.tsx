@@ -86,7 +86,7 @@ const Header: React.FC = () => {
       className={`text-[18px] font-medium fixed top-0 w-screen left-0 right-0  hadow-md z-50 font-poppins`}
     >
       <div
-        className={`flex w-full h-20 md:h-24 max-w-[1520px] bg-black bg-opacity-70 px-5 lg:px-10 3xl:px-[80px] mx-auto items-center justify-between lg:whitespace-nowrap transition-transform duration-500 ease-in-out ${
+        className={`flex w-full h-20 lg:h-[100px] max-w-[1520px] bg-black bg-opacity-70 px-5 sm:px-10  mx-auto items-center justify-between lg:whitespace-nowrap transition-transform duration-500 ease-in-out ${
           scrollDirection === "down"
             ? "transform -translate-y-full"
             : "transform translate-y-0"
@@ -97,15 +97,15 @@ const Header: React.FC = () => {
           className="text-xl font-bold text-white cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <a className="flex 3xl:flex-col">
+          <a className="flex test:flex-col">
             <span className="block">2024 SBVA</span>
-            <span className="3xl:block hidden"> TOKYO FORUM</span>
-            <span className="block 3xl:hidden">&nbsp; TOKYO FORUM</span>
+            <span className="test:block hidden"> TOKYO FORUM</span>
+            <span className="block test:hidden">&nbsp; TOKYO FORUM</span>
           </a>
         </div>
 
         {/* Navigation Links (Hidden on mobile) */}
-        <nav className="hidden 3xl:flex xl:space-x-[60px] font-medium space-x-3 md:whitespace-nowrap">
+        <nav className="hidden test:flex xl:space-x-[60px] font-medium space-x-3 md:whitespace-nowrap">
           {[
             "OVERVIEW",
             "PROGRAM",
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Language Switch (Visible on larger screens) */}
-        <div className="hidden 3xl:flex items-center space-x-4 lg:whitespace-nowrap">
+        <div className="hidden test:flex items-center space-x-4 lg:whitespace-nowrap">
           <button
             className={`text-[18px] ${
               language === "JP"
@@ -158,7 +158,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="3xl:hidden flex items-center">
+        <div className="test:hidden flex items-center">
           <button
             className="fill-[#00E300] focus:outline-none"
             onClick={toggleMenu}
@@ -179,7 +179,7 @@ const Header: React.FC = () => {
 
       {/* Full-Screen Menu */}
       <nav
-        className={`3xl:hidden h-full fixed top-0 left-0 w-full  bg-black transform ${
+        className={`test:hidden h-full fixed top-0 left-0 w-full  bg-black transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out z-40`}
       >
@@ -243,7 +243,10 @@ const Header: React.FC = () => {
                   ? "text-white"
                   : "text-gray-400 hover:text-[#00E300]"
               } `}
-              onClick={() => setLanguage("JP")}
+              onClick={() => {
+                toggleMenu();
+                setLanguage("JP");
+              }}
             >
               JP
             </button>
@@ -254,7 +257,10 @@ const Header: React.FC = () => {
                   ? "text-white"
                   : "text-gray-400 hover:text-[#00E300]"
               } `}
-              onClick={() => setLanguage("KR")}
+              onClick={() => {
+                toggleMenu();
+                setLanguage("KR");
+              }}
             >
               KR
             </button>
@@ -264,7 +270,7 @@ const Header: React.FC = () => {
 
       {/* Overlay Background */}
       <div
-        className={`fixed  3xl:hidden inset-0 bg-black bg-opacity-50 z-30 transition-opacity ${
+        className={`fixed  test:hidden inset-0 bg-black bg-opacity-50 z-30 transition-opacity ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleMenu}

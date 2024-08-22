@@ -14,7 +14,7 @@ const App: React.FC = () => {
       {/* Header */}
       <Header />
       <div className="block h-20 md:h-24"></div>
-      <div className="relative flex flex-col h-[580px] lg:h-[768px] 3xl:h-[800px] items-center justify-center overflow-hidden font-poppins">
+      <div className="relative flex flex-col h-[580px] lg:h-[768px] xl:h-[800px] items-center justify-center overflow-hidden font-poppins">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
@@ -28,7 +28,7 @@ const App: React.FC = () => {
         </video>{" "}
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         {/* 중앙에 배치된 텍스트 */}
-        <div className="relative z-10 text-center flex flex-col text-[66px] lg:text-[70px] 3xl:text-[120px] font-semibold  items-center justify-center text-white leading-80 lg:leading-[90px] 3xl:leading-[130px]">
+        <div className="relative z-10 text-center flex flex-col text-[66px] lg:text-[70px] test:text-[120px] font-bold items-center justify-center text-white leading-80 lg:leading-[90px] test:leading-[170px]">
           <span>2024</span>
           <h1 className="w-3/4 lg:w-full mb-4 text-[#00E300] leading-80">
             SBVA TOKYO FORUM
@@ -47,14 +47,14 @@ const App: React.FC = () => {
         <div
           id="OVERVIEW"
           //4 페이지
-          className="h-fit w-full lg:w-[1100px] 3xl:w-[1100px] flex flex-col items-center justify-start py-[120px] lg:pb-[150px] 3xl:pb-[250px]  3xl:py-[150px]"
+          className="h-fit w-full lg:w-[1100px] xl:w-[1100px] flex flex-col items-center justify-start py-[120px] lg:pb-[150px] xl:pb-[250px]  xl:py-[150px]"
         >
           <div className="px-5 lg:px-0 w-full">
-            <h2 className="text-3xl relative lg:text-6xl text-white font-semibold text-left w-full pb-[50px] lg:pb-[80px] font-poppins">
+            <h2 className="text-3xl relative lg:text-6xl text-white font-bold text-left w-full pb-[50px] lg:pb-[80px] font-poppins">
               OVERVIEW
             </h2>
             <div className="text-white font-normal text-lg lg:text-[22px]  flex flex-col   space-y-7">
-              <div className="leading-[33px]">
+              <div className="leading-[26px] lg:leading-[33px]">
                 {" "}
                 {language === "KR"
                   ? " 2024 Tokyo Forum은 일본 스타트업 생태계에 대한 심도 있는 이해를 돕고,"
@@ -77,7 +77,7 @@ const App: React.FC = () => {
                   )}
                 </span>
               </div>
-              <div className="leading-[33px]">
+              <div className="leading-[26px] lg:leading-[33px]">
                 {language === "KR" ? (
                   <>
                     한일 스타트업 및 벤처투자 산업 전반을 아우르는 실질적인
@@ -144,7 +144,15 @@ const App: React.FC = () => {
                     {language === "KR" ? "장소" : "開催場所"}
                   </td>
                   <td className="relative pl-[30px]">
-                    <div className="flex w-fit items-center space-x-2  group cursor-pointer">
+                    <div
+                      className="flex w-fit items-center space-x-2  group cursor-pointer"
+                      onClick={() => {
+                        window.open(
+                          "https://catstreet.trunk-hotel.com/access/",
+                          "_blank"
+                        ); // Replace with your desired URL
+                      }}
+                    >
                       <span>
                         {" "}
                         {language === "KR"
@@ -235,7 +243,7 @@ const App: React.FC = () => {
             </table>
             <div className="flex flex-col space-y-3 text-lg lg:hidden ">
               <div className="flex flex-col lg:flex-row  ">
-                <span className="font-semibold w-full text-sm text-[#777777]">
+                <span className="font-medium w-full text-sm text-[#777777]">
                   {language === "KR" ? "행사명" : "イベント名"}
                 </span>
                 <span className="w-full text-lg font-normal">
@@ -243,7 +251,7 @@ const App: React.FC = () => {
                 </span>
               </div>
               <div className="flex flex-col lg:flex-row ">
-                <span className="font-semibold w-full text-sm text-[#777777]">
+                <span className="font-medium w-full text-sm text-[#777777]">
                   {language === "KR" ? "일시" : "開催日時"}
                 </span>
                 <span className="w-full text-lg font-normal">
@@ -253,7 +261,7 @@ const App: React.FC = () => {
                 </span>
               </div>
               <div className="flex flex-col lg:flex-row ">
-                <span className="font-semibold w-full text-sm text-[#777777]">
+                <span className="font-medium w-full text-sm text-[#777777]">
                   {language === "KR" ? "장소" : "開催場所"}
                 </span>
                 <div className="flex w-fit justify-center text-center items-center cursor-pointer group">
@@ -274,7 +282,7 @@ const App: React.FC = () => {
                 </div>
               </div>
               <div className="flex flex-col lg:flex-row ">
-                <span className="font-semibold w-full text-sm text-[#777777]">
+                <span className="font-medium w-full text-sm text-[#777777]">
                   {language === "KR" ? "목적" : "目的"}
                 </span>
                 <span className="w-full text-lg font-normal">
@@ -284,7 +292,7 @@ const App: React.FC = () => {
                 </span>
               </div>
               <div className="flex flex-col lg:flex-row ">
-                <span className="font-semibold w-full text-sm text-[#777777]">
+                <span className="font-medium w-full text-sm text-[#777777]">
                   {language === "KR" ? "주최" : "主催"}
                 </span>
                 <span className="w-full pt-2">
@@ -326,8 +334,10 @@ const App: React.FC = () => {
           </div>
           <div className="w-full px-4 flex justify-center pt-[70px] lg:pt-20 ">
             <a
-              href="#"
-              className="flex justify-center w-fit px-[16px] py-10 lg:py-[50px] lg:px-[80px] text-white flex-col justify-center items-center font-semibold text-2xl lg:text-[34px] 3xl:text-[38px] border-2  gap-2 border-[#00E300] hover:bg-[#00E300] hover:text-black"
+              className="flex w-full lg:w-fit justify-center px-[16px] py-5 lg:py-[50px] lg:px-[80px] text-white flex-col justify-center items-center font-semibold text-2xl lg:text-[34px] xl:text-[38px] border-2  border-[#00E300] hover:bg-[#00E300] cursor-pointer hover:text-black"
+              onClick={() => {
+                window.open("https://forms.office.com/r/pW3HtB9qn1", "_blank"); // Replace with your desired URL
+              }}
             >
               <span className="lg:hidden">2024 SBVA Tokyo Forum</span>
               <span className="hidden lg:block">
@@ -347,26 +357,26 @@ const App: React.FC = () => {
           id="PROGRAM"
           className={`w-full px-5 lg:px-0 lg:w-[1100px] flex flex-col items-center justify-start lg:mb-32 ${
             language === "KR"
-              ? "h-[2300px] lg:h-[2150px]"
-              : "h-[2460px] lg:h-[2160px] "
+              ? "h-[2550px] lg:h-[2430px]"
+              : "h-[2650px] lg:h-[2510px] "
           }`}
         >
-          <h2 className="text-3xl lg:px-0 relative lg:text-6xl text-white font-semibold mb-8 text-left w-[360px] lg:w-full pb-12 font-poppins">
+          <h2 className="pl-5 lg:pl-0 text-3xl relative lg:text-6xl text-white font-bold text-left w-[360px] lg:w-full lg:pb-[80px] pb-[50px] font-poppins">
             PROGRAM
           </h2>
 
           <div
             className={`border-l-[1px] relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
               language === "KR"
-                ? "right-0 lg:right-8 h-[1980px] lg:h-[1900px]"
-                : "lg:right-3 h-[2130px] lg:h-[1970px]"
+                ? "right-0 lg:right-8 h-[2250px] lg:h-[2180px]"
+                : "lg:right-3 h-[2380px] lg:h-[2270px]"
             }`}
           >
             <div className="relative ">
               <div className="absolute -left-1.5 bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 ">
+              <div className="pl-[22px] ">
                 <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 lg:right-44 font-normal lg:text-xl">
+                  <span className="relative bottom-2 lg:right-[170px] font-normal lg:text-xl">
                     14:00~14:15
                   </span>
                   <div className="flex flex-col relative lg:bottom-14">
@@ -454,7 +464,7 @@ const App: React.FC = () => {
                   </span>
                   <div className="flex flex-col relative lg:bottom-[58px]">
                     <span className="text-[#00E300]  font-normal lg:text-xl">
-                      Keynote
+                      Keynote I
                     </span>
                     <span className="text-2xl lg:text-[30px] font-semibold pt-2">
                       {language === "KR" ? (
@@ -464,12 +474,12 @@ const App: React.FC = () => {
                           방향
                         </>
                       ) : (
-                        <>
+                        <span className="lg:leading-[33px] ">
                           ソフトバンクが期待する
                           <br /> スタートアップとの理想
                           <br className="lg:hidden" />
                           的な協業
-                        </>
+                        </span>
                       )}
                     </span>
                   </div>
@@ -505,13 +515,13 @@ const App: React.FC = () => {
                           <br className="lg:hidden" /> 업계 동향, 투자/Exit 전략
                         </>
                       ) : (
-                        <>
+                        <span className="lg:leading-[36px]">
                           日本現地のVCが語る業界 <br className="lg:hidden" />
                           の最新動向や <br className="hidden lg:block" />{" "}
                           投資および
                           <br className="lg:hidden" />
                           Exit戦略
-                        </>
+                        </span>
                       )}
                     </span>
                   </div>
@@ -582,10 +592,36 @@ const App: React.FC = () => {
               <div className="pl-7 relative top-[310px]">
                 <div className="flex flex-col space-y-5">
                   <span className="relative bottom-2 lg:right-44 font-normal lg:text-xl">
-                    16:10~17:30
+                    16:10~16:30
                   </span>
                   <div className="flex flex-col relative lg:bottom-[58px] ">
-                    <span className="text-[#00E300]  font-normal lg:text-xl">
+                    <span className="text-[#00E300] font-normal lg:text-xl">
+                      Keynote II
+                    </span>
+                    <span className="text-2xl lg:text-[30px] font-semibold pt-2">
+                      TBD
+                    </span>
+                  </div>
+                  <div className="relative lg:bottom-12 lg:text-xl">
+                    <div>
+                      <div className="flex gap-3">
+                        <span className="whitespace-nowrap">Taizo Son</span>{" "}
+                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
+                          Chairman · Mistletoe
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>{" "}
+              <div className="relative -left-1.5 top-[390px] bg-[#00E300] h-3 w-3 rounded-full "></div>
+              <div className="pl-7 relative top-[380px]">
+                <div className="flex flex-col space-y-5">
+                  <span className="relative bottom-2 lg:right-44 font-normal lg:text-xl">
+                    16:30~17:50
+                  </span>
+                  <div className="flex flex-col relative lg:bottom-[58px] ">
+                    <span className="text-[#00E300] font-normal lg:text-xl">
                       SBVA Portfolio Pitching
                     </span>
                     <span className="text-2xl lg:text-[30px] font-semibold pt-2">
@@ -602,6 +638,7 @@ const App: React.FC = () => {
                   <div className="relative lg:bottom-12 lg:text-xl">
                     <div>
                       <div className="flex gap-3">
+                        {" "}
                         <span className="whitespace-nowrap">
                           {language === "KR"
                             ? "국내 포트폴리오 8개사"
@@ -612,11 +649,11 @@ const App: React.FC = () => {
                   </div>
                 </div>
               </div>{" "}
-              <div className="relative -left-1.5 top-[400px] bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 relative top-[390px]">
+              <div className="relative -left-1.5 top-[460px] bg-[#00E300] h-3 w-3 rounded-full "></div>
+              <div className="pl-7 relative top-[450px]">
                 <div className="flex flex-col space-y-5">
                   <span className="relative bottom-2 lg:right-44 lg:text-xl">
-                    17:30~17:40
+                    17:50~18:00
                   </span>
                   <div className="flex flex-col relative lg:bottom-[58px]">
                     <span className="text-[#00E300]  font-normal lg:text-xl">
@@ -645,11 +682,11 @@ const App: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative -left-1.5 top-[450px] bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 relative top-[440px]">
+              <div className="relative -left-1.5 top-[530px] bg-[#00E300] h-3 w-3 rounded-full "></div>
+              <div className="pl-7 relative top-[520px]">
                 <div className="flex flex-col space-y-5">
                   <span className="relative bottom-2 lg:right-44 font-normal lg:text-xl">
-                    17:40~20:00
+                    18:00~20:00
                   </span>
                   <div className="flex flex-col relative lg:bottom-[60px]">
                     <span className="text-2xl w-full  lg:text-[30px] font-semibold">
@@ -666,8 +703,8 @@ const App: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative -left-1.5 top-[490px] bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 relative top-[480px]">
+              <div className="relative -left-1.5 top-[600px] bg-[#00E300] h-3 w-3 rounded-full "></div>
+              <div className="pl-7 relative top-[590px]">
                 <div className="flex flex-col space-y-5">
                   <span className="relative bottom-2 lg:right-44 font-normal lg:text-xl">
                     20:00~22:00
@@ -692,7 +729,7 @@ const App: React.FC = () => {
           id="SPEAKERS & PANELS"
           className="h-full w-full lg:w-[1100px] flex flex-col items-center overflow-hidden lg:pt-[30px]  justify-start "
         >
-          <h2 className="text-3xl relative px-5 lg:px-0 lg:text-6xl text-white font-semibold mb-8 text-left w-full pb-12 font-poppins">
+          <h2 className="text-3xl relative px-5 lg:px-0  lg:text-6xl text-white font-bold mb-8 text-left w-full pb-3 font-poppins">
             SPEAKERS & PANELS
           </h2>
           <SpeakersAndPanels />
@@ -702,9 +739,9 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="SBVA PORTFOLIO PITCHING"
-          className="h-fit w-full lg:w-[1100px] gap-5 flex flex-col items-start justify-start pt-[120px] lg:pt-[210px] font-poppins"
+          className="h-fit w-full lg:w-[1100px] gap-5 flex flex-col items-center justify-start pt-[120px] lg:pt-[210px] font-poppins"
         >
-          <h2 className="text-3xl font-semibold lg:text-6xl pb-[50px] pl-5 lg:pl-0 lg:pb-[66px] text-white">
+          <h2 className="text-3xl w-full font-bold lg:text-6xl pb-[50px] pl-5 lg:pl-0 lg:pb-[66px] text-white">
             SBVA PORTFOLIO PITCHING
           </h2>
           <SliderComponent />
@@ -714,9 +751,9 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="ABOUT SBVA"
-          className="h-[1150px] lg:h-[1500px] w-full lg:w-[1100px] flex flex-col items-center justify-start pt-[120px] lg:pt-[250px] pb-[120px]"
+          className="h-fit lg:h-[1600px] w-full lg:w-[1100px] flex flex-col items-center justify-start pt-[120px] lg:pt-[250px] pb-[120px]"
         >
-          <h2 className="text-3xl pl-5 lg:pl-0 lg:pb-[60px] relative lg:text-6xl text-white font-semibold mb-8 text-left w-full font-poppins">
+          <h2 className="text-3xl pl-5 lg:pl-0 lg:pb-[60px] relative lg:text-6xl text-white font-bold mb-8 text-left w-full font-poppins">
             ABOUT SBVA
           </h2>
           <div className="w-screen flex justify-center">
@@ -732,11 +769,11 @@ const App: React.FC = () => {
               ></iframe>
             </div>
           </div>
-          <div className="w-full flex items-center px-5 lg:px-0 py-12 justify-start">
+          <div className="w-full flex items-center px-5 lg:px-0  py-12 justify-start">
             <div className="w-20 border-t-4 border-[#00E300]"></div>
           </div>
-          <div className="w-full text-white px-5 lg:px-0 text-lg lg:text-[22px] font-normal flex flex-col space-y-10">
-            <span>
+          <div className="w-full text-white px-5 lg:px-0  text-lg lg:text-[22px] font-normal flex flex-col space-y-10">
+            <span className="leading-[26px] lg:leading-[33px]">
               {language === "KR" ? (
                 <>
                   SBVA는 2000년 소프트뱅크그룹(SoftBank Group) 산하의
@@ -753,7 +790,7 @@ const App: React.FC = () => {
                 </>
               )}
             </span>{" "}
-            <span>
+            <span className="leading-[26px] lg:leading-[33px]">
               {" "}
               {language === "KR" ? (
                 <>
@@ -775,7 +812,7 @@ const App: React.FC = () => {
                 </>
               )}
             </span>{" "}
-            <span>
+            <span className="leading-[26px] lg:leading-[33px]">
               {language === "KR" ? (
                 <>
                   현재 서울을 포함해 북경, 싱가포르, 샌프란시스코, 이스라엘 등에
@@ -794,8 +831,10 @@ const App: React.FC = () => {
           </div>
           <div className="w-full flex space-x-1 px-5 lg:px-0 py-10 text-lg font-normal items-center">
             <a
-              href="https://www.sbva.com"
               className="text-white hover:text-[#00E300] fill-[#00E300] hover:fill-white group flex justify-center gap-1 items-center"
+              onClick={() => {
+                window.open("https://sbvacorp.com/en", "_blank"); // Replace with your desired URL
+              }}
             >
               {language === "KR"
                 ? "SBVA 홈페이지 가기"
@@ -811,7 +850,7 @@ const App: React.FC = () => {
             </a>
           </div>{" "}
           <a
-            className=" fixed bottom-0 right-0 w-20 h-20 bg-[#181818] text-white fill-white hover:fill-[#00E300] shadow-lg flex items-center justify-center space-x-2 cursor-pointer hidden 3xl:flex "
+            className=" fixed bottom-0 right-0 w-20 h-20 bg-[#181818] text-white fill-white hover:fill-[#00E300] shadow-lg flex items-center justify-center space-x-2 cursor-pointer hidden xl:flex "
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
@@ -829,9 +868,9 @@ const App: React.FC = () => {
           </a>
         </div>
       </FadeInSection>
-      <footer className="w-full h-[140px] border-t-[1px] 3xl:py-[55px] border-white border-opacity-20 text-center flex flex-col items-center space-y-5 justify-center text-white text-sm">
+      <footer className="w-full h-[140px] border-t-[1px] xl:py-[55px] border-white border-opacity-20 text-center flex flex-col items-center space-y-5 justify-center text-white text-sm">
         <a
-          className=" w-10 h-10 rounded-full bg-[#181818] text-white fill-white hover:fill-[#00E300] shadow-lg flex items-center justify-center space-x-2 cursor-pointer flex 3xl:hidden"
+          className=" w-10 h-10 rounded-full bg-[#181818] text-white fill-white hover:fill-[#00E300] shadow-lg flex items-center justify-center space-x-2 cursor-pointer flex xl:hidden"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -847,7 +886,7 @@ const App: React.FC = () => {
             <path d="m3.293 11.293 1.414 1.414L11 6.414V20h2V6.414l6.293 6.293 1.414-1.414L12 2.586l-8.707 8.707z" />
           </svg>
         </a>
-        <p className="3xl:pb-4 font-poppins font-normal">
+        <p className="xl:pb-4 font-poppins text-lg font-normal">
           Copyright © 2024 by SBVA. All Rights Reserved.
         </p>
       </footer>
