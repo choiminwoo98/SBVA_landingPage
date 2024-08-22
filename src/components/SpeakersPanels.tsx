@@ -80,7 +80,7 @@ const SpeakersAndPanels: React.FC = () => {
     <div className="w-full">
       <div className="flex flex-col space-y-14">
         <div className="flex flex-col space-y-7">
-          <div className="flex items-center pl-5 space-x-4">
+          <div className="flex items-center pl-5 lg:pl-0 space-x-4">
             <span className="text-[#00E300] text-lg lg:text-[30px]  font-medium">
               Fireside Chat
             </span>
@@ -129,7 +129,7 @@ const SpeakersAndPanels: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-7">
-          <div className="flex items-c pl-5 space-x-4">
+          <div className="flex items-c pl-5 lg:pl-0 lg:pl-0 space-x-4">
             <span className="text-[#00E300] text-lg lg:text-[30px] lg:pt-8 font-medium">
               Keynote
             </span>
@@ -148,7 +148,7 @@ const SpeakersAndPanels: React.FC = () => {
           </div>
         </div>{" "}
         <div className="flex flex-col space-y-7">
-          <div className="flex items-c pl-5 space-x-4">
+          <div className="flex items-c pl-5 lg:pl-0 space-x-4">
             <span className="text-[#00E300] text-lg lg:text-[30px] lg:pt-8 font-medium">
               Panel Discussion{" "}
             </span>

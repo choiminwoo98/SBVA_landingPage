@@ -37,7 +37,7 @@ const Card: React.FC<CardProps> = ({
           dangerouslySetInnerHTML={{
             __html: description.replaceAll("+", "<br />"),
           }}
-          className="font-medium text-white lg:text-lg"
+          className="font-medium text-white "
         />
 
         {/* 버튼 */}

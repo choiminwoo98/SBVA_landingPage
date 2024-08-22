@@ -14,7 +14,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [language, setLanguage] = useState<Language>("KR"); // 기본 언어를 KR로 설정
+  const [language, setLanguage] = useState<Language>("JP"); // 기본 언어를 KR로 설정
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
