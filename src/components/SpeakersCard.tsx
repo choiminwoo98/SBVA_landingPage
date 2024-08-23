@@ -22,7 +22,7 @@ const SpeakerCard: React.FC<SpeakerProps> = ({
       <img
         src={require(`../assets/${image}.png`)}
         alt={name}
-        className="w-[150px] h-[150px] cus:w-[260px] cus:h-[260px]  rounded-full mb-4 object-cover border-2 border-transparent hover:cursor-pointer hover:border-[#00E300]"
+        className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] cus:w-[260px] cus:h-[260px]  rounded-full mb-4 object-cover border-2 border-transparent hover:cursor-pointer hover:border-[#00E300]"
         onClick={() => {
           window.open(url, "_blank"); // Replace with your desired URL
         }}

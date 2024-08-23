@@ -407,7 +407,7 @@ const App: React.FC = () => {
           </div>
           <div className="w-full px-4 flex justify-center pt-[70px] cus:pt-20 ">
             <a
-              className="flex w-full cus:w-fit justify-center px-[16px] py-5 cus:py-[50px] cus:px-[80px] text-white flex-col justify-center items-center font-semibold text-2xl cus:text-[34px] xl:text-[38px] border-2  border-[#00E300] hover:bg-[#00E300] cursor-pointer hover:text-black"
+              className="flex w-full max-w-[938px] cus:w-fit justify-center px-[16px] py-5 cus:py-[50px] cus:px-[80px] text-white flex-col justify-center items-center font-semibold text-2xl cus:text-[34px] xl:text-[38px] border-2  border-[#00E300] hover:bg-[#00E300] cursor-pointer hover:text-black"
               onClick={() => {
                 window.open("https://forms.office.com/r/pW3HtB9qn1", "_blank"); // Replace with your desired URL
               }}
@@ -436,21 +436,21 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="PROGRAM"
-          className={`w-full px-5 cus:px-0 cus:w-[1100px] flex flex-col items-center justify-start cus:mb-32 ${
+          className={`w-full px-5 cus:px-0 md:w-[708px] cus:w-[1100px] flex flex-col items-center justify-start cus:mb-32 ${
             language === "KR"
               ? "h-[2550px] cus:h-[2430px]"
               : "h-[2650px] cus:h-[2510px] "
           }`}
         >
-          <h2 className="pl-0 cus:pl-5 cus:right-6 text-3xl relative cus:text-6xl text-white font-bold text-left w-[360px] cus:w-full cus:pb-[80px] pb-[50px] font-poppins">
+          <h2 className="pl-0 cus:pl-5 md:right-36 cus:right-6 text-3xl relative cus:text-6xl text-white font-bold text-left w-[360px] cus:w-full cus:pb-[80px] pb-[50px] font-poppins">
             PROGRAM
           </h2>
 
           <div
-            className={`border-l-[1px] relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
+            className={`border-l-[1px]  relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
               language === "KR"
                 ? "right-0 cus:right-8 h-[2300px] cus:h-[2190px]"
-                : "cus:right-3 h-[2430px] cus:h-[2270px]"
+                : "cus:right-3 h-[2430px] md:h-[2220px] cus:h-[2270px]"
             }`}
           >
             <div className="relative ">
@@ -507,7 +507,7 @@ const App: React.FC = () => {
                         </>
                       ) : (
                         <span className="font-meiryo">
-                          日本におけるSBVAの投資 <br className="cus:hidden" />
+                          日本におけるSBVAの投資 <br className="md:hidden" />
                           成功事例
                         </span>
                       )}
@@ -564,7 +564,7 @@ const App: React.FC = () => {
                         <span className="cus:leading-[35px] font-meiryo ">
                           ソフトバンクのスタートア <br />
                           ップ投資・事業提携の過去と未{" "}
-                          <br className="cus:hidden" />
+                          <br className="md:hidden" />
                           来的な協業
                         </span>
                       )}
@@ -581,7 +581,7 @@ const App: React.FC = () => {
                           )}
                         </span>
                         <span className="text-[#777777] text-sm relative top0 cus:top-1 cus:text-base">
-                          VP/Head of Alliance &<br className="cus:hidden" />{" "}
+                          VP/Head of Alliance &<br className="md:hidden" />{" "}
                           Investment Strategy Div
                           <br className="cus:hidden" /> · SoftBank
                         </span>
@@ -597,19 +597,18 @@ const App: React.FC = () => {
                     15:10~16:00
                   </span>
                   <div className="flex flex-col relative cus:bottom-[58px]">
-                    <span className="text-[#00E300]  font-normal cus:text-xl">
+                    <span className="text-[#00E300] font-normal cus:text-xl">
                       Panel Discussion
                     </span>
                     <span className="text-2xl cus:text-[30px] font-semibold pt-2">
                       {language === "KR" ? (
                         <>
                           일본 현지 VC를 통해 듣는
-                          <br className="cus:hidden" /> 업계 동향, 투자/Exit
-                          전략
+                          <br className="md:hidden" /> 업계 동향, 투자/Exit 전략
                         </>
                       ) : (
                         <span className="cus:leading-[36px] font-meiryo">
-                          日本現地のVCが語る業界 <br className="cus:hidden" />
+                          日本現地のVCが語る業界 <br className="md:hidden" />
                           の最新動向や <br className="hidden cus:block" />{" "}
                           投資および
                           <br className="cus:hidden" />
@@ -638,7 +637,7 @@ const App: React.FC = () => {
                           )}
                         </span>
                         <span className="text-[#777777] text-sm relative top-0 cus:top-1 cus:text-base">
-                          CEO · SAMURAI <br className="cus:hidden" /> INCUBATE
+                          CEO · SAMURAI <br className="md:hidden" /> INCUBATE
                         </span>
                       </div>
                       <div className="flex gap-3">
@@ -754,7 +753,7 @@ const App: React.FC = () => {
                       ) : (
                         <span className="font-meiryo">
                           SBVAが選定したポートフォリ
-                          <br className="cus:hidden" />オ 企業 ８社のピッチング{" "}
+                          <br className="md:hidden" />オ 企業 ８社のピッチング{" "}
                         </span>
                       )}
                     </span>
@@ -792,7 +791,7 @@ const App: React.FC = () => {
                         <>SBVA의 일본 투자 포부</>
                       ) : (
                         <span className="font-meiryo">
-                          SBVA <br className="cus:hidden" />
+                          SBVA <br className="md:hidden" />
                           の抱負とご協力のお願い
                         </span>
                       )}
@@ -823,7 +822,7 @@ const App: React.FC = () => {
                       ) : (
                         <span className="font-meiryo">
                           ディナー＆
-                          <br className="cus:hidden" />
+                          <br className="md:hidden" />
                           ネットワーキング
                         </span>
                       )}
