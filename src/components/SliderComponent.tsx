@@ -46,7 +46,7 @@ const cardData = [
     title: "Enterprise",
     image: "image5.png",
     descriptionkr:
-      "가우디오랩은 뛰어난 오디오+^ 경험을 제공하기 위한 기술 및+^ 솔루션을 개발하는 +^AI/Spatial Audio 전문 기업입니다.",
+      "가우디오랩은 뛰어난 오디오+^ 경험을 제공하기 위한 기술 및+^ 솔루션을 개발하는 ^AI/Spatial Audio 전문 기업입니다.",
     descriptionjp:
       "GAUDIO Labは、AI技術を活用し+^優れたオーディオ体験を+^提供するSpatial Audio専門の+^技術会社です。",
     url: "https://www.gaudiolab.com/experience",
@@ -57,7 +57,7 @@ const cardData = [
     descriptionkr:
       "매스프레소는 개인 맞춤형+^ 학습 플랫폼 QANDA를+^ 운영합니다.",
     descriptionjp:
-      "MATHPRESSOは、AI技術を+^活用したオンライン学習^+プラットフォームQUANDA^+を運営しています。",
+      "MATHPRESSOは、AI技術を+^活用したオンライン学習^+プラットフォームQANDA^+を運営しています。",
     url: "https://qanda.ai/ja",
   },
 
@@ -100,281 +100,158 @@ const SliderComponent: React.FC = () => {
   const sliderSettings = {
     className: "slider-left",
     arrows: false,
-    centerMode: true, // Enable center mode
+    centerMode: false, // Enable center mode
     slidesToScroll: 1,
     infinite: false,
-    slidesToShow: 1.9,
+    slidesToShow: 1.5,
     speed: 500,
-    centerPadding: "200px", // Adjust padding for left side visibility
     initialSlide: 0, // Set the initial slide to the first one
-
     responsive: [
       {
-        breakpoint: 1120, // When the screen width is 1024px or below
+        breakpoint: 1480, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.9, // Show 2.5 slides at a time
-          centerPadding: "200px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 3.4,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 1100, // When the screen width is 1024px or below
+        breakpoint: 1160, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.9, // Show 2.5 slides at a time
-          centerPadding: "200px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 3.4,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 1080, // When the screen width is 1024px or below
+        breakpoint: 1120, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.9, // Show 2.5 slides at a time
-          centerPadding: "200px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 3.3,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 1060, // When the screen width is 1024px or below
+        breakpoint: 1080, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.9, // Show 2.5 slides at a time
-          centerPadding: "200px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 3.2,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 1040, // When the screen width is 1024px or below
+        breakpoint: 1040, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.9, // Show 2.5 slides at a time
-          centerPadding: "200px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 3.1,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 1024, // When the screen width is 1024px or below
+        breakpoint: 1000, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.9, // Show 2.5 slides at a time
-          centerPadding: "200px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 3.1,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 1000, // When the screen width is 1024px or below
+        breakpoint: 960, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.9, // Show 2.5 slides at a time
-          centerPadding: "200px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 2.6,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 980, // When the screen width is 1024px or below
+        breakpoint: 920, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.9, // Show 2.5 slides at a time
-          centerPadding: "190px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 2.5,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 960, // When the screen width is 1024px or below
+        breakpoint: 880, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.9, // Show 2.5 slides at a time
-          centerPadding: "140px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 2.4,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 940, // When the screen width is 1024px or below
+        breakpoint: 840, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.7, // Show 2.5 slides at a time
-          centerPadding: "140px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 2.3,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 900, // When the screen width is 1024px or below
+        breakpoint: 800, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.6, // Show 2.5 slides at a time
-          centerPadding: "160px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 2.2,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 860, // When the screen width is 1024px or below
+        breakpoint: 760, // Mobile landscape and above
         settings: {
-          slidesToShow: 1.4, // Show 2.5 slides at a time
-          centerPadding: "140px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 2.1,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 800, // When the screen width is 768px or below
+        breakpoint: 720, // Mobile portrait and below
         settings: {
-          slidesToShow: 1.4, // Show 1.5 slides at a time
-          centerPadding: "140px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 1.9,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 760, // When the screen width is 768px or below
+        breakpoint: 680, // Mobile portrait and below
         settings: {
-          slidesToShow: 1.3, // Show 1.5 slides at a time
-          centerPadding: "140px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 1.8,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 680, // When the screen width is 768px or below
+        breakpoint: 640, // Mobile portrait and below
         settings: {
-          slidesToShow: 1.5, // Show 1.5 slides at a time
-          centerPadding: "80px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 1.7,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 660, // When the screen width is 768px or below
+        breakpoint: 600, // Mobile portrait and below
         settings: {
-          slidesToShow: 1.4, // Show 1.5 slides at a time
-          centerPadding: "80px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 1.6,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 640, // When the screen width is 768px or below
+        breakpoint: 560, // Mobile portrait and below
         settings: {
-          slidesToShow: 1.4, // Show 1.5 slides at a time
-          centerPadding: "80px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 1.5,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 620, // When the screen width is 768px or below
+        breakpoint: 520, // Mobile portrait and below
         settings: {
-          slidesToShow: 1.4, // Show 1.5 slides at a time
-          centerPadding: "80px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 1.4,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 600, // When the screen width is 768px or below
+        breakpoint: 480, // Mobile portrait and below
         settings: {
-          slidesToShow: 1.4, // Show 1.5 slides at a time
-          centerPadding: "75px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 1.3,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 580, // When the screen width is 768px or below
+        breakpoint: 440, // Mobile portrait and below
         settings: {
-          slidesToShow: 1.3, // Show 1.5 slides at a time
-          centerPadding: "75px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 1.2,
+          centerPadding: "10px",
         },
       },
       {
-        breakpoint: 560, // When the screen width is 768px or below
+        breakpoint: 400, // Mobile portrait and below
         settings: {
-          slidesToShow: 1.3, // Show 1.5 slides at a time
-          centerPadding: "70px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-        },
-      },
-      {
-        breakpoint: 540, // When the screen width is 480px or below
-        settings: {
-          slidesToShow: 1.2, // Show 1.3 slides at a time
-          centerPadding: "65px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-        },
-      },
-      {
-        breakpoint: 520, // When the screen width is 480px or below
-        settings: {
-          slidesToShow: 1.2, // Show 1.3 slides at a time
-          centerPadding: "60px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-        },
-      },
-      {
-        breakpoint: 480, // When the screen width is 480px or below
-        settings: {
-          slidesToShow: 1.2, // Show 1.3 slides at a time
-          centerPadding: "49px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-        },
-      },
-      {
-        breakpoint: 460, // When the screen width is 480px or below
-        settings: {
-          slidesToShow: 1.1, // Show 1.3 slides at a time
-          centerPadding: "45px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-
-          rightPadding: "10px", // Keep the right padding
-        },
-      },
-      {
-        breakpoint: 440, // When the screen width is 480px or below
-        settings: {
-          slidesToShow: 1.1, // Show 1.3 slides at a time
-          centerPadding: "40px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-
-          rightPadding: "10px", // Keep the right padding
-        },
-      },
-      {
-        breakpoint: 420, // When the screen width is 400px or below
-        settings: {
-          slidesToShow: 1.1, // Show 1.1 slides at a time
-          centerPadding: "35px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-        },
-      },
-      {
-        breakpoint: 410, // When the screen width is 400px or below
-        settings: {
-          slidesToShow: 1.1, // Show 1.1 slides at a time
-          centerPadding: "30px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-        },
-      },
-      {
-        breakpoint: 400, // When the screen width is 400px or below
-        settings: {
-          slidesToShow: 1.1, // Show 1.1 slides at a time
-          centerPadding: "27px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-        },
-      },
-      {
-        breakpoint: 390, // When the screen width is 400px or below
-        settings: {
-          slidesToShow: 1.08, // Show 1.1 slides at a time
-          centerPadding: "27px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-        },
-      },
-      {
-        breakpoint: 380, // When the screen width is 400px or below
-        settings: {
-          slidesToShow: 1.04, // Show 1.1 slides at a time
-          centerPadding: "26px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-        },
-      },
-      {
-        breakpoint: 370, // When the screen width is 400px or below
-        settings: {
-          slidesToShow: 1.03, // Show 1.1 slides at a time
-          centerPadding: "25px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
-        },
-      },
-      {
-        breakpoint: 365, // When the screen width is 400px or below
-        settings: {
-          slidesToShow: 1.02, // Show 1.1 slides at a time
-          centerPadding: "23px", // Adjust padding for left side visibility
-          initialSlide: 0, // Set the initial slide to the first one
+          slidesToShow: 1.1,
+          centerPadding: "10px",
         },
       },
     ],
