@@ -43,6 +43,7 @@ const SpeakersAndPanels: React.FC = () => {
       role: "Chairman · Mistletoe",
       panel: "Keynote II",
       jppanel: "スピーカー",
+      url: "https://jp.linkedin.com/in/taizo-son-b6086182",
     },
   ];
   const speakers3 = [

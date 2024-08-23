@@ -376,8 +376,8 @@ const App: React.FC = () => {
           <div
             className={`border-l-[1px] relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
               language === "KR"
-                ? "right-0 cus:right-8 h-[2270px] cus:h-[2190px]"
-                : "cus:right-3 h-[2400px] cus:h-[2270px]"
+                ? "right-0 cus:right-8 h-[2300px] cus:h-[2190px]"
+                : "cus:right-3 h-[2430px] cus:h-[2230px]"
             }`}
           >
             <div className="relative ">
@@ -477,16 +477,16 @@ const App: React.FC = () => {
                     <span className="text-2xl cus:text-[30px] font-semibold pt-2">
                       {language === "KR" ? (
                         <>
-                          소프트뱅크가 기대하는
-                          <br className="cus:hidden" /> 스타트업과의 미래 협력
-                          방향
+                          SoftBank의 스타트업 투자 <br className="cus:hidden" />
+                          및 파트너십에 대한
+                          <br className="cus:hidden" /> 과거와 미래
                         </>
                       ) : (
                         <span className="cus:leading-[33px] ">
-                          ソフトバンクが期待する
-                          <br /> スタートアップとの理想
+                          ソフトバンクのスタートア <br className="cus:hidden" />
+                          ップ投資・事業提携の過去と未{" "}
                           <br className="cus:hidden" />
-                          的な協業
+                          来的な協業
                         </span>
                       )}
                     </span>
@@ -609,7 +609,14 @@ const App: React.FC = () => {
                       Keynote II
                     </span>
                     <span className="text-2xl cus:text-[30px] font-semibold pt-2">
-                      TBD
+                      {language === "KR" ? (
+                        <> AI 시대의 글로벌 전개</>
+                      ) : (
+                        <>
+                          <br className="cus:hidden" />
+                          AI時代の国際展開
+                        </>
+                      )}
                     </span>
                   </div>
                   <div className="relative cus:bottom-12 cus:text-xl">
@@ -763,7 +770,7 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="ABOUT SBVA"
-          className="h-fit cus:h-[1600px] w-full cus:w-[1100px] flex flex-col items-center justify-start pt-[120px] cus:pt-[250px] pb-[120px]"
+          className="h-fit cus:h-[1680px] w-full cus:w-[1100px] flex flex-col items-center justify-start pt-[120px] cus:pt-[250px] pb-[120px]"
         >
           <h2 className="text-3xl pl-5 cus:pl-0 cus:pb-[60px] relative cus:text-6xl text-white font-bold mb-8 text-left w-full font-poppins">
             ABOUT SBVA
