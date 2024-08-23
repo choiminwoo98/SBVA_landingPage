@@ -407,7 +407,7 @@ const App: React.FC = () => {
           </div>
           <div className="w-full px-4 flex justify-center pt-[70px] cus:pt-20 ">
             <a
-              className="flex w-full max-w-[938px] cus:w-fit justify-center px-[16px] py-5 cus:py-[50px] cus:px-[80px] text-white flex-col justify-center items-center font-semibold text-2xl cus:text-[34px] xl:text-[38px] border-2  border-[#00E300] hover:bg-[#00E300] cursor-pointer hover:text-black"
+              className="flex w-full max-w-[1008px] cus:w-fit justify-center px-[16px] py-5 cus:py-[50px] cus:px-[80px] text-white flex-col justify-center items-center font-semibold text-2xl cus:text-[34px] xl:text-[38px] border-2  border-[#00E300] hover:bg-[#00E300] cursor-pointer hover:text-black"
               onClick={() => {
                 window.open("https://forms.office.com/r/pW3HtB9qn1", "_blank"); // Replace with your desired URL
               }}
@@ -442,15 +442,15 @@ const App: React.FC = () => {
               : "h-[2650px] cus:h-[2510px] "
           }`}
         >
-          <h2 className="pl-0 cus:pl-5 md:right-36 cus:right-6 text-3xl relative cus:text-6xl text-white font-bold text-left w-[360px] cus:w-full cus:pb-[80px] pb-[50px] font-poppins">
+          <h2 className="pl-0 cus:pl-5 md:right-48 cus:right-6 text-3xl relative cus:text-6xl text-white font-bold text-left w-[360px] cus:w-full cus:pb-[80px] pb-[50px] font-poppins">
             PROGRAM
           </h2>
 
           <div
-            className={`border-l-[1px]  relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
+            className={`border-l-[1px] relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
               language === "KR"
-                ? "right-0 cus:right-8 h-[2300px] cus:h-[2190px]"
-                : "cus:right-3 h-[2430px] md:h-[2220px] cus:h-[2270px]"
+                ? "right-0 cus:right-8 md:right-28 h-[2300px] md:h-[2150px] cus:h-[2190px]"
+                : "cus:right-3 h-[2430px] md:right-14 md:h-[2220px] cus:h-[2270px]"
             }`}
           >
             <div className="relative ">
@@ -468,7 +468,7 @@ const App: React.FC = () => {
                       {language === "KR" ? (
                         <>
                           SBVA와 SBVA의 투자 전략에
-                          <br className="cus:hidden" />
+                          <br className="md:hidden" />
                           대한 이해
                         </>
                       ) : (
@@ -502,12 +502,13 @@ const App: React.FC = () => {
                       {" "}
                       {language === "KR" ? (
                         <>
-                          SBVA의 성공적인 일본 투자{" "}
-                          <br className="cus:hidden" /> 사례 소개
+                          SBVA의 성공적인 일본 투자 <br className="md:hidden" />{" "}
+                          사례 소개
                         </>
                       ) : (
                         <span className="font-meiryo">
-                          日本におけるSBVAの投資 <br className="md:hidden" />
+                          日本におけるSBVAの投資
+                          <br className="md:hidden" />
                           成功事例
                         </span>
                       )}
@@ -556,7 +557,7 @@ const App: React.FC = () => {
                     <span className="text-2xl cus:text-[30px] font-semibold pt-2">
                       {language === "KR" ? (
                         <>
-                          SoftBank의 스타트업 투자 <br className="cus:hidden" />
+                          SoftBank의 스타트업 투자 <br className="md:hidden" />
                           및 파트너십에 대한
                           <br className="cus:hidden" /> 과거와 미래
                         </>
@@ -608,7 +609,8 @@ const App: React.FC = () => {
                         </>
                       ) : (
                         <span className="cus:leading-[36px] font-meiryo">
-                          日本現地のVCが語る業界 <br className="md:hidden" />
+                          日本現地のVCが語る業界
+                          <br className="md:hidden" />
                           の最新動向や <br className="hidden cus:block" />{" "}
                           投資および
                           <br className="cus:hidden" />
@@ -753,7 +755,8 @@ const App: React.FC = () => {
                       ) : (
                         <span className="font-meiryo">
                           SBVAが選定したポートフォリ
-                          <br className="md:hidden" />オ 企業 ８社のピッチング{" "}
+                          <br className="md:hidden" />
+                          オ企業８社のピッチング
                         </span>
                       )}
                     </span>
