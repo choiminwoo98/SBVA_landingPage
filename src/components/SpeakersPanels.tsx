@@ -98,13 +98,13 @@ const SpeakersAndPanels: React.FC = () => {
     <div className="w-full">
       <div className="flex flex-col space-y-14">
         <div className="flex flex-col space-y-7 pt-[30px] ">
-          <div className="flex items-center pl-5 lg:pl-0 lg:pb-[30px]  space-x-4 ">
-            <span className="text-[#00E300]  text-lg lg:text-[30px]  font-medium">
+          <div className="flex items-center pl-5 cus:pl-0 cus:pb-[30px]  space-x-4 ">
+            <span className="text-[#00E300]  text-lg cus:text-[30px]  font-medium">
               Fireside Chat
             </span>
-            <div className="flex-grow border-t relative left-5 lg:left-10 border-white opacity-20"></div>
+            <div className="flex-grow border-t relative left-5 cus:left-10 border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3  lg:gap-x-0 lg:flex justify-between text-white flex-wrap  gap-y-[30px]">
+          <div className="grid grid-cols-2 cus:grid-cols-3  cus:gap-x-0 cus:flex justify-between text-white flex-wrap  gap-y-[30px]">
             {speakers.map((speaker, index) => (
               <React.Fragment key={index}>
                 <SpeakerCard
@@ -114,7 +114,7 @@ const SpeakersAndPanels: React.FC = () => {
                   url={speaker.url}
                 />
                 {index < speakers.length - 1 && (
-                  <div className="hidden lg:flex items-center justify-center pb-16 px-4">
+                  <div className="hidden cus:flex items-center justify-center pb-16 px-4">
                     <svg
                       width="40"
                       height="40"
@@ -148,13 +148,13 @@ const SpeakersAndPanels: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-7 pt-[30px]   ">
-          <div className="flex items-c pl-5 lg:pl-0 lg:pb-[30px] space-x-4">
-            <span className="text-[#00E300] text-lg lg:text-[30px] lg:pt-8 font-medium">
+          <div className="flex items-c pl-5 cus:pl-0 cus:pb-[30px] space-x-4">
+            <span className="text-[#00E300] text-lg cus:text-[30px] cus:pt-8 font-medium">
               Keynote
             </span>
-            <div className="flex-grow border-t relative left-5 lg:left-10 top-3 lg:top-11 border-white opacity-20"></div>
+            <div className="flex-grow border-t relative left-5 cus:left-10 top-3 cus:top-11 border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3  lg:flex justify-between text-white flex-wrap gap-y-7">
+          <div className="grid grid-cols-2 cus:grid-cols-3  cus:flex justify-between text-white flex-wrap gap-y-7">
             {speakers2.map((speaker, index) => (
               <React.Fragment key={index}>
                 <SpeakerCard
@@ -165,7 +165,7 @@ const SpeakersAndPanels: React.FC = () => {
                   panel={speaker.panel}
                 />
                 {index < speakers2.length - 1 && (
-                  <div className="hidden lg:flex items-center justify-center pb-32 px-4">
+                  <div className="hidden cus:flex items-center justify-center pb-32 px-4">
                     <svg
                       width="40"
                       height="40"
@@ -196,7 +196,7 @@ const SpeakersAndPanels: React.FC = () => {
                 )}
               </React.Fragment>
             ))}
-            <div className="hidden invisible lg:flex items-center justify-center pb-16 px-4">
+            <div className="hidden invisible cus:flex items-center justify-center pb-16 px-4">
               <svg
                 width="40"
                 height="40"
@@ -228,13 +228,13 @@ const SpeakersAndPanels: React.FC = () => {
           </div>
         </div>{" "}
         <div className="flex flex-col space-y-7 pt-[30px] ">
-          <div className="flex items-c pl-5 lg:pl-0 lg:pb-[30px] space-x-4">
-            <span className="text-[#00E300] text-lg lg:text-[30px] lg:pt-8 font-medium">
+          <div className="flex items-c pl-5 cus:pl-0 cus:pb-[30px] space-x-4">
+            <span className="text-[#00E300] text-lg cus:text-[30px] cus:pt-8 font-medium">
               Panel Discussion{" "}
             </span>
-            <div className="flex-grow border-t relative left-5 lg:left-10 top-3 lg:top-11 border-white opacity-20"></div>
+            <div className="flex-grow border-t relative left-5 cus:left-10 top-3 cus:top-11 border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2  lg:gap-x-0 lg:grid-cols-3  lg:flex justify-between text-white flex-wrap lg:gap-y-[60px] gap-y-[30px]">
+          <div className="grid grid-cols-2  cus:gap-x-0 cus:grid-cols-3  cus:flex justify-between text-white flex-wrap cus:gap-y-[60px] gap-y-[30px]">
             {speakers3.map((speaker, index) => (
               <React.Fragment key={index}>
                 <SpeakerCard
@@ -245,7 +245,7 @@ const SpeakersAndPanels: React.FC = () => {
                   url={speaker.url}
                 />
                 {index != 2 && index < speakers3.length - 1 && (
-                  <div className="hidden lg:flex items-center justify-center pb-24 px-4">
+                  <div className="hidden cus:flex items-center justify-center pb-24 px-4">
                     <svg
                       width="40"
                       height="40"
@@ -276,7 +276,7 @@ const SpeakersAndPanels: React.FC = () => {
                 )}
               </React.Fragment>
             ))}
-            <div className="hidden invisible lg:flex items-center justify-center pb-16 px-4">
+            <div className="hidden invisible cus:flex items-center justify-center pb-16 px-4">
               <svg
                 width="40"
                 height="40"

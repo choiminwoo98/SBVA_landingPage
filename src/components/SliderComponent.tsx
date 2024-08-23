@@ -106,6 +106,7 @@ const SliderComponent: React.FC = () => {
     slidesToShow: 1.5,
     speed: 500,
     initialSlide: 0, // Set the initial slide to the first one
+
     responsive: [
       {
         breakpoint: 1480, // Mobile landscape and above
