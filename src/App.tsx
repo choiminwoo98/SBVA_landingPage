@@ -369,7 +369,7 @@ const App: React.FC = () => {
               : "h-[2650px] cus:h-[2510px] "
           }`}
         >
-          <h2 className="pl-5 cus:pl-0 text-3xl relative cus:text-6xl text-white font-bold text-left w-[360px] cus:w-full cus:pb-[80px] pb-[50px] font-poppins">
+          <h2 className="pl-5 cus:pl-0 cus:right-6 text-3xl relative cus:text-6xl text-white font-bold text-left w-[360px] cus:w-full cus:pb-[80px] pb-[50px] font-poppins">
             PROGRAM
           </h2>
 

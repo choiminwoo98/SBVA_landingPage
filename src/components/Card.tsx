@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({
 
       {/* 하단 콘텐츠 영역 */}
       <div className="flex flex-col pl-5 py-4 flex-grow text-white space-y-3">
-        <span className="text-[13px] xl:text-[14px] font-medium text-[rgb(151,151,151)]">
+        <span className="text-[13px] xl:text-[14px] font-normal text-[#979797]">
           {title}
         </span>
         <p
