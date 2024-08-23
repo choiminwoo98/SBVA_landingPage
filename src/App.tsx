@@ -467,13 +467,14 @@ const App: React.FC = () => {
                     <span className="text-2xl cus:text-[30px] font-semibold pt-2">
                       {language === "KR" ? (
                         <>
-                          SBVA와 SBVA의 투자 전략에
+                          SBVA와 SBVA의 투자 전략에 &nbsp;
                           <br className="md:hidden" />
                           대한 이해
                         </>
                       ) : (
                         <span className="font-meiryo">
-                          SBVAとSBVAの投資戦略
+                          <span className="font-sans">SBVA</span>と
+                          <span className="font-sans">SBVA</span>の投資戦略
                         </span>
                       )}
                     </span>
@@ -507,7 +508,8 @@ const App: React.FC = () => {
                         </>
                       ) : (
                         <span className="font-meiryo">
-                          日本におけるSBVAの投資
+                          日本における<span className="font-sans">SBVA</span>
+                          の投資
                           <br className="md:hidden" />
                           成功事例
                         </span>
@@ -754,7 +756,8 @@ const App: React.FC = () => {
                         <>SBVA 포트폴리오 8개사 피칭</>
                       ) : (
                         <span className="font-meiryo">
-                          SBVAが選定したポートフォリ
+                          <span className="font-sans">SBVA</span>
+                          が選定したポートフォリ
                           <br className="md:hidden" />
                           オ企業８社のピッチング
                         </span>
@@ -794,7 +797,8 @@ const App: React.FC = () => {
                         <>SBVA의 일본 투자 포부</>
                       ) : (
                         <span className="font-meiryo">
-                          SBVA <br className="md:hidden" />
+                          <span className="font-sans">SBVA</span>
+                          <br className="md:hidden" />
                           の抱負とご協力のお願い
                         </span>
                       )}
