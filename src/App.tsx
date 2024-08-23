@@ -895,7 +895,7 @@ const App: React.FC = () => {
             <path d="m3.293 11.293 1.414 1.414L11 6.414V20h2V6.414l6.293 6.293 1.414-1.414L12 2.586l-8.707 8.707z" />
           </svg>
         </a>
-        <p className="xl:pb-4 font-poppins text-lg font-normal">
+        <p className="xl:pb-4 font-poppins text-xs lg:text-lg font-normal">
           Copyright © 2024 by SBVA. All Rights Reserved.
         </p>
       </footer>
