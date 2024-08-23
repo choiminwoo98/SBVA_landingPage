@@ -39,7 +39,7 @@ const Card: React.FC<CardProps> = ({
           dangerouslySetInnerHTML={{
             __html: description.replaceAll("^", "").replaceAll("+", "<br />"),
           }}
-          className={`font-normal hidden xl:block text-white ${
+          className={`font-normal lg:text-[14px] hidden xl:block text-white ${
             language === "KR" ? "" : "font-meiryo"
           }`}
         />
@@ -47,7 +47,7 @@ const Card: React.FC<CardProps> = ({
           dangerouslySetInnerHTML={{
             __html: description.replaceAll("+", "").replaceAll("^", "<br />"),
           }}
-          className={`font-normal block xl:hidden text-white ${
+          className={`font-normal lg:text-[14px] block xl:hidden text-white ${
             language === "KR" ? "" : "font-meiryo"
           }`}
         />

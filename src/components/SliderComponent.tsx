@@ -22,7 +22,7 @@ const cardData = [
       "닥터나우는 원격진료 상담,^+ 처방약 배달, AI 진단 등을 제공+^하는 디지털 헬스케어 플랫폼^+입니다.",
     descriptionjp:
       "ドクターナウは、リモート診療+^相談・処方薬の配達・AI診断等+^のサービスを提供するデジタル+^ヘルスケアプラットフォームで+す。",
-    url: "https://company.doctornow.co.kr/company",
+    url: "https://doctornow.co.jp/ ",
   },
   {
     title: "Enterprise",
