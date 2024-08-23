@@ -75,7 +75,7 @@ const App: React.FC = () => {
                   ) : (
                     <span className="font-meiryo">
                       <br className="hidden cus:block" />
-                      &nbsp;韓国の有望なスタートアップと日本の著名なベンチャーキャピタルや企業間の
+                      韓国の有望なスタートアップと日本の著名なベンチャーキャピタルや企業間の
                       <br className="hidden cus:block" />
                       ネットワーキングの場を提供するために企画されました。
                     </span>
