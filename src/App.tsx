@@ -376,7 +376,7 @@ const App: React.FC = () => {
           <div
             className={`border-l-[1px] relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
               language === "KR"
-                ? "right-0 lg:right-8 h-[2270px] lg:h-[2180px]"
+                ? "right-0 lg:right-8 h-[2270px] lg:h-[2190px]"
                 : "lg:right-3 h-[2400px] lg:h-[2270px]"
             }`}
           >
@@ -497,7 +497,7 @@ const App: React.FC = () => {
                         <span className="whitespace-nowrap">
                           {language === "KR" ? "Miki Fukazawa " : "深澤 実樹"}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
+                        <span className="text-[#777777] text-sm relative top0 lg:top-1 lg:text-base">
                           VP/Head of Alliance &<br className="lg:hidden" />{" "}
                           Investment Strategy Div
                           <br className="lg:hidden" /> · SoftBank
@@ -547,7 +547,7 @@ const App: React.FC = () => {
                             ? "Kentaro Sakakibara"
                             : "榊原 健太郎"}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-0 lg:top-1 lg:text-base">
                           CEO · SAMURAI <br className="lg:hidden" /> INCUBATE
                         </span>
                       </div>
@@ -555,7 +555,7 @@ const App: React.FC = () => {
                         <span className="whitespace-nowrap">
                           {language === "KR" ? "Hogil Doh" : "都 虎吉"}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-0.5 lg:top-1 lg:text-base">
                           General Partner · Global Brain
                         </span>
                       </div>
@@ -563,7 +563,7 @@ const App: React.FC = () => {
                         <span className="whitespace-nowrap">
                           {language === "KR" ? "Takashi Kitao" : "北尾 崇"}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-1  lg:text-base">
+                        <span className="text-[#777777] text-sm relative lg:top-1  lg:text-base">
                           Partner/Director · <br className="lg:hidden" />
                           Cyber Agent Capital
                         </span>
@@ -572,7 +572,7 @@ const App: React.FC = () => {
                         <span className="whitespace-nowrap">
                           {language === "KR" ? "Tomoko Numata" : "沼田 朋子"}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-0.5 lg:top-1 lg:text-base">
                           Chief Capitalist · JAFCO
                         </span>
                       </div>
@@ -589,7 +589,7 @@ const App: React.FC = () => {
                             ? "Hideyuki Ebihara"
                             : "海老原 秀幸"}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
+                        <span className="text-[#777777] text-sm relative  top-0.5 lg:top-1 lg:text-base">
                           Partner · PKSHA CAPITAL
                         </span>
                       </div>
@@ -615,7 +615,7 @@ const App: React.FC = () => {
                     <div>
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap">Taizo Son</span>{" "}
-                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-0.5 lg:top-1 lg:text-base">
                           Chairman · Mistletoe
                         </span>
                       </div>
@@ -683,7 +683,7 @@ const App: React.FC = () => {
                     <div>
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap">JP Lee</span>{" "}
-                        <span className="text-[#777777] text-sm relative top-1 lg:text-base">
+                        <span className="text-[#777777] text-sm relative top-0.5 lg:top-1 lg:text-base">
                           CEO/Managing Partner · SBVA{" "}
                         </span>
                       </div>
