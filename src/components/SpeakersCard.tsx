@@ -1,3 +1,5 @@
+import { useLanguage } from "../contexts/LanguageContext";
+
 interface SpeakerProps {
   image: string;
   name: string;
@@ -13,6 +15,8 @@ const SpeakerCard: React.FC<SpeakerProps> = ({
   panel,
   url,
 }) => {
+  const { language } = useLanguage(); // 컨텍스트에서 현재 언어를 가져옵니다.
+
   return (
     <div className="flex flex-col items-center rounded-lg font-medium ">
       <img
@@ -23,8 +27,20 @@ const SpeakerCard: React.FC<SpeakerProps> = ({
           window.open(url, "_blank"); // Replace with your desired URL
         }}
       />
-      <span className=" text-[#00E300] text-sm cus:text-xl">{panel}</span>
-      <h3 className="text-lg cus:text-2xl text-white ">{name}</h3>
+      <span
+        className={`text-[#00E300] text-sm cus:text-xl ${
+          language === "JP" ? "font-meiryo" : ""
+        }`}
+      >
+        {panel}
+      </span>
+      <h3
+        className={`text-lg cus:text-2xl text-white ${
+          language === "JP" ? "font-meiryo" : ""
+        }`}
+      >
+        {name}
+      </h3>
       <p
         dangerouslySetInnerHTML={{
           __html: role.replace("+", "<br />"),

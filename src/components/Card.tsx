@@ -39,13 +39,17 @@ const Card: React.FC<CardProps> = ({
           dangerouslySetInnerHTML={{
             __html: description.replaceAll("^", "").replaceAll("+", "<br />"),
           }}
-          className="font-normal hidden xl:block text-white"
+          className={`font-normal hidden xl:block text-white ${
+            language === "KR" ? "" : "font-meiryo"
+          }`}
         />
         <p
           dangerouslySetInnerHTML={{
             __html: description.replaceAll("+", "").replaceAll("^", "<br />"),
           }}
-          className="font-normal block xl:hidden text-white"
+          className={`font-normal block xl:hidden text-white ${
+            language === "KR" ? "" : "font-meiryo"
+          }`}
         />
 
         {/* 버튼 */}

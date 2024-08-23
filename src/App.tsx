@@ -56,9 +56,14 @@ const App: React.FC = () => {
             <div className="text-white font-normal text-lg cus:text-[22px]  flex flex-col   space-y-7">
               <div className="leading-[26px] cus:leading-[33px]">
                 {" "}
-                {language === "KR"
-                  ? " 2024 Tokyo Forum은 일본 스타트업 생태계에 대한 심도 있는 이해를 돕고,"
-                  : "「2024 Tokyo Forum」は、日本のスタートアップエコシステムに対する深い理解を促進し、"}
+                {language === "KR" ? (
+                  "2024 Tokyo Forum은 일본 스타트업 생태계에 대한 심도 있는 이해를 돕고,"
+                ) : (
+                  <span className="font-meiryo">
+                    「2024 Tokyo
+                    Forum」は、日本のスタートアップエコシステムに対する深い理解を促進し、
+                  </span>
+                )}
                 <span className="text-[#00E300] ">
                   {language === "KR" ? (
                     <>
@@ -68,12 +73,12 @@ const App: React.FC = () => {
                       행사입니다.
                     </>
                   ) : (
-                    <>
+                    <span className="font-meiryo">
                       <br className="hidden cus:block" />
                       &nbsp;韓国の有望なスタートアップと日本の著名なベンチャーキャピタルや企業間の
                       <br className="hidden cus:block" />
                       ネットワーキングの場を提供するために企画されました。
-                    </>
+                    </span>
                   )}
                 </span>
               </div>
@@ -88,7 +93,7 @@ const App: React.FC = () => {
                     많은 관심과 참여를 부탁드립니다.
                   </>
                 ) : (
-                  <>
+                  <span className="font-meiryo">
                     本イベントは、日韓のスタートアップおよびベンチャー投資産業における実質的な交流と
                     <br className="hidden cus:block" />
                     協業機会の創出を目指し、両国の優れた創業者や投資家、業界専門家など、
@@ -96,7 +101,7 @@ const App: React.FC = () => {
                     約150名を限定してお招きいたします。
                     <br className="hidden cus:block" />
                     ご多忙のところ恐縮ではございますが、ぜひご参加いただけますようお願い申し上げます。
-                  </>
+                  </span>
                 )}
               </div>
             </div>
@@ -117,7 +122,11 @@ const App: React.FC = () => {
                       language === "KR" ? "" : "w-36"
                     }`}
                   >
-                    {language === "KR" ? "행사명" : "イベント名"}
+                    {language === "KR" ? (
+                      "행사명"
+                    ) : (
+                      <span className="font-meiryo">イベント名</span>
+                    )}
                   </td>
                   <td className="relative pl-[30px]">
                     <span>2024 SBVA Tokyo Forum</span>
@@ -127,13 +136,21 @@ const App: React.FC = () => {
                 <tr className="relative ">
                   <td className="py-2 w-fit text-end pr-6">
                     {" "}
-                    {language === "KR" ? "일시" : "開催日時"}
+                    {language === "KR" ? (
+                      "일시"
+                    ) : (
+                      <span className="font-meiryo">開催日時</span>
+                    )}
                   </td>
                   <td className="relative pl-[30px]">
                     <span>
-                      {language === "KR"
-                        ? "2024년 10월 2일 (수) 14시~20시"
-                        : "2024年 10月 2日 (水) 14:00～20:00"}
+                      {language === "KR" ? (
+                        "2024년 10월 2일 (수) 14시~20시"
+                      ) : (
+                        <span className="font-meiryo">
+                          2024年 10月 2日 (水) 14:00～20:00
+                        </span>
+                      )}
                     </span>
                     <div className="absolute inset-y-0 left-0 w-px bg-white bg-opacity-20"></div>
                   </td>
@@ -141,7 +158,11 @@ const App: React.FC = () => {
                 <tr className="relative ">
                   <td className="py-2  text-end pr-6 ">
                     {" "}
-                    {language === "KR" ? "장소" : "開催場所"}
+                    {language === "KR" ? (
+                      "장소"
+                    ) : (
+                      <span className="font-meiryo">開催場所</span>
+                    )}
                   </td>
                   <td className="relative pl-[30px]">
                     <div
@@ -155,9 +176,13 @@ const App: React.FC = () => {
                     >
                       <span>
                         {" "}
-                        {language === "KR"
-                          ? "도쿄 시부야 트렁크 호텔"
-                          : "TRUNK HOTEL、渋谷区、東京"}
+                        {language === "KR" ? (
+                          "도쿄 시부야 트렁크 호텔"
+                        ) : (
+                          <span className="font-meiryo">
+                            TRUNK HOTEL、渋谷区、東京
+                          </span>
+                        )}
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +201,11 @@ const App: React.FC = () => {
                 <tr className="relative">
                   <td className=" align-top  text-end pr-6 ">
                     {" "}
-                    {language === "KR" ? "목적" : "目的"}
+                    {language === "KR" ? (
+                      "목적"
+                    ) : (
+                      <span className="font-meiryo">目的</span>
+                    )}
                   </td>
                   <td className="relative pl-[30px]">
                     <span className="block ">
@@ -187,11 +216,11 @@ const App: React.FC = () => {
                           기업 간 네트워킹
                         </>
                       ) : (
-                        <>
+                        <span className="font-meiryo">
                           日本のスタートアップエコシステムに対する理解促進および
                           <br />
                           日韓のスタートアップ、VC、 企業間のネットワーキング
-                        </>
+                        </span>
                       )}
                     </span>
                     <div className="absolute top-0 left-0 w-px h-full bg-white bg-opacity-20"></div>
@@ -200,7 +229,11 @@ const App: React.FC = () => {
                 <tr className="relative ">
                   <td className="py-2  text-end pr-6 ">
                     {" "}
-                    {language === "KR" ? "주최" : "主催"}
+                    {language === "KR" ? (
+                      "주최"
+                    ) : (
+                      <span className="font-meiryo">主催</span>
+                    )}
                   </td>
                   <td className="relative pl-[30px]">
                     <span>
@@ -244,7 +277,11 @@ const App: React.FC = () => {
             <div className="flex flex-col space-y-3 text-lg cus:hidden ">
               <div className="flex flex-col cus:flex-row  ">
                 <span className="font-medium w-full text-sm text-[#777777]">
-                  {language === "KR" ? "행사명" : "イベント名"}
+                  {language === "KR" ? (
+                    "행사명"
+                  ) : (
+                    <span className="font-meiryo">イベント名</span>
+                  )}
                 </span>
                 <span className="w-full text-lg font-normal">
                   2024 SBVA Tokyo Forum
@@ -252,17 +289,29 @@ const App: React.FC = () => {
               </div>
               <div className="flex flex-col cus:flex-row ">
                 <span className="font-medium w-full text-sm text-[#777777]">
-                  {language === "KR" ? "일시" : "開催日時"}
+                  {language === "KR" ? (
+                    "일시"
+                  ) : (
+                    <span className="font-meiryo">開催日時</span>
+                  )}
                 </span>
                 <span className="w-full text-lg font-normal">
-                  {language === "KR"
-                    ? "2024년 10월 2일 (수) 14시~20시"
-                    : "2024年 10月 2日 (水) 14:00～20:00"}
+                  {language === "KR" ? (
+                    "2024년 10월 2일 (수) 14시~20시"
+                  ) : (
+                    <span className="font-meiryo">
+                      2024年 10月 2日 (水) 14:00～20:00
+                    </span>
+                  )}
                 </span>
               </div>
               <div className="flex flex-col cus:flex-row ">
                 <span className="font-medium w-full text-sm text-[#777777]">
-                  {language === "KR" ? "장소" : "開催場所"}
+                  {language === "KR" ? (
+                    "장소"
+                  ) : (
+                    <span className="font-meiryo">開催場所</span>
+                  )}
                 </span>
                 <div
                   className="flex w-fit justify-center text-center items-center cursor-pointer group"
@@ -274,9 +323,13 @@ const App: React.FC = () => {
                   }}
                 >
                   <span className="w-full text-lg font-normal pr-1">
-                    {language === "KR"
-                      ? "도쿄 시부야 트렁크 호텔"
-                      : "TRUNK HOTEL、渋谷区、東京"}
+                    {language === "KR" ? (
+                      "도쿄 시부야 트렁크 호텔"
+                    ) : (
+                      <span className="font-meiryo">
+                        TRUNK HOTEL、渋谷区、東京
+                      </span>
+                    )}
                   </span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -291,17 +344,29 @@ const App: React.FC = () => {
               </div>
               <div className="flex flex-col cus:flex-row ">
                 <span className="font-medium w-full text-sm text-[#777777]">
-                  {language === "KR" ? "목적" : "目的"}
+                  {language === "KR" ? (
+                    "목적"
+                  ) : (
+                    <span className="font-meiryo">目的</span>
+                  )}
                 </span>
                 <span className="w-full text-lg font-normal">
-                  {language === "KR"
-                    ? "일본 스타트업 생태계에 대한 이해 및 양국 스타트업, VC, 기업 간 네트워킹"
-                    : "日本のスタートアップエコシステムに対する理解促進および日韓のスタートアップ、VC、企業間のネットワーキング"}
+                  {language === "KR" ? (
+                    "일본 스타트업 생태계에 대한 이해 및 양국 스타트업, VC, 기업 간 네트워킹"
+                  ) : (
+                    <span className="font-meiryo">
+                      日本のスタートアップエコシステムに対する理解促進および日韓のスタートアップ、VC、企業間のネットワーキング
+                    </span>
+                  )}
                 </span>
               </div>
               <div className="flex flex-col cus:flex-row ">
                 <span className="font-medium w-full text-sm text-[#777777]">
-                  {language === "KR" ? "주최" : "主催"}
+                  {language === "KR" ? (
+                    "주최"
+                  ) : (
+                    <span className="font-meiryo">主催</span>
+                  )}
                 </span>
                 <span className="w-full pt-2">
                   {" "}
@@ -350,10 +415,18 @@ const App: React.FC = () => {
               <span className="cus:hidden">2024 SBVA Tokyo Forum</span>
               <span className="hidden cus:block">
                 2024 SBVA Tokyo Forum{" "}
-                {language === "KR" ? "신청하기" : "お申し込みはこちら"}
+                {language === "KR" ? (
+                  "신청하기"
+                ) : (
+                  <span className="font-meiryo">お申し込みはこちら</span>
+                )}
               </span>
               <div className="cus:hidden">
-                {language === "KR" ? "신청하기" : "お申し込みはこちら"}
+                {language === "KR" ? (
+                  "신청하기"
+                ) : (
+                  <span className="font-meiryo">お申し込みはこちら</span>
+                )}
               </div>
             </a>
           </div>
@@ -369,7 +442,7 @@ const App: React.FC = () => {
               : "h-[2650px] cus:h-[2510px] "
           }`}
         >
-          <h2 className="pl-5 cus:pl-0 cus:right-6 text-3xl relative cus:text-6xl text-white font-bold text-left w-[360px] cus:w-full cus:pb-[80px] pb-[50px] font-poppins">
+          <h2 className="pl-0 cus:pl-5 cus:right-6 text-3xl relative cus:text-6xl text-white font-bold text-left w-[360px] cus:w-full cus:pb-[80px] pb-[50px] font-poppins">
             PROGRAM
           </h2>
 
@@ -377,7 +450,7 @@ const App: React.FC = () => {
             className={`border-l-[1px] relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
               language === "KR"
                 ? "right-0 cus:right-8 h-[2300px] cus:h-[2190px]"
-                : "cus:right-3 h-[2430px] cus:h-[2230px]"
+                : "cus:right-3 h-[2430px] cus:h-[2270px]"
             }`}
           >
             <div className="relative ">
@@ -399,7 +472,9 @@ const App: React.FC = () => {
                           대한 이해
                         </>
                       ) : (
-                        <>SBVAとSBVAの投資戦略</>
+                        <span className="font-meiryo">
+                          SBVAとSBVAの投資戦略
+                        </span>
                       )}
                     </span>
                   </div>
@@ -431,10 +506,10 @@ const App: React.FC = () => {
                           <br className="cus:hidden" /> 사례 소개
                         </>
                       ) : (
-                        <>
+                        <span className="font-meiryo">
                           日本におけるSBVAの投資 <br className="cus:hidden" />
                           成功事例
-                        </>
+                        </span>
                       )}
                     </span>
                   </div>
@@ -448,7 +523,11 @@ const App: React.FC = () => {
                       </div>
                       <div>
                         <span>
-                          {language === "KR" ? "Uchiyama" : "内山 雄太"}
+                          {language === "KR" ? (
+                            "Uchiyama"
+                          ) : (
+                            <span className="font-meiryo">内山 雄太</span>
+                          )}
                         </span>
                         <span className="text-[#777777] text-sm relative cus:text-base">
                           &nbsp; &nbsp; CEO · SODA
@@ -482,8 +561,8 @@ const App: React.FC = () => {
                           <br className="cus:hidden" /> 과거와 미래
                         </>
                       ) : (
-                        <span className="cus:leading-[33px] ">
-                          ソフトバンクのスタートア <br className="cus:hidden" />
+                        <span className="cus:leading-[35px] font-meiryo ">
+                          ソフトバンクのスタートア <br />
                           ップ投資・事業提携の過去と未{" "}
                           <br className="cus:hidden" />
                           来的な協業
@@ -495,7 +574,11 @@ const App: React.FC = () => {
                     <div className="flex">
                       <div className="flex gap-3 ">
                         <span className="whitespace-nowrap">
-                          {language === "KR" ? "Miki Fukazawa " : "深澤 実樹"}
+                          {language === "KR" ? (
+                            "Miki Fukazawa "
+                          ) : (
+                            <span className="font-meiryo">深澤 実樹</span>
+                          )}
                         </span>
                         <span className="text-[#777777] text-sm relative top0 cus:top-1 cus:text-base">
                           VP/Head of Alliance &<br className="cus:hidden" />{" "}
@@ -525,7 +608,7 @@ const App: React.FC = () => {
                           전략
                         </>
                       ) : (
-                        <span className="cus:leading-[36px]">
+                        <span className="cus:leading-[36px] font-meiryo">
                           日本現地のVCが語る業界 <br className="cus:hidden" />
                           の最新動向や <br className="hidden cus:block" />{" "}
                           投資および
@@ -539,14 +622,20 @@ const App: React.FC = () => {
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap text-[#00E300] text-sm">
-                          {language === "KR" ? "Panels" : "スピーカー"}
+                          {language === "KR" ? (
+                            "Panels"
+                          ) : (
+                            <span className="font-meiryo">スピーカー</span>
+                          )}
                         </span>
                       </div>
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap">
-                          {language === "KR"
-                            ? "Kentaro Sakakibara"
-                            : "榊原 健太郎"}
+                          {language === "KR" ? (
+                            "Kentaro Sakakibara"
+                          ) : (
+                            <span>榊原 健太郎</span>
+                          )}
                         </span>
                         <span className="text-[#777777] text-sm relative top-0 cus:top-1 cus:text-base">
                           CEO · SAMURAI <br className="cus:hidden" /> INCUBATE
@@ -554,7 +643,11 @@ const App: React.FC = () => {
                       </div>
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap">
-                          {language === "KR" ? "Hogil Doh" : "都 虎吉"}
+                          {language === "KR" ? (
+                            "Hogil Doh"
+                          ) : (
+                            <span className="font-meiryo">都 虎吉</span>
+                          )}
                         </span>
                         <span className="text-[#777777] text-sm relative top-0.5 cus:top-1 cus:text-base">
                           General Partner · Global Brain
@@ -562,7 +655,11 @@ const App: React.FC = () => {
                       </div>
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap">
-                          {language === "KR" ? "Takashi Kitao" : "北尾 崇"}
+                          {language === "KR" ? (
+                            "Takashi Kitao"
+                          ) : (
+                            <span className="font-meiryo">北尾 崇 </span>
+                          )}
                         </span>
                         <span className="text-[#777777] text-sm relative cus:top-1  cus:text-base">
                           Partner/Director · <br className="cus:hidden" />
@@ -571,7 +668,11 @@ const App: React.FC = () => {
                       </div>
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap">
-                          {language === "KR" ? "Tomoko Numata" : "沼田 朋子"}
+                          {language === "KR" ? (
+                            "Tomoko Numata"
+                          ) : (
+                            <span className="font-meiryo">沼田 朋子</span>
+                          )}
                         </span>
                         <span className="text-[#777777] text-sm relative top-0.5 cus:top-1 cus:text-base">
                           Chief Capitalist · JAFCO
@@ -580,15 +681,21 @@ const App: React.FC = () => {
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap text-[#00E300] text-sm">
                           {" "}
-                          {language === "KR" ? "Moderator" : "モデレーター"}
+                          {language === "KR" ? (
+                            "Moderator"
+                          ) : (
+                            <span className="font-meiryo">モデレーター</span>
+                          )}
                         </span>
                       </div>
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap">
                           {" "}
-                          {language === "KR"
-                            ? "Hideyuki Ebihara"
-                            : "海老原 秀幸"}
+                          {language === "KR" ? (
+                            "Hideyuki Ebihara"
+                          ) : (
+                            <span className="font-meiryo">海老原 秀幸</span>
+                          )}
                         </span>
                         <span className="text-[#777777] text-sm relative  top-0.5 cus:top-1 cus:text-base">
                           Partner · PKSHA CAPITAL
@@ -612,10 +719,10 @@ const App: React.FC = () => {
                       {language === "KR" ? (
                         <> AI 시대의 글로벌 전개</>
                       ) : (
-                        <>
+                        <span className="font-meiryo">
                           <br className="cus:hidden" />
                           AI時代の国際展開
-                        </>
+                        </span>
                       )}
                     </span>
                   </div>
@@ -645,10 +752,10 @@ const App: React.FC = () => {
                       {language === "KR" ? (
                         <>SBVA 포트폴리오 8개사 피칭</>
                       ) : (
-                        <>
+                        <span className="font-meiryo">
                           SBVAが選定したポートフォリ
                           <br className="cus:hidden" />オ 企業 ８社のピッチング{" "}
-                        </>
+                        </span>
                       )}
                     </span>
                   </div>
@@ -657,9 +764,13 @@ const App: React.FC = () => {
                       <div className="flex gap-3">
                         {" "}
                         <span className="whitespace-nowrap">
-                          {language === "KR"
-                            ? "국내 포트폴리오 8개사"
-                            : "韓国生まれのスタートアップ企業８社"}
+                          {language === "KR" ? (
+                            "국내 포트폴리오 8개사"
+                          ) : (
+                            <span className="font-meiryo">
+                              韓国生まれのスタートアップ企業８社
+                            </span>
+                          )}
                         </span>
                       </div>
                     </div>
@@ -680,10 +791,10 @@ const App: React.FC = () => {
                       {language === "KR" ? (
                         <>SBVA의 일본 투자 포부</>
                       ) : (
-                        <>
+                        <span className="font-meiryo">
                           SBVA <br className="cus:hidden" />
                           の抱負とご協力のお願い
-                        </>
+                        </span>
                       )}
                     </span>
                   </div>
@@ -710,11 +821,11 @@ const App: React.FC = () => {
                       {language === "KR" ? (
                         <>Dinner & Networking</>
                       ) : (
-                        <>
+                        <span className="font-meiryo">
                           ディナー＆
                           <br className="cus:hidden" />
                           ネットワーキング
-                        </>
+                        </span>
                       )}
                     </span>
                   </div>
@@ -728,7 +839,11 @@ const App: React.FC = () => {
                   </span>
                   <div className="flex flex-col relative cus:bottom-[60px]">
                     <span className="flex gap-4 items-end text-2xl cus:text-[30px] font-semibold">
-                      {language === "KR" ? "After Party" : "アフターパーティー"}
+                      {language === "KR" ? (
+                        "After Party"
+                      ) : (
+                        <span className="font-meiryo">アフターパーティー</span>
+                      )}
                       <p className="text-base relative top-1 cus:text-xl font-normal ">
                         (optional)
                       </p>
@@ -801,12 +916,12 @@ const App: React.FC = () => {
                   투자해 오고 있습니다.
                 </>
               ) : (
-                <>
+                <span className="font-meiryo">
                   SBVAは((旧) ソフトバンクベンチャーズアジア
                   )、2000年にソフトバンクグループ傘下のベンチャー{" "}
                   <br className="hidden cus:block" />
                   キャピタルとして韓国に設立され、グローバルのさまざまなスタートアップに投資を行ってきました。
-                </>
+                </span>
               )}
             </span>{" "}
             <span className="leading-[26px] cus:leading-[33px]">
@@ -821,14 +936,14 @@ const App: React.FC = () => {
                   운용하고 있습니다.
                 </>
               ) : (
-                <>
+                <span className="font-meiryo">
                   2023年6月には、「ミスルト(Mistletoe)」の孫泰蔵会長と大蘿淳司Managing
                   Director、そしてSBVAの <br className="hidden cus:block" />
                   CEOであるJP
                   Leeが共同で設立したシンガポール拠点の投資会社「ディ・エッジ・オブ(The
                   Edgeof)」 <br className="hidden cus:block" />
                   の傘下として独立し、
-                </>
+                </span>
               )}
             </span>{" "}
             <span className="leading-[26px] cus:leading-[33px]">
@@ -840,11 +955,11 @@ const App: React.FC = () => {
                   이어오고 있습니다.
                 </>
               ) : (
-                <>
+                <span className="font-meiryo">
                   現在はソウルをはじめ、北京、シンガポール、サンフランシスコ、イスラエルなどに支社を構え、
                   <br className="hidden cus:block" />
                   100社以上のポートフォリオ企業を育成しながら投資活動を続けています。{" "}
-                </>
+                </span>
               )}
             </span>
           </div>
@@ -855,9 +970,11 @@ const App: React.FC = () => {
                 window.open("https://sbvacorp.com/en", "_blank"); // Replace with your desired URL
               }}
             >
-              {language === "KR"
-                ? "SBVA 홈페이지 가기"
-                : "SBVAのホームページはこちら"}{" "}
+              {language === "KR" ? (
+                "SBVA 홈페이지 가기"
+              ) : (
+                <span className="font-meiryo">SBVAのホームページはこちら</span>
+              )}{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

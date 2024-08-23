@@ -23,6 +23,7 @@ module.exports = {
       fontFamily: {
         sans: ["Pretendard", "sans-serif"], // Set Pretendard as the default sans-serif font
         poppins: ["Poppins", "sans-serif"], // Add Poppins as an option
+        meiryo: ["Meiryo", "sans-serif"],
       },
       lineHeight: {
         80: "80px", // Add custom line-height value
