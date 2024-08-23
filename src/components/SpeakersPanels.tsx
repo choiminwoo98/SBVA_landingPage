@@ -41,7 +41,7 @@ const SpeakersAndPanels: React.FC = () => {
       krname: "Taizo Son",
       jpname: "孫 泰蔵",
       role: "Chairman · Mistletoe",
-      panel: "PKeynote II",
+      panel: "Keynote II",
       jppanel: "スピーカー",
     },
   ];

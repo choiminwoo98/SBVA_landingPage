@@ -74,7 +74,7 @@ const cardData = [
     title: "LegalTech",
     image: "image8.png",
     descriptionkr:
-      "로앤컴퍼니는 첨단 기술을 통해^ 법률 서비스의 패러다임을 혁신^+하는 국내 1위 리걸테크 기업입^+니다.",
+      "로앤컴퍼니는 첨단 기술을 통해+^ 법률 서비스의 패러다임을 혁신^+하는 국내 1위 리걸테크 기업입^+니다.",
     descriptionjp:
       "Law＆Companyは、最先端のIT+^技術を活用し、法律相談サービス^+のパラダイムを革新している+^韓国のリーガルテック企業です。",
     url: "https://www.lawtalk.is/lawcompany",
@@ -106,7 +106,7 @@ const SliderComponent: React.FC = () => {
     slidesToShow: 1.9,
     speed: 500,
     centerPadding: "200px", // Adjust padding for left side visibility
-    initialSlide: 1, // Set the initial slide to the first one
+    initialSlide: 0, // Set the initial slide to the first one
 
     responsive: [
       {
