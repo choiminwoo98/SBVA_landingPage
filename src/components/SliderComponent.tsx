@@ -102,18 +102,98 @@ const SliderComponent: React.FC = () => {
     centerMode: true, // Enable center mode
     slidesToScroll: 1,
     infinite: false,
-    slidesToShow: 3.1,
+    slidesToShow: 1.9,
     speed: 500,
-    centerPadding: "10px", // Default padding for non-responsive case
+    centerPadding: "200px", // Adjust padding for left side visibility
     initialSlide: 1, // Set the initial slide to the first one
 
     responsive: [
       {
+        breakpoint: 1120, // When the screen width is 1024px or below
+        settings: {
+          slidesToShow: 1.9, // Show 2.5 slides at a time
+          centerPadding: "200px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 1100, // When the screen width is 1024px or below
+        settings: {
+          slidesToShow: 1.9, // Show 2.5 slides at a time
+          centerPadding: "200px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 1080, // When the screen width is 1024px or below
+        settings: {
+          slidesToShow: 1.9, // Show 2.5 slides at a time
+          centerPadding: "200px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 1060, // When the screen width is 1024px or below
+        settings: {
+          slidesToShow: 1.9, // Show 2.5 slides at a time
+          centerPadding: "200px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 1040, // When the screen width is 1024px or below
+        settings: {
+          slidesToShow: 1.9, // Show 2.5 slides at a time
+          centerPadding: "200px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
         breakpoint: 1024, // When the screen width is 1024px or below
         settings: {
-          slidesToShow: 2.2, // Show 2.5 slides at a time
-          centerPadding: "20px", // Adjust padding for left side visibility
-          initialSlide: 2, // Set the initial slide to the first one
+          slidesToShow: 1.9, // Show 2.5 slides at a time
+          centerPadding: "200px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 1000, // When the screen width is 1024px or below
+        settings: {
+          slidesToShow: 1.9, // Show 2.5 slides at a time
+          centerPadding: "200px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 980, // When the screen width is 1024px or below
+        settings: {
+          slidesToShow: 1.9, // Show 2.5 slides at a time
+          centerPadding: "190px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 960, // When the screen width is 1024px or below
+        settings: {
+          slidesToShow: 1.9, // Show 2.5 slides at a time
+          centerPadding: "140px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 940, // When the screen width is 1024px or below
+        settings: {
+          slidesToShow: 1.7, // Show 2.5 slides at a time
+          centerPadding: "140px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 900, // When the screen width is 1024px or below
+        settings: {
+          slidesToShow: 1.6, // Show 2.5 slides at a time
+          centerPadding: "160px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
         },
       },
       {
@@ -141,18 +221,66 @@ const SliderComponent: React.FC = () => {
         },
       },
       {
-        breakpoint: 640, // When the screen width is 768px or below
+        breakpoint: 680, // When the screen width is 768px or below
         settings: {
-          slidesToShow: 1.3, // Show 1.5 slides at a time
-          centerPadding: "90px", // Adjust padding for left side visibility
+          slidesToShow: 1.5, // Show 1.5 slides at a time
+          centerPadding: "80px", // Adjust padding for left side visibility
           initialSlide: 0, // Set the initial slide to the first one
         },
       },
       {
-        breakpoint: 560, // When the screen width is 480px or below
+        breakpoint: 660, // When the screen width is 768px or below
+        settings: {
+          slidesToShow: 1.4, // Show 1.5 slides at a time
+          centerPadding: "80px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 640, // When the screen width is 768px or below
+        settings: {
+          slidesToShow: 1.4, // Show 1.5 slides at a time
+          centerPadding: "80px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 620, // When the screen width is 768px or below
+        settings: {
+          slidesToShow: 1.4, // Show 1.5 slides at a time
+          centerPadding: "80px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 600, // When the screen width is 768px or below
+        settings: {
+          slidesToShow: 1.4, // Show 1.5 slides at a time
+          centerPadding: "75px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 580, // When the screen width is 768px or below
+        settings: {
+          slidesToShow: 1.3, // Show 1.5 slides at a time
+          centerPadding: "75px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 560, // When the screen width is 768px or below
+        settings: {
+          slidesToShow: 1.3, // Show 1.5 slides at a time
+          centerPadding: "70px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 540, // When the screen width is 480px or below
         settings: {
           slidesToShow: 1.2, // Show 1.3 slides at a time
-          centerPadding: "55px", // Adjust padding for left side visibility
+          centerPadding: "65px", // Adjust padding for left side visibility
           initialSlide: 0, // Set the initial slide to the first one
         },
       },
@@ -160,7 +288,7 @@ const SliderComponent: React.FC = () => {
         breakpoint: 520, // When the screen width is 480px or below
         settings: {
           slidesToShow: 1.2, // Show 1.3 slides at a time
-          centerPadding: "55px", // Adjust padding for left side visibility
+          centerPadding: "60px", // Adjust padding for left side visibility
           initialSlide: 0, // Set the initial slide to the first one
         },
       },
@@ -170,6 +298,16 @@ const SliderComponent: React.FC = () => {
           slidesToShow: 1.2, // Show 1.3 slides at a time
           centerPadding: "49px", // Adjust padding for left side visibility
           initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 460, // When the screen width is 480px or below
+        settings: {
+          slidesToShow: 1.1, // Show 1.3 slides at a time
+          centerPadding: "45px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+
+          rightPadding: "10px", // Keep the right padding
         },
       },
       {
@@ -191,18 +329,50 @@ const SliderComponent: React.FC = () => {
         },
       },
       {
+        breakpoint: 410, // When the screen width is 400px or below
+        settings: {
+          slidesToShow: 1.1, // Show 1.1 slides at a time
+          centerPadding: "30px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
         breakpoint: 400, // When the screen width is 400px or below
         settings: {
           slidesToShow: 1.1, // Show 1.1 slides at a time
-          centerPadding: "32px", // Adjust padding for left side visibility
+          centerPadding: "27px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 390, // When the screen width is 400px or below
+        settings: {
+          slidesToShow: 1.08, // Show 1.1 slides at a time
+          centerPadding: "27px", // Adjust padding for left side visibility
           initialSlide: 0, // Set the initial slide to the first one
         },
       },
       {
         breakpoint: 380, // When the screen width is 400px or below
         settings: {
-          slidesToShow: 1.1, // Show 1.1 slides at a time
-          centerPadding: "20px", // Adjust padding for left side visibility
+          slidesToShow: 1.04, // Show 1.1 slides at a time
+          centerPadding: "26px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 370, // When the screen width is 400px or below
+        settings: {
+          slidesToShow: 1.03, // Show 1.1 slides at a time
+          centerPadding: "25px", // Adjust padding for left side visibility
+          initialSlide: 0, // Set the initial slide to the first one
+        },
+      },
+      {
+        breakpoint: 365, // When the screen width is 400px or below
+        settings: {
+          slidesToShow: 1.02, // Show 1.1 slides at a time
+          centerPadding: "23px", // Adjust padding for left side visibility
           initialSlide: 0, // Set the initial slide to the first one
         },
       },

@@ -264,7 +264,15 @@ const App: React.FC = () => {
                 <span className="font-medium w-full text-sm text-[#777777]">
                   {language === "KR" ? "장소" : "開催場所"}
                 </span>
-                <div className="flex w-fit justify-center text-center items-center cursor-pointer group">
+                <div
+                  className="flex w-fit justify-center text-center items-center cursor-pointer group"
+                  onClick={() => {
+                    window.open(
+                      "https://catstreet.trunk-hotel.com/access/",
+                      "_blank"
+                    ); // Replace with your desired URL
+                  }}
+                >
                   <span className="w-full text-lg font-normal pr-1">
                     {language === "KR"
                       ? "도쿄 시부야 트렁크 호텔"
@@ -368,8 +376,8 @@ const App: React.FC = () => {
           <div
             className={`border-l-[1px] relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
               language === "KR"
-                ? "right-0 lg:right-8 h-[2250px] lg:h-[2180px]"
-                : "lg:right-3 h-[2380px] lg:h-[2270px]"
+                ? "right-0 lg:right-8 h-[2270px] lg:h-[2180px]"
+                : "lg:right-3 h-[2400px] lg:h-[2270px]"
             }`}
           >
             <div className="relative ">
@@ -491,7 +499,8 @@ const App: React.FC = () => {
                         </span>
                         <span className="text-[#777777] text-sm relative top-1 lg:text-base">
                           VP/Head of Alliance &<br className="lg:hidden" />{" "}
-                          Investment Strategy Div · SoftBank
+                          Investment Strategy Div
+                          <br className="lg:hidden" /> · SoftBank
                         </span>
                       </div>
                     </div>

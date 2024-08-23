@@ -20,12 +20,7 @@ const Card: React.FC<CardProps> = ({
   // 언어에 따라 설명을 선택합니다.
   const description = language === "JP" ? descriptionjp : descriptionkr;
   return (
-    <div
-      className="relative flex flex-col w-[300px] xl:w-[263px] h-[380px] bg-[#1F1F1F] border-2 border-transparent hover:cursor-pointer hover:border-[#444444] group"
-      onClick={() => {
-        window.open(url, "_blank"); // Replace with your desired URL
-      }}
-    >
+    <div className="relative flex flex-col w-[300px] xl:w-[263px] h-[380px] bg-[#1F1F1F] border-2 border-transparent hover:border-[#444444] group">
       {/* 상단 이미지 영역 */}
       <div className="h-[140px] bg-[#171717] flex justify-center items-center">
         <img
@@ -55,6 +50,9 @@ const Card: React.FC<CardProps> = ({
             viewBox="0 0 24 24"
             fill="currentColor" // 이 속성으로 색상을 조절할 수 있습니다.
             xmlns="http://www.w3.org/2000/svg"
+            onClick={() => {
+              window.open(url, "_blank"); // Replace with your desired URL
+            }}
           >
             <path d="M16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20L10.575 18.6L16.175 13Z" />
           </svg>
