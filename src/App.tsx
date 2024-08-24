@@ -288,7 +288,7 @@ const App: React.FC = () => {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <g clip-path="url(#clip0_265_125)">
+                        <g>
                           <path
                             d="M58.3754 0L50.5621 10.8665L42.7487 0H39.3408L49.4075 14H51.7167L61.7833 0H58.3754Z"
                             fill="white"
@@ -306,11 +306,7 @@ const App: React.FC = () => {
                             fill="white"
                           />
                         </g>
-                        <defs>
-                          <clipPath id="clip0_265_125">
-                            <rect width="78.2353" height="14" fill="white" />
-                          </clipPath>
-                        </defs>
+                        <defs></defs>
                       </svg>
                     </span>
                     <div className="absolute inset-y-0 left-0 w-px bg-white bg-opacity-20"></div>
@@ -421,7 +417,7 @@ const App: React.FC = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0_265_125)">
+                    <g>
                       <path
                         d="M58.3754 0L50.5621 10.8665L42.7487 0H39.3408L49.4075 14H51.7167L61.7833 0H58.3754Z"
                         fill="white"
@@ -439,11 +435,7 @@ const App: React.FC = () => {
                         fill="white"
                       />
                     </g>
-                    <defs>
-                      <clipPath id="clip0_265_125">
-                        <rect width="78.2353" height="14" fill="white" />
-                      </clipPath>
-                    </defs>
+                    <defs></defs>
                   </svg>
                 </span>
               </div>
@@ -608,7 +600,9 @@ const App: React.FC = () => {
                         {language === "KR" ? (
                           "Miki Fukazawa "
                         ) : (
-                          <span className="font-meiryo">深澤 実樹</span>
+                          <span className="font-meiryo whitespace-nowrap">
+                            深澤 実樹
+                          </span>
                         )}
                       </span>
                       <span className="text-[#777777] text-sm relative cus:text-base">

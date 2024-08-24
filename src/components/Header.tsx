@@ -199,16 +199,8 @@ const Header: React.FC = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M21.0703 2.55295L2.99981 20.6235"
-                  stroke="white"
-                  stroke-width="2.22222"
-                />
-                <path
-                  d="M21.0703 20.6259L2.99981 2.55535"
-                  stroke="white"
-                  stroke-width="2.22222"
-                />
+                <path d="M21.0703 2.55295L2.99981 20.6235" stroke="white" />
+                <path d="M21.0703 20.6259L2.99981 2.55535" stroke="white" />
               </svg>
             </button>
           </div>
