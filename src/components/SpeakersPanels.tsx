@@ -105,7 +105,7 @@ const SpeakersAndPanels: React.FC = () => {
             </span>
             <div className="flex-grow border-t relative left-5 cus:left-10 border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 cus:grid-cols-3  cus:gap-x-0 cus:flex justify-between text-white flex-wrap  gap-y-[30px]">
+          <div className="grid grid-cols-2 md:grid-cols-3  cus:gap-x-0 cus:flex justify-between text-white flex-wrap  gap-y-[30px]">
             {speakers.map((speaker, index) => (
               <React.Fragment key={index}>
                 <SpeakerCard
@@ -114,36 +114,6 @@ const SpeakersAndPanels: React.FC = () => {
                   role={speaker.role}
                   url={speaker.url}
                 />
-                {index < speakers.length - 1 && (
-                  <div className="hidden cus:flex items-center justify-center pb-16 px-4">
-                    <svg
-                      width="40"
-                      height="40"
-                      viewBox="0 0 40 40"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g opacity="0.4">
-                        <mask
-                          id="mask0_175_200"
-                          maskUnits="userSpaceOnUse"
-                          x="0"
-                          y="0"
-                          width="40"
-                          height="40"
-                        >
-                          <rect width="40" height="40" fill="#D9D9D9" />
-                        </mask>
-                        <g mask="url(#mask0_175_200)">
-                          <path
-                            d="M19.295 20.705H10V19.295H19.295V10H20.705V19.295H30V20.705H20.705V30H19.295V20.705Z"
-                            fill="white"
-                          />
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-                )}
               </React.Fragment>
             ))}
           </div>
@@ -155,7 +125,7 @@ const SpeakersAndPanels: React.FC = () => {
             </span>
             <div className="flex-grow border-t relative left-5 cus:left-10 top-3 cus:top-11 border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 cus:grid-cols-3  cus:flex justify-between text-white flex-wrap gap-y-7">
+          <div className="grid grid-cols-2 md:grid-cols-3  cus:gap-x-0 cus:flex justify-between text-white flex-wrap  gap-y-[30px]">
             {speakers2.map((speaker, index) => (
               <React.Fragment key={index}>
                 <SpeakerCard
@@ -165,66 +135,9 @@ const SpeakersAndPanels: React.FC = () => {
                   url={speaker.url}
                   panel={speaker.panel}
                 />
-                {index < speakers2.length - 1 && (
-                  <div className="hidden cus:flex items-center justify-center pb-32 px-4">
-                    <svg
-                      width="40"
-                      height="40"
-                      viewBox="0 0 40 40"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g opacity="0.4">
-                        <mask
-                          id="mask0_175_200"
-                          maskUnits="userSpaceOnUse"
-                          x="0"
-                          y="0"
-                          width="40"
-                          height="40"
-                        >
-                          <rect width="40" height="40" fill="#D9D9D9" />
-                        </mask>
-                        <g mask="url(#mask0_175_200)">
-                          <path
-                            d="M19.295 20.705H10V19.295H19.295V10H20.705V19.295H30V20.705H20.705V30H19.295V20.705Z"
-                            fill="white"
-                          />
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-                )}
               </React.Fragment>
             ))}
-            <div className="hidden invisible cus:flex items-center justify-center pb-16 px-4">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g opacity="0.4">
-                  <mask
-                    id="mask0_175_200"
-                    maskUnits="userSpaceOnUse"
-                    x="0"
-                    y="0"
-                    width="40"
-                    height="40"
-                  >
-                    <rect width="40" height="40" fill="#D9D9D9" />
-                  </mask>
-                  <g mask="url(#mask0_175_200)">
-                    <path
-                      d="M19.295 20.705H10V19.295H19.295V10H20.705V19.295H30V20.705H20.705V30H19.295V20.705Z"
-                      fill="white"
-                    />
-                  </g>
-                </g>
-              </svg>
-            </div>
+
             <div className="w-[260px] invisible"></div>
           </div>
         </div>{" "}
@@ -235,7 +148,7 @@ const SpeakersAndPanels: React.FC = () => {
             </span>
             <div className="flex-grow border-t relative left-5 cus:left-10 top-3 cus:top-11 border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3  cus:gap-x-0 cus:grid-cols-3  cus:flex justify-between text-white flex-wrap cus:gap-y-[60px] gap-y-[30px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 cus:grid-cols-[auto_1fr_auto] cus:gap-x-0 text-white flex-wrap  gap-y-[30px]">
             {speakers3.map((speaker, index) => (
               <React.Fragment key={index}>
                 <SpeakerCard
@@ -245,66 +158,9 @@ const SpeakersAndPanels: React.FC = () => {
                   panel={language === "KR" ? speaker.panel : speaker.jppanel}
                   url={speaker.url}
                 />
-                {index != 2 && index < speakers3.length - 1 && (
-                  <div className="hidden cus:flex items-center justify-center pb-24 px-4">
-                    <svg
-                      width="40"
-                      height="40"
-                      viewBox="0 0 40 40"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g opacity="0.4">
-                        <mask
-                          id="mask0_175_200"
-                          maskUnits="userSpaceOnUse"
-                          x="0"
-                          y="0"
-                          width="40"
-                          height="40"
-                        >
-                          <rect width="40" height="40" fill="#D9D9D9" />
-                        </mask>
-                        <g mask="url(#mask0_175_200)">
-                          <path
-                            d="M19.295 20.705H10V19.295H19.295V10H20.705V19.295H30V20.705H20.705V30H19.295V20.705Z"
-                            fill="white"
-                          />
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-                )}
               </React.Fragment>
             ))}
-            <div className="hidden invisible cus:flex items-center justify-center pb-16 px-4">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g opacity="0.4">
-                  <mask
-                    id="mask0_175_200"
-                    maskUnits="userSpaceOnUse"
-                    x="0"
-                    y="0"
-                    width="40"
-                    height="40"
-                  >
-                    <rect width="40" height="40" fill="#D9D9D9" />
-                  </mask>
-                  <g mask="url(#mask0_175_200)">
-                    <path
-                      d="M19.295 20.705H10V19.295H19.295V10H20.705V19.295H30V20.705H20.705V30H19.295V20.705Z"
-                      fill="white"
-                    />
-                  </g>
-                </g>
-              </svg>
-            </div>
+
             <div className="w-[260px] invisible"></div>
           </div>
         </div>

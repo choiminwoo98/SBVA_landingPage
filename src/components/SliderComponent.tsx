@@ -10,36 +10,36 @@ const cardData = [
     title: "Content",
     image: "image1.png",
     descriptionkr:
-      "스푼라디오는 실시간 ^+개인 오디오 방송 플랫폼을+^ 운영합니다.",
+      "Spoon Labs는 라이브 오디오 ^방송 플랫폼 ‘Spoon’과 ^숏폼 드라마 플랫폼^ ‘Vigloo’를 운영합니다.",
     descriptionjp:
-      "Spoonは、リアルタイムの +^オーディオ放送プラット+^フォーム 「Spoon」、短尺ドラマ+^プラットフォーム「Vigloo」+^を運営しています。",
+      "Spoonは、リアルタイムの +^オーディオ放送プラット+^フォーム「Spoon」と、短尺ドラマ+^プのラットフォーム「Vigloo」+^を運営しています。",
     url: "https://company.spoonradio.co/jp/",
   },
   {
     title: "Healthcare",
     image: "image2.png",
     descriptionkr:
-      "닥터나우는 원격진료 상담,^+ 처방약 배달, AI 진단 등을 제공+^하는 디지털 헬스케어 플랫폼^+입니다.",
+      "닥터나우는 원격진료 상담,^+ 처방약 배달, AI 진단 등을 제공+하는 ^디지털 헬스케어 플랫폼+입니다.",
     descriptionjp:
-      "ドクターナウは、リモート診療+^相談・処方薬の配達・AI診断等+^のサービスを提供するデジタル+^ヘルスケアプラットフォームで+す。",
+      "ドクターナウは、リモート診療+^相談、処方薬の配達、AI診断サ+^ービスを提供するデジタル+^ヘルスケアプラットフォームです。",
     url: "https://doctornow.co.jp/ ",
   },
   {
     title: "Enterprise",
     image: "image3.png",
     descriptionkr:
-      "업스테이지는 인공지능 분야의+^ 기업을 지원하기 위한 맞춤형+^ AI 서비스를 제공합니다.",
+      "업스테이지는 대한민국의 ^대표적인 B2B AI 회사로, ^+LLM(Large Language Model), Document AI, AI교육 서비스를 ^제공합니다.",
     descriptionjp:
-      "Upstageは、法人向けに+^カスタマイズしたLLMを+^提供する韓国一流の+^人工知能企業です。",
+      "Upstageは、法人向けに+^カスタマイズした+^LLM(Large Language Model)+^を提供する韓国一流の人^+工知能企業です。",
     url: "https://www.upstage.ai/",
   },
   {
     title: "Retail",
     image: "image4.png",
     descriptionkr:
-      "비주얼은 국내 유일 주얼리 +^버티컬 커머스 플랫폼+^ ‘아몬즈‘를 운영합니다.",
+      "비주얼은 주얼리 셀러의 +^온라인 기반 브랜드로의 성장을 ^+지원하는 국내 최대 주얼리 ^+플랫폼 ‘아몬즈’를 운영합니다.",
     descriptionjp:
-      "Bejewelは、韓国最大の+^ジュエリーに特化したEC+^プラットフォームである+^「アモンズ」を運営しています。",
+      "Bejewelは、韓国最大のジュエ+リ^ーに特化したバーティカルコ+マ^ースプラットフォーム^+「アモンズ」を運営しています。",
     url: "https://amondz.jp/",
   },
   {
@@ -48,16 +48,16 @@ const cardData = [
     descriptionkr:
       "가우디오랩은 뛰어난 오디오+^ 경험을 제공하기 위한 기술 및+^ 솔루션을 개발하는 ^AI/Spatial Audio 전문 기업입니다.",
     descriptionjp:
-      "GAUDIO Labは、AI技術を活用し+^優れたオーディオ体験を+^提供するSpatial Audio専門の+^技術会社です。",
+      "GAUDIO Labは、+^AIを活用し優れたオーデ+^ィオ体験を提供する^+Spatial Audio^専門の技術会社です。",
     url: "https://www.gaudiolab.com/experience",
   },
   {
     title: "EdTech",
     image: "image6.png",
     descriptionkr:
-      "매스프레소는 개인 맞춤형+^ 학습 플랫폼 QANDA를+^ 운영합니다.",
+      "매스프레소는 ^+AI 기반 맞춤형 학습 플랫폼인 ^+‘콴다(QANDA)’를 운영합니다.",
     descriptionjp:
-      "MATHPRESSOは、AI技術を+^活用したオンライン学習^+プラットフォームQANDA^+を運営しています。",
+      "MATHPRESSOは、^+AI技術を活用したオンライ^+ン学習プラットフォーム「QUANDA」を運営しています。",
     url: "https://qanda.ai/ja",
   },
 
@@ -65,18 +65,18 @@ const cardData = [
     title: "Enterprise",
     image: "image7.png",
     descriptionkr:
-      "마크비전은 AI 기반 온라인상+^ 위조 상품 및 불법 콘텐츠+^ 모니터링 자동 서비스를+^ 제공합니다.",
+      "마크비전은 AI 기반 ^온라인 상+ 위조상품 및^ 불법 콘텐츠 +모니터링 ^자동화 서비스를 +제공합니다.",
     descriptionjp:
-      "MarqVisionは、AI技術を+^ベースとし、オンライン上の ^+偽造品や違法コンテンツの ^+自動モニタリング ^+サービスを提供しています。",
+      "MarqVisionは、+^AI技術をベースとし、オンライン^+上の偽造品や違法コンテ+ン^ツの自動モニタリング^+サービスを提供しています。",
     url: "https://www.marqvision.com/",
   },
   {
     title: "LegalTech",
     image: "image8.png",
     descriptionkr:
-      "로앤컴퍼니는 첨단 기술을 통해+^ 법률 서비스의 패러다임을 혁신^+하는 국내 1위 리걸테크 기업입^+니다.",
+      "로앤컴퍼니는 첨단 기술을 ^통해+ 법률 서비스 플랫폼, ^AI 법률 비서+ 솔루션, 종합 법률 ^정보 검색 +서비스 등을 제공하는 +^리걸테크 기업입니다.",
     descriptionjp:
-      "Law＆Companyは、最先端のIT+^技術を活用し、法律相談サービス^+のパラダイムを革新している+^韓国のリーガルテック企業です。",
+      "Law＆Companyは、最先端の^+IT技術を活用し、法律相談サ^+ービスのパラダイムを革新して^+いる韓国のリ^+ーガルテック企業です。",
     url: "https://www.lawtalk.is/lawcompany",
   },
 ];
