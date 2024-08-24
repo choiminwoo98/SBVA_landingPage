@@ -436,41 +436,31 @@ const App: React.FC = () => {
       <FadeInSection>
         <div
           id="PROGRAM"
-          className={`w-full px-5 cus:px-0 md:w-[708px] cus:w-[1100px] flex flex-col items-center justify-start cus:mb-32 ${
-            language === "KR"
-              ? "h-[2550px] cus:h-[2430px]"
-              : "h-[2650px] cus:h-[2510px] "
-          }`}
+          className="h-fit w-full cus:w-[1100px] xl:w-[1100px] flex flex-col items-center justify-start py-[120px] cus:pb-[150px] xl:pb-[250px]  xl:py-[150px]"
         >
-          <h2 className="pl-0 cus:pl-5 md:right-48 cus:right-6 text-3xl relative cus:text-6xl text-white font-bold text-left w-[360px] cus:w-full cus:pb-[80px] pb-[50px] font-poppins">
-            PROGRAM
-          </h2>
-
-          <div
-            className={`border-l-[1px] relative border-white border-opacity-20  mt-0 pt-0 space-y-12 text-white ${
-              language === "KR"
-                ? "right-0 cus:right-8 md:right-28 h-[2300px] md:h-[2150px] cus:h-[2190px]"
-                : "cus:right-3 h-[2430px] md:right-14 md:h-[2220px] cus:h-[2270px]"
-            }`}
-          >
-            <div className="relative ">
-              <div className="absolute -left-1.5 bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-[22px] ">
-                <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 cus:right-[170px] font-normal cus:text-xl">
+          <div className="px-5 cus:px-0 w-full">
+            <h2 className="text-3xl relative cus:text-6xl text-white font-bold text-left w-full pb-[50px] cus:pb-[80px] font-poppins">
+              PROGRAM
+            </h2>
+            <ul className="text-white">
+              <li className="relative flex gap-6 cus:gap-[55px] pb-20 cus:pb-[100px] items-baseline">
+                <p className="font-normal hidden w-[114px] cus:block cus:text-xl">
+                  14:00~14:15
+                </p>
+                <div className="before:absolute before:left-[5.5px] cus:before:left-auto before:h-full before:w-[1px] before:bg-white before:bg-opacity-20">
+                  <div className="bg-[#00E300] cus:right-[5.5px] relative h-3 w-3 rounded-full "></div>
+                </div>
+                <div>
+                  <p className=" font-normal block cus:hidden cus:text-xl">
                     14:00~14:15
-                  </span>
-                  <div className="flex flex-col relative cus:bottom-14">
+                  </p>
+                  <div className="flex flex-col pt-4">
                     <span className="text-[#00E300] font-normal cus:text-xl">
                       Opening Remarks
                     </span>
-                    <span className="text-2xl cus:text-[30px] font-semibold pt-2">
+                    <span className="text-2xl cus:text-[30px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
-                        <>
-                          SBVA와 SBVA의 투자 전략에 &nbsp;
-                          <br className="md:hidden" />
-                          대한 이해
-                        </>
+                        <>SBVA와 SBVA의 투자 전략에 대한 이해</>
                       ) : (
                         <span className="font-meiryo">
                           <span className="font-sans">SBVA</span>と
@@ -478,8 +468,6 @@ const App: React.FC = () => {
                         </span>
                       )}
                     </span>
-                  </div>
-                  <div className="relative cus:bottom-12 cus:text-xl">
                     <div>
                       <span>JP Lee</span>
                       <span className="text-[#777777] text-sm relative cus:text-base">
@@ -488,36 +476,33 @@ const App: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="relative -left-1.5 top-20 bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 relative top-[70px]">
-                <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 cus:right-44 font-normal cus:text-xl">
+              </li>
+              <li className="relative flex gap-6 cus:gap-[55px] pb-20 cus:pb-[100px] items-baseline">
+                <p className="font-normal hidden w-[114px] cus:block cus:text-xl">
+                  14:15~14:40
+                </p>
+                <div className="before:absolute before:left-[5.5px] cus:before:left-auto before:h-full before:w-[1px] before:bg-white before:bg-opacity-20">
+                  <div className="bg-[#00E300] cus:right-[5.5px] relative h-3 w-3 rounded-full "></div>
+                </div>
+                <div>
+                  <p className=" font-normal block cus:hidden cus:text-xl">
                     14:15~14:40
-                  </span>
-                  <div className="flex flex-col relative cus:bottom-[58px]">
-                    <span className="text-[#00E300]  font-normal cus:text-xl">
+                  </p>
+                  <div className="flex flex-col pt-4">
+                    <span className="text-[#00E300] font-normal cus:text-xl">
                       Fireside Chat
                     </span>
-                    <span className="text-2xl cus:text-[30px] font-semibold pt-2">
-                      {" "}
+                    <span className="text-2xl cus:text-[30px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
-                        <>
-                          SBVA의 성공적인 일본 투자 <br className="md:hidden" />{" "}
-                          사례 소개
-                        </>
+                        <>SBVA의 성공적인 일본 투자 사례 소개</>
                       ) : (
                         <span className="font-meiryo">
                           日本における<span className="font-sans">SBVA</span>
-                          の投資
-                          <br className="md:hidden" />
-                          成功事例
+                          の投資 成功事例
                         </span>
                       )}
                     </span>
-                  </div>
-                  <div>
-                    <div className="relative cus:bottom-12 cus:text-xl flex flex-col gap-2">
+                    <div>
                       <div>
                         <span>JP Lee</span>
                         <span className="text-[#777777] text-sm relative cus:text-base">
@@ -545,83 +530,76 @@ const App: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="relative -left-1.5 top-40 bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 relative top-[150px]">
-                <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 cus:right-44 font-normal cus:text-xl">
+              </li>{" "}
+              <li className="relative flex gap-6 cus:gap-[55px] pb-20 cus:pb-[100px] items-baseline">
+                <p className="font-normal hidden w-[114px] cus:block cus:text-xl">
+                  14:50~15:10
+                </p>
+                <div className="before:absolute before:left-[5.5px] cus:before:left-auto before:h-full before:w-[1px] before:bg-white before:bg-opacity-20">
+                  <div className="bg-[#00E300] cus:right-[5.5px] relative h-3 w-3 rounded-full "></div>
+                </div>
+                <div>
+                  <p className=" font-normal block cus:hidden cus:text-xl">
                     14:50~15:10
-                  </span>
-                  <div className="flex flex-col relative cus:bottom-[58px]">
-                    <span className="text-[#00E300]  font-normal cus:text-xl">
+                  </p>
+                  <div className="flex flex-col pt-4">
+                    <span className="text-[#00E300] font-normal cus:text-xl">
                       Keynote I
                     </span>
-                    <span className="text-2xl cus:text-[30px] font-semibold pt-2">
+                    <span className="text-2xl cus:text-[30px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
                         <>
-                          SoftBank의 스타트업 투자 <br className="md:hidden" />
-                          및 파트너십에 대한
-                          <br className="cus:hidden" /> 과거와 미래
+                          SoftBank의 스타트업 투자 및 파트너십에 대한 과거와
+                          미래
                         </>
                       ) : (
                         <span className="cus:leading-[35px] font-meiryo ">
                           ソフトバンクのスタートア <br />
-                          ップ投資・事業提携の過去と未{" "}
-                          <br className="md:hidden" />
-                          来的な協業
+                          ップ投資・事業提携の過去と未 来的な協業
                         </span>
                       )}
                     </span>
-                  </div>
-                  <div className="relative cus:bottom-12 cus:text-xl">
-                    <div className="flex">
-                      <div className="flex gap-3 ">
-                        <span className="whitespace-nowrap">
-                          {language === "KR" ? (
-                            "Miki Fukazawa "
-                          ) : (
-                            <span className="font-meiryo">深澤 実樹</span>
-                          )}
-                        </span>
-                        <span className="text-[#777777] text-sm relative top0 cus:top-1 cus:text-base">
-                          VP/Head of Alliance &<br className="md:hidden" />{" "}
-                          Investment Strategy Div
-                          <br className="cus:hidden" /> · SoftBank
-                        </span>
-                      </div>
+                    <div className="flex gap-5">
+                      <span>
+                        {language === "KR" ? (
+                          "Miki Fukazawa "
+                        ) : (
+                          <span className="font-meiryo">深澤 実樹</span>
+                        )}
+                      </span>
+                      <span className="text-[#777777] text-sm relative cus:text-base">
+                        VP/Head of Alliance & Investment Strategy Div · SoftBank
+                      </span>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="relative -left-1.5 top-60 bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 relative top-[230px]">
-                <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 cus:right-44 cus:text-xl">
+              </li>{" "}
+              <li className="relative flex gap-6 cus:gap-[55px] pb-20 cus:pb-[100px] items-baseline">
+                <p className="font-normal hidden w-[114px] cus:block cus:text-xl">
+                  15:10~16:00
+                </p>
+                <div className="before:absolute before:left-[5.5px] cus:before:left-auto before:h-full before:w-[1px] before:bg-white before:bg-opacity-20">
+                  <div className="bg-[#00E300] cus:right-[5.5px] relative h-3 w-3 rounded-full "></div>
+                </div>
+                <div>
+                  <p className=" font-normal block cus:hidden cus:text-xl">
                     15:10~16:00
-                  </span>
-                  <div className="flex flex-col relative cus:bottom-[58px]">
+                  </p>
+                  <div className="flex flex-col pt-4">
                     <span className="text-[#00E300] font-normal cus:text-xl">
                       Panel Discussion
                     </span>
-                    <span className="text-2xl cus:text-[30px] font-semibold pt-2">
+                    <span className="text-2xl cus:text-[30px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
-                        <>
-                          일본 현지 VC를 통해 듣는
-                          <br className="md:hidden" /> 업계 동향, 투자/Exit 전략
-                        </>
+                        <>일본 현지 VC를 통해 듣는 업계 동향, 투자/Exit 전략</>
                       ) : (
                         <span className="cus:leading-[36px] font-meiryo">
-                          日本現地のVCが語る業界
-                          <br className="md:hidden" />
-                          の最新動向や <br className="hidden cus:block" />{" "}
-                          投資および
-                          <br className="cus:hidden" />
+                          日本現地のVCが語る業界 の最新動向や{" "}
+                          <br className="hidden cus:block" /> 投資および
                           Exit戦略
                         </span>
                       )}
                     </span>
-                  </div>
-                  <div className="relative cus:bottom-12 cus:text-xl">
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-3">
                         <span className="whitespace-nowrap text-[#00E300] text-sm">
@@ -641,7 +619,7 @@ const App: React.FC = () => {
                           )}
                         </span>
                         <span className="text-[#777777] text-sm relative top-0 cus:top-1 cus:text-base">
-                          CEO · SAMURAI <br className="md:hidden" /> INCUBATE
+                          CEO · SAMURAI INCUBATE
                         </span>
                       </div>
                       <div className="flex gap-3">
@@ -652,7 +630,7 @@ const App: React.FC = () => {
                             <span className="font-meiryo">都 虎吉</span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-0.5 cus:top-1 cus:text-base">
+                        <span className="text-[#777777] text-sm relative  cus:text-base">
                           General Partner · Global Brain
                         </span>
                       </div>
@@ -665,8 +643,7 @@ const App: React.FC = () => {
                           )}
                         </span>
                         <span className="text-[#777777] text-sm relative cus:top-1  cus:text-base">
-                          Partner/Director · <br className="cus:hidden" />
-                          Cyber Agent Capital
+                          Partner/Director · Cyber Agent Capital
                         </span>
                       </div>
                       <div className="flex gap-3">
@@ -677,7 +654,7 @@ const App: React.FC = () => {
                             <span className="font-meiryo">沼田 朋子</span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-0.5 cus:top-1 cus:text-base">
+                        <span className="text-[#777777] text-sm relative  cus:text-base">
                           Chief Capitalist · JAFCO
                         </span>
                       </div>
@@ -692,7 +669,7 @@ const App: React.FC = () => {
                         </span>
                       </div>
                       <div className="flex gap-3">
-                        <span className="whitespace-nowrap">
+                        <span>
                           {" "}
                           {language === "KR" ? (
                             "Hideyuki Ebihara"
@@ -700,151 +677,156 @@ const App: React.FC = () => {
                             <span className="font-meiryo">海老原 秀幸</span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative  top-0.5 cus:top-1 cus:text-base">
+                        <span className="text-[#777777] text-sm relative  cus:text-base">
                           Partner · PKSHA CAPITAL
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="relative -left-1.5 top-80 bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 relative top-[310px]">
-                <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 cus:right-44 font-normal cus:text-xl">
+              </li>{" "}
+              <li className="relative flex gap-6 cus:gap-[55px] pb-20 cus:pb-[100px] items-baseline">
+                <p className="font-normal hidden w-[114px] cus:block cus:text-xl">
+                  16:10~16:30
+                </p>
+                <div className="before:absolute before:left-[5.5px] cus:before:left-auto before:h-full before:w-[1px] before:bg-white before:bg-opacity-20">
+                  <div className="bg-[#00E300] cus:right-[5.5px] relative h-3 w-3 rounded-full "></div>
+                </div>
+                <div>
+                  <p className=" font-normal block cus:hidden cus:text-xl">
                     16:10~16:30
-                  </span>
-                  <div className="flex flex-col relative cus:bottom-[58px] ">
+                  </p>
+                  <div className="flex flex-col pt-4">
                     <span className="text-[#00E300] font-normal cus:text-xl">
                       Keynote II
                     </span>
-                    <span className="text-2xl cus:text-[30px] font-semibold pt-2">
+                    <span className="text-2xl cus:text-[30px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
                         <> AI 시대의 글로벌 전개</>
                       ) : (
-                        <span className="font-meiryo">
-                          <br className="cus:hidden" />
-                          AI時代の国際展開
-                        </span>
+                        <span className="font-meiryo">AI時代の国際展開</span>
                       )}
                     </span>
-                  </div>
-                  <div className="relative cus:bottom-12 cus:text-xl">
-                    <div>
-                      <div className="flex gap-3">
-                        <span className="whitespace-nowrap">Taizo Son</span>{" "}
-                        <span className="text-[#777777] text-sm relative top-0.5 cus:top-1 cus:text-base">
-                          Chairman · Mistletoe
-                        </span>
-                      </div>
+                    <div className="flex gap-3">
+                      <span className="whitespace-nowrap">Taizo Son</span>{" "}
+                      <span className="text-[#777777] text-sm relative  cus:text-base">
+                        Chairman · Mistletoe
+                      </span>
                     </div>
                   </div>
                 </div>
-              </div>{" "}
-              <div className="relative -left-1.5 top-[390px] bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 relative top-[380px]">
-                <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 cus:right-44 font-normal cus:text-xl">
+              </li>{" "}
+              <li className="relative flex gap-6 cus:gap-[55px] pb-20 cus:pb-[100px] items-baseline">
+                <p className="font-normal hidden w-[114px] cus:block cus:text-xl">
+                  16:30~17:50
+                </p>
+                <div className="before:absolute before:left-[5.5px] cus:before:left-auto before:h-full before:w-[1px] before:bg-white before:bg-opacity-20">
+                  <div className="bg-[#00E300] cus:right-[5.5px] relative h-3 w-3 rounded-full "></div>
+                </div>
+                <div>
+                  <p className=" font-normal block cus:hidden cus:text-xl">
                     16:30~17:50
-                  </span>
-                  <div className="flex flex-col relative cus:bottom-[58px] ">
+                  </p>
+                  <div className="flex flex-col pt-4">
                     <span className="text-[#00E300] font-normal cus:text-xl">
                       SBVA Portfolio Pitching
                     </span>
-                    <span className="text-2xl cus:text-[30px] font-semibold pt-2">
+                    <span className="text-2xl cus:text-[30px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
                         <>SBVA 포트폴리오 8개사 피칭</>
                       ) : (
                         <span className="font-meiryo">
                           <span className="font-sans">SBVA</span>
-                          が選定したポートフォリ
-                          <br className="md:hidden" />
-                          オ企業８社のピッチング
+                          が選定したポートフォリ オ企業８社のピッチング
                         </span>
                       )}
                     </span>
-                  </div>
-                  <div className="relative cus:bottom-12 cus:text-xl">
-                    <div>
-                      <div className="flex gap-3">
-                        {" "}
-                        <span className="whitespace-nowrap">
-                          {language === "KR" ? (
-                            "국내 포트폴리오 8개사"
-                          ) : (
-                            <span className="font-meiryo">
-                              韓国生まれのスタートアップ企業８社
-                            </span>
-                          )}
-                        </span>
-                      </div>
+                    <div className="flex gap-3">
+                      {" "}
+                      <span className="whitespace-nowrap">
+                        {language === "KR" ? (
+                          "국내 포트폴리오 8개사"
+                        ) : (
+                          <span className="font-meiryo">
+                            韓国生まれのスタートアップ企業８社
+                          </span>
+                        )}
+                      </span>
                     </div>
                   </div>
                 </div>
-              </div>{" "}
-              <div className="relative -left-1.5 top-[460px] bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 relative top-[450px]">
-                <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 cus:right-44 cus:text-xl">
+              </li>{" "}
+              <li className="relative flex gap-6 cus:gap-[55px] pb-20 cus:pb-[100px] items-baseline">
+                <p className="font-normal hidden w-[114px] cus:block cus:text-xl">
+                  17:50~18:00
+                </p>
+                <div className="before:absolute before:left-[5.5px] cus:before:left-auto before:h-[105%] cus:before:h-[107%] before:w-[1px] before:bg-white before:bg-opacity-20">
+                  <div className="bg-[#00E300] cus:right-[5.5px] relative h-3 w-3 rounded-full "></div>
+                </div>
+                <div>
+                  <p className=" font-normal block cus:hidden cus:text-xl">
                     17:50~18:00
-                  </span>
-                  <div className="flex flex-col relative cus:bottom-[58px]">
-                    <span className="text-[#00E300]  font-normal cus:text-xl">
-                      Closing Remarks{" "}
+                  </p>
+                  <div className="flex flex-col pt-4">
+                    <span className="text-[#00E300] font-normal cus:text-xl">
+                      Closing Remarks
                     </span>
-                    <span className="text-2xl cus:text-[30px] font-semibold pt-2 ">
+                    <span className="text-2xl cus:text-[30px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
                         <>SBVA의 일본 투자 포부</>
                       ) : (
                         <span className="font-meiryo">
                           <span className="font-sans">SBVA</span>
-                          <br className="md:hidden" />
                           の抱負とご協力のお願い
                         </span>
                       )}
                     </span>
-                  </div>
-                  <div className="relative cus:bottom-12 cus:text-xl">
                     <div>
-                      <div className="flex gap-3">
-                        <span className="whitespace-nowrap">JP Lee</span>{" "}
-                        <span className="text-[#777777] text-sm relative top-0.5 cus:top-1 cus:text-base">
-                          CEO/Managing Partner · SBVA{" "}
-                        </span>
-                      </div>
+                      <span>JP Lee</span>
+                      <span className="text-[#777777] text-sm relative cus:text-base">
+                        &nbsp; &nbsp; CEO/Managing Partner · SBVA
+                      </span>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="relative -left-1.5 top-[530px] bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 relative top-[520px]">
-                <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 cus:right-44 font-normal cus:text-xl">
+              </li>{" "}
+              <li className="relative flex gap-6 cus:gap-[55px] pb-20 cus:pb-[100px] items-baseline">
+                <p className="font-normal hidden w-[114px] cus:block cus:text-xl">
+                  18:00~20:00
+                </p>
+                <div className="before:absolute before:left-[5.5px] cus:before:left-auto before:h-full cus:before:h-[95%]  before:w-[1px] before:bg-white before:bg-opacity-20">
+                  <div className="bg-[#00E300] cus:right-[5.5px] relative h-3 w-3 rounded-full "></div>
+                </div>
+                <div>
+                  <p className=" font-normal block cus:hidden cus:text-xl">
                     18:00~20:00
-                  </span>
-                  <div className="flex flex-col relative cus:bottom-[60px]">
-                    <span className="text-2xl w-full  cus:text-[30px] font-semibold">
+                  </p>
+                  <div className="flex flex-col pt-4">
+                    <span className="text-2xl relative cus:top-1 cus:text-[30px] font-semibold">
                       {language === "KR" ? (
                         <>Dinner & Networking</>
                       ) : (
                         <span className="font-meiryo">
-                          ディナー＆
-                          <br className="md:hidden" />
-                          ネットワーキング
+                          ディナー＆ ネットワーキング
                         </span>
                       )}
                     </span>
                   </div>
                 </div>
-              </div>
-              <div className="relative -left-1.5 top-[600px] bg-[#00E300] h-3 w-3 rounded-full "></div>
-              <div className="pl-7 relative top-[590px]">
-                <div className="flex flex-col space-y-5">
-                  <span className="relative bottom-2 cus:right-44 font-normal cus:text-xl">
+              </li>{" "}
+              <li className="relative flex gap-6 cus:gap-[55px] pb-20 cus:pb-[100px] items-baseline">
+                <p className="font-normal hidden w-[114px] cus:block cus:text-xl">
+                  20:00~22:00
+                </p>
+                <div>
+                  <div className="bg-[#00E300] cus:right-[5.5px] relative h-3 w-3 rounded-full "></div>
+                </div>
+                <div>
+                  <p className=" font-normal block cus:hidden cus:text-xl">
                     20:00~22:00
-                  </span>
-                  <div className="flex flex-col relative cus:bottom-[60px]">
-                    <span className="flex gap-4 items-end text-2xl cus:text-[30px] font-semibold">
+                  </p>
+                  <div className="flex flex-col">
+                    <span className="flex gap-4 relative cus:top-1  items-end text-2xl cus:text-[30px] font-semibold">
                       {language === "KR" ? (
                         "After Party"
                       ) : (
@@ -856,8 +838,8 @@ const App: React.FC = () => {
                     </span>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>{" "}
+            </ul>
           </div>
         </div>
       </FadeInSection>
@@ -924,7 +906,7 @@ const App: React.FC = () => {
               ) : (
                 <span className="font-meiryo">
                   SBVAは((旧) ソフトバンクベンチャーズアジア
-                  )、2000年にソフトバンクグループ傘下のベンチャー{" "}
+                  )、2000年にソフトバンクグループ傘下のベンチャー
                   <br className="hidden cus:block" />
                   キャピタルとして韓国に設立され、グローバルのさまざまなスタートアップに投資を行ってきました。
                 </span>
