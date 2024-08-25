@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "./components/Header";
 import FadeInSection from "./components/FadeInSection";
 import { useLanguage } from "./contexts/LanguageContext"; // 추가된 코드
@@ -9,6 +9,28 @@ import SpeakersAndPanels from "./components/SpeakersPanels";
 
 const App: React.FC = () => {
   const { language } = useLanguage(); // 추가된 코드
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && videoRef.current) {
+          videoRef.current.play();
+        }
+      },
+      { threshold: 0.5 } // 50%가 보일 때 비디오 재생
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
   return (
     <div className="App bg-black font-sans">
       {/* Header */}
@@ -16,18 +38,20 @@ const App: React.FC = () => {
       <div className="block h-20 md:h-24"></div>
       <div className="relative flex flex-col h-[580px] cus:h-[768px] xl:h-[800px] items-center justify-center overflow-hidden font-poppins">
         <video
+          ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
           muted
           loop
           playsInline
-          controls={false} // This ensures that the player controls are removed
+          controls={false}
         >
-          <source src={require("./assets/video.mp4")} type="video/mp4" />
+          <source
+            src="https://github.com/user-attachments/assets/8403fb60-eec5-4866-a177-51f1cc679c26"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
-        </video>{" "}
+        </video>
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        {/* 중앙에 배치된 텍스트 */}
         <div className="relative z-10 text-center flex flex-col text-[66px] cus:text-[70px] test:text-[120px] font-bold items-center justify-center text-white leading-80 cus:leading-[90px] test:leading-[170px]">
           <span>2024</span>
           <h1 className="w-3/4 cus:w-full mb-4 text-[#00E300] leading-80">
@@ -39,7 +63,7 @@ const App: React.FC = () => {
           <p>THE JAPANESE STARTUP ECOSYSTEM</p>
         </div>
         <div className="absolute bottom-4 text-center pb-4 w-full cus:hidden">
-          <span className="text-white text-sm ">SCROLL</span>
+          <span className="text-white text-sm">SCROLL</span>
         </div>
       </div>
       {/* FadeInSection: 첫 번째 페이지 - 높이 1579px */}

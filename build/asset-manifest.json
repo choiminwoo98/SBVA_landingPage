@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.af8a8b8d.css",
-    "main.js": "/static/js/main.176f8164.js",
+    "main.js": "/static/js/main.6ea02397.js",
     "static/js/453.d24df9f2.chunk.js": "/static/js/453.d24df9f2.chunk.js",
     "static/media/meiryo.woff": "/static/media/meiryo.0a2000c2ba3d1683cf11.woff",
-    "static/media/video.mp4": "/static/media/video.369e66274dea39098ef8.mp4",
     "static/media/img.png": "/static/media/img.c4d71e0544b292e479bf.png",
     "static/media/Yuta Uchiyama.png": "/static/media/Yuta Uchiyama.dfe11a244287cc701522.png",
     "static/media/Taizo Son.png": "/static/media/Taizo Son.97262f5e4d6531c805bc.png",
@@ -22,11 +21,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.af8a8b8d.css.map": "/static/css/main.af8a8b8d.css.map",
-    "main.176f8164.js.map": "/static/js/main.176f8164.js.map",
+    "main.6ea02397.js.map": "/static/js/main.6ea02397.js.map",
     "453.d24df9f2.chunk.js.map": "/static/js/453.d24df9f2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.af8a8b8d.css",
-    "static/js/main.176f8164.js"
+    "static/js/main.6ea02397.js"
   ]
 }
