@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.0b89ab82.css",
-    "main.js": "/static/js/main.f8f3b48c.js",
+    "main.js": "/static/js/main.d9184251.js",
     "static/js/453.d24df9f2.chunk.js": "/static/js/453.d24df9f2.chunk.js",
     "static/media/meiryo.ttc": "/static/media/meiryo.f65820cd039ef0570e6f.ttc",
     "static/media/meiryo.woff": "/static/media/meiryo.0a2000c2ba3d1683cf11.woff",
     "static/media/meiryo.woff2": "/static/media/meiryo.7bbb610e92e83fc39b8c.woff2",
-    "static/media/img.png": "/static/media/img.78ac97afff60448dc8d4.png",
+    "static/media/img.png": "/static/media/img.c4d71e0544b292e479bf.png",
     "static/media/Taizo Son.png": "/static/media/Taizo Son.4efdc813b5b05d91a2b2.png",
     "static/media/Miki Fukazawa.png": "/static/media/Miki Fukazawa.41a48248ec9d7c5d5faf.png",
     "static/media/Hogil Doh.png": "/static/media/Hogil Doh.0fa54d39d432b3d5f442.png",
@@ -23,11 +23,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.0b89ab82.css.map": "/static/css/main.0b89ab82.css.map",
-    "main.f8f3b48c.js.map": "/static/js/main.f8f3b48c.js.map",
+    "main.d9184251.js.map": "/static/js/main.d9184251.js.map",
     "453.d24df9f2.chunk.js.map": "/static/js/453.d24df9f2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b89ab82.css",
-    "static/js/main.f8f3b48c.js"
+    "static/js/main.d9184251.js"
   ]
 }
