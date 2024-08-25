@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Meiryo";
-  src: url("/public/meiryo.ttc") format("truetype"); /* 또는 .woff */
+  src: url("/public/meiryo.woff") format("truetype"); /* 또는 .woff */
   font-weight: normal;
   font-style: normal;
 }
