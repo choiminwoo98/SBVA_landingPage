@@ -791,7 +791,7 @@ const App: React.FC = () => {
                       <span className="text-lg whitespace-nowrap ">
                         Taizo Son
                       </span>{" "}
-                      <span className="text-[#777777] text-sm relative top-1 font-poppins cus:text-base">
+                      <span className="text-[#777777] text-sm relative top-1  font-poppins cus:text-base">
                         Chairman · Mistletoe
                       </span>
                     </div>
@@ -949,7 +949,7 @@ const App: React.FC = () => {
           id="SBVA PORTFOLIO PITCHING"
           className="h-fit w-full cus:w-[1100px] gap-5 flex flex-col items-center justify-start pb-[120px] cus:pb-[250px] font-poppins"
         >
-          <h2 className="text-3xl w-full font-bold cus:text-6xl pl-5 cus:pl-0 pb-[50px]  cus:pb-[66px] text-white">
+          <h2 className="text-3xl w-full font-bold cus:text-6xl pl-5 cus:pl-0 pb-[30px]  cus:pb-[66px] text-white">
             SBVA PORTFOLIO PITCHING
           </h2>
           <div className="w-full pl-5 cus:pl-0 font-spoka">
