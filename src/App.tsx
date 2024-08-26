@@ -791,7 +791,7 @@ const App: React.FC = () => {
                       <span className="text-lg whitespace-nowrap ">
                         Taizo Son
                       </span>{" "}
-                      <span className="text-[#777777] text-sm relative top-1  cus:text-base">
+                      <span className="text-[#777777] text-sm relative top-1 font-poppins cus:text-base">
                         Chairman · Mistletoe
                       </span>
                     </div>

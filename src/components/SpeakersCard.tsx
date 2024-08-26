@@ -18,7 +18,7 @@ const SpeakerCard: React.FC<SpeakerProps> = ({
   const { language } = useLanguage(); // 컨텍스트에서 현재 언어를 가져옵니다.
 
   return (
-    <div className="flex flex-col items-center rounded-lg font-medium ">
+    <div className="flex flex-col items-center rounded-lg font-normal ">
       <img
         src={require(`../assets/${image}.png`)}
         alt={name}
