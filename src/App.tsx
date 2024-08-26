@@ -913,20 +913,14 @@ const App: React.FC = () => {
                   <p className=" font-normal block cus:hidden cus:text-xl">
                     20:00~22:00
                   </p>
-                  <div className="flex flex-col pt-4">
-                    <span className="flex gap-4 relative cus:top-1 items-end text-2xl cus:text-[26px] font-semibold font-poppins">
+                  <div className="flex pt-4">
+                    <span className="flex gap-4 flex-col relative cus:top-1 items-start text-2xl cus:text-[26px] font-semibold font-poppins">
                       {language === "KR" ? (
                         "After Party"
                       ) : (
                         <span className="font-meiryo">アフターパーティー</span>
                       )}
-                      <p
-                        className={`text-base absolute cus:text-xl font-normal ${
-                          language === "KR"
-                            ? "top-6  left-[140px] cus:left-36"
-                            : "top-6 left-56 cus:left-60"
-                        } `}
-                      >
+                      <p className={`text-base cus:text-xl font-normal  `}>
                         (optional)
                       </p>
                     </span>
