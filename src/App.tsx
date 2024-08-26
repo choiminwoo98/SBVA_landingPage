@@ -475,11 +475,11 @@ const App: React.FC = () => {
                 window.open("https://forms.office.com/r/pW3HtB9qn1", "_blank"); // Replace with your desired URL
               }}
             >
-              <span className="cus:hidden font-poppins">
+              <span className="cus:hidden font-poppins text-nowrap">
                 2024 SBVA Tokyo Forum
               </span>
-              <span className="hidden font-poppins cus:block">
-                2024 SBVA Tokyo Forum{" "}
+              <span className="hidden font-poppins text-nowrap cus:block">
+                2024 SBVA Tokyo Forum
                 {language === "KR" ? (
                   "신청하기"
                 ) : (
