@@ -161,7 +161,7 @@ const App: React.FC = () => {
                     </div>
                   </td>
                   <td className="relative pl-[34px]">
-                    <span>2024 SBVA Tokyo Forum</span>
+                    <span className="font-poppins">2024 SBVA Tokyo Forum</span>
                     <div className="absolute inset-y-0 left-0 w-px bg-white bg-opacity-20"></div>
                   </td>
                 </tr>
@@ -271,14 +271,17 @@ const App: React.FC = () => {
                     <span className="block pt-2">
                       {language === "KR" ? (
                         <>
-                          일본 스타트업 생태계에 대한 이해 및 양국 스타트업, VC,
-                          기업 간 네트워킹
+                          일본 스타트업 생태계에 대한 이해 및 양국 스타트업,{" "}
+                          <span className="font-poppins">VC</span>, 기업 간
+                          네트워킹
                         </>
                       ) : (
                         <span className=" font-meiryo">
                           日本のスタートアップエコシステムに対する理解促進および
                           <br />
-                          日韓のスタートアップ、VC、 企業間のネットワーキング
+                          日韓のスタートアップ、{" "}
+                          <span className="font-poppins">VC</span>、
+                          企業間のネットワーキング
                         </span>
                       )}
                     </span>
@@ -347,7 +350,7 @@ const App: React.FC = () => {
                     <span className="font-meiryo">イベント名</span>
                   )}
                 </span>
-                <span className="w-full text-lg font-normal">
+                <span className="w-full text-lg font-normal font-poppins">
                   2024 SBVA Tokyo Forum
                 </span>
               </div>
@@ -472,8 +475,10 @@ const App: React.FC = () => {
                 window.open("https://forms.office.com/r/pW3HtB9qn1", "_blank"); // Replace with your desired URL
               }}
             >
-              <span className="cus:hidden">2024 SBVA Tokyo Forum</span>
-              <span className="hidden cus:block">
+              <span className="cus:hidden font-poppins">
+                2024 SBVA Tokyo Forum
+              </span>
+              <span className="hidden font-poppins cus:block">
                 2024 SBVA Tokyo Forum{" "}
                 {language === "KR" ? (
                   "신청하기"
@@ -515,22 +520,26 @@ const App: React.FC = () => {
                     14:00~14:15
                   </p>
                   <div className="flex flex-col pt-4">
-                    <span className="text-[#00E300] font-normal cus:text-xl">
+                    <span className="text-[#00E300] font-normal cus:text-xl font-poppins">
                       Opening Remarks
                     </span>
                     <span className="text-2xl cus:text-[26px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
-                        <>SBVA와 SBVA의 투자 전략에 대한 이해</>
+                        <>
+                          <span className="font-poppins">SBVA</span>와{" "}
+                          <span className="font-poppins">SBVA</span>의 투자
+                          전략에 대한 이해
+                        </>
                       ) : (
                         <span className="font-meiryo">
-                          <span className="font-sans">SBVA</span>と
-                          <span className="font-sans">SBVA</span>の投資戦略
+                          <span className="font-popins">SBVA</span>と
+                          <span className="font-popins">SBVA</span>の投資戦略
                         </span>
                       )}
                     </span>
                     <div>
-                      <span className="text-lg">JP Lee</span>
-                      <span className="text-[#777777] text-sm relative cus:text-base">
+                      <span className="text-lg font-poppins">JP Lee</span>
+                      <span className="text-[#777777] text-sm relative top-0.5 cus:text-base font-poppins ">
                         &nbsp; &nbsp; CEO/Managing Partner · SBVA
                       </span>
                     </div>
@@ -549,23 +558,26 @@ const App: React.FC = () => {
                     14:15~14:40
                   </p>
                   <div className="flex flex-col pt-4">
-                    <span className="text-[#00E300] font-normal cus:text-xl">
+                    <span className="text-[#00E300] font-normal cus:text-xl font-poppins">
                       Fireside Chat
                     </span>
                     <span className="text-2xl cus:text-[26px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
-                        <>SBVA의 성공적인 일본 투자 사례 소개</>
+                        <>
+                          <span className="font-poppins">SBVA</span>의 성공적인
+                          일본 투자 사례 소개
+                        </>
                       ) : (
                         <span className="font-meiryo">
-                          日本における<span className="font-sans">SBVA</span>
+                          日本における<span className="font-popins">SBVA</span>
                           の投資成功事例
                         </span>
                       )}
                     </span>
-                    <div>
+                    <div className="flex flex-col gap-2">
                       <div>
-                        <span className="text-lg">JP Lee</span>
-                        <span className="text-[#777777] text-sm relative cus:text-base">
+                        <span className="text-lg font-poppins">JP Lee</span>
+                        <span className="text-[#777777] text-sm relative cus:text-base font-poppins ">
                           &nbsp; &nbsp; CEO/Managing Partner · SBVA
                         </span>
                       </div>
@@ -577,13 +589,13 @@ const App: React.FC = () => {
                             <span className="font-meiryo">内山 雄太</span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative cus:text-base">
+                        <span className="text-[#777777] text-sm relative cus:text-base font-poppins ">
                           &nbsp; &nbsp; CEO · SODA
                         </span>
                       </div>
                       <div>
                         <span className="text-lg">Youngki Kim</span>
-                        <span className="text-[#777777] text-sm relative cus:text-base">
+                        <span className="text-[#777777] text-sm relative cus:text-base font-poppins ">
                           &nbsp; &nbsp; CFO · KREAM
                         </span>
                       </div>
@@ -603,13 +615,14 @@ const App: React.FC = () => {
                     14:50~15:10
                   </p>
                   <div className="flex flex-col pt-4">
-                    <span className="text-[#00E300] font-normal cus:text-xl">
+                    <span className="text-[#00E300] font-normal cus:text-xl font-poppins">
                       Keynote I
                     </span>
                     <span className="text-2xl cus:text-[26px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
                         <>
-                          SoftBank의 오픈 이노베이션 그리고 스타트업과의 제휴 전략
+                          <span className="font-poppins">SoftBank</span>
+                          의 오픈 이노베이션 그리고 스타트업과의 제휴 전략
                         </>
                       ) : (
                         <span className="cus:leading-[35px] font-meiryo ">
@@ -629,7 +642,7 @@ const App: React.FC = () => {
                           </span>
                         )}
                       </span>
-                      <span className="text-[#777777] text-sm relative cus:text-base">
+                      <span className="text-[#777777] top-1 text-sm relative cus:text-base font-poppins ">
                         VP/Head of Alliance & Investment Strategy Div. ·
                         SoftBank
                       </span>
@@ -649,7 +662,7 @@ const App: React.FC = () => {
                     15:10~16:00
                   </p>
                   <div className="flex flex-col pt-4">
-                    <span className="text-[#00E300] font-normal cus:text-xl">
+                    <span className="text-[#00E300] font-normal cus:text-xl font-poppins">
                       Panel Discussion
                     </span>
                     <span className="text-2xl cus:text-[26px] font-semibold pt-2 pb-5">
@@ -693,7 +706,7 @@ const App: React.FC = () => {
                             <span className="font-meiryo">都 虎吉</span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative  cus:text-base">
+                        <span className="text-[#777777] text-sm relative top-1  cus:text-base">
                           General Partner · Global Brain
                         </span>
                       </div>
@@ -717,7 +730,7 @@ const App: React.FC = () => {
                             <span className="font-meiryo">沼田 朋子</span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative  cus:text-base">
+                        <span className="text-[#777777] text-sm relative top-1  cus:text-base">
                           Chief Capitalist · JAFCO
                         </span>
                       </div>
@@ -740,7 +753,7 @@ const App: React.FC = () => {
                             <span className="font-meiryo">海老原 秀幸</span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative  cus:text-base">
+                        <span className="text-[#777777] text-sm relative top-1  cus:text-base">
                           Partner · PKSHA CAPITAL
                         </span>
                       </div>
@@ -760,12 +773,16 @@ const App: React.FC = () => {
                     16:10~16:30
                   </p>
                   <div className="flex flex-col pt-4">
-                    <span className="text-[#00E300] font-normal cus:text-xl">
+                    <span className="text-[#00E300] font-normal cus:text-xl font-poppins">
                       Keynote II
                     </span>
                     <span className="text-2xl cus:text-[26px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
-                        <> AI 시대의 글로벌 전개</>
+                        <>
+                          {" "}
+                          <span className="font-poppins">AI</span> 시대의 글로벌
+                          전개
+                        </>
                       ) : (
                         <span className="font-meiryo">AI時代の国際展開</span>
                       )}
@@ -774,7 +791,7 @@ const App: React.FC = () => {
                       <span className="text-lg whitespace-nowrap ">
                         Taizo Son
                       </span>{" "}
-                      <span className="text-[#777777] text-sm relative  cus:text-base">
+                      <span className="text-[#777777] text-sm relative top-1  cus:text-base">
                         Chairman · Mistletoe
                       </span>
                     </div>
@@ -793,15 +810,18 @@ const App: React.FC = () => {
                     16:30~17:50
                   </p>
                   <div className="flex flex-col pt-4">
-                    <span className="text-[#00E300] font-normal cus:text-xl">
+                    <span className="text-[#00E300] font-normal cus:text-xl font-poppins">
                       SBVA Portfolio Pitching
                     </span>
                     <span className="text-2xl cus:text-[26px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
-                        <>SBVA 포트폴리오 8개사 피칭</>
+                        <>
+                          <span className="font-poppins">SBVA</span>포트폴리오
+                          8개사 피칭
+                        </>
                       ) : (
                         <span className="font-meiryo">
-                          <span className="font-sans">SBVA</span>
+                          <span className="font-popins">SBVA</span>
                           が選定したポートフォリオ企業８社のピッチング
                         </span>
                       )}
@@ -833,22 +853,25 @@ const App: React.FC = () => {
                     17:50~18:00
                   </p>
                   <div className="flex flex-col pt-4">
-                    <span className="text-[#00E300] font-normal cus:text-xl">
+                    <span className="text-[#00E300] font-normal cus:text-xl font-poppins">
                       Closing Remarks
                     </span>
                     <span className="text-2xl cus:text-[26px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
-                        <>SBVA의 일본 투자 포부</>
+                        <>
+                          <span className="font-poppins">SBVA</span>의 일본 투자
+                          포부
+                        </>
                       ) : (
                         <span className="font-meiryo">
-                          <span className="font-sans">SBVA</span>
+                          <span className="font-popins">SBVA</span>
                           の抱負とご協力のお願い
                         </span>
                       )}
                     </span>
                     <div>
-                      <span className="text-lg">JP Lee</span>
-                      <span className="text-[#777777] text-sm relative cus:text-base">
+                      <span className="text-lg font-poppins">JP Lee</span>
+                      <span className="text-[#777777] text-sm relative top-0.5 cus:text-base font-poppins ">
                         &nbsp; &nbsp; CEO/Managing Partner · SBVA
                       </span>
                     </div>
@@ -867,7 +890,7 @@ const App: React.FC = () => {
                     18:00~20:00
                   </p>
                   <div className="flex flex-col pt-4">
-                    <span className="text-2xl relative cus:top-1 cus:text-[26px] font-semibold">
+                    <span className="text-2xl relative cus:top-1 cus:text-[26px] font-semibold font-poppins">
                       {language === "KR" ? (
                         <>Dinner & Networking</>
                       ) : (
@@ -891,7 +914,7 @@ const App: React.FC = () => {
                     20:00~22:00
                   </p>
                   <div className="flex flex-col pt-4">
-                    <span className="flex gap-4 relative cus:top-1 items-end text-2xl cus:text-[26px] font-semibold">
+                    <span className="flex gap-4 relative cus:top-1 items-end text-2xl cus:text-[26px] font-semibold font-poppins">
                       {language === "KR" ? (
                         "After Party"
                       ) : (
@@ -975,8 +998,10 @@ const App: React.FC = () => {
             <span className="leading-[26px] cus:leading-[33px]">
               {language === "KR" ? (
                 <>
-                  SBVA는 2000년 소프트뱅크그룹(SoftBank Group) 산하의
-                  창업투자회사인
+                  <span className="font-poppins">SBVA</span>는 2000년
+                  소프트뱅크그룹(
+                  <span className="font-poppins">SoftBank Group</span>
+                  ) 산하의 창업투자회사인
                   <br className="hidden cus:block" />
                   소프트뱅크벤처스로 한국에 설립돼 국내외 다양한 스타트업에
                   투자해 오고 있습니다.
@@ -994,21 +1019,28 @@ const App: React.FC = () => {
               {" "}
               {language === "KR" ? (
                 <>
-                  2023년 6월에 손태장 미슬토 회장과 이준표 SBVA 대표, 타이라
-                  아츠시 미슬토 대표가 공동으로
+                  2023년 6월에 손태장 미슬토 회장과 이준표{" "}
+                  <span className="font-poppins">SBVA</span> 대표, 타이라 아츠시
+                  미슬토 대표가 공동으로
                   <br className="hidden cus:block" /> 설립한 싱가포르 기반의
-                  투자 회사 디에지오브(The Edgeof)에 인수돼 독립하였으며,{" "}
-                  <br className="hidden cus:block" />약 2.5조원 규모의 자산을
-                  운용하고 있습니다.
+                  투자 회사 디에지오브(
+                  <span className="font-poppins">The Edgeof</span>)에 인수돼
+                  독립하였으며, <br className="hidden cus:block" />약 2.5조원
+                  규모의 자산을 운용하고 있습니다.
                 </>
               ) : (
                 <span className="font-meiryo">
-                  2023年6月には「ミスルト(Mistletoe)」の孫泰蔵会長と
-                  孫泰蔵会長と大蘿淳司Managing Director、そしてSBVAの{" "}
-                  <br className="hidden cus:block" />
-                  CEOであるJP
-                  Leeが共同で設立したシンガポール拠点の投資会社「ディ・エッジ・オブ(The
-                  Edgeof)」 <br className="hidden cus:block" />
+                  2023年6月には「ミスルト(
+                  <span className="font-poppins">Mistletoe</span>
+                  )」の孫泰蔵会長と 孫泰蔵会長と大蘿淳司Managing
+                  <span className="font-poppins">Director</span>
+                  、そして <span className="font-poppins">SBVA</span>
+                  の <br className="hidden cus:block" />
+                  <span className="font-poppins">CEO</span>である{" "}
+                  <span className="font-poppins">JP Lee</span>
+                  が共同で設立したシンガポール拠点の投資会社「ディ・エッジ・オブ({" "}
+                  <span className="font-poppins">The Edgeof</span>
+                  )」 <br className="hidden cus:block" />
                   の傘下として独立し、
                 </span>
               )}
@@ -1089,7 +1121,7 @@ const App: React.FC = () => {
             <path d="m3.293 11.293 1.414 1.414L11 6.414V20h2V6.414l6.293 6.293 1.414-1.414L12 2.586l-8.707 8.707z" />
           </svg>
         </a>
-        <p className="xl:pb-4 font-poppins text-xs cus:text-lg font-spoka font-normal">
+        <p className="xl:pb-4 font-poppins text-xs cus:text-lg font-normal">
           Copyright © 2024 by SBVA. All Rights Reserved.
         </p>
       </footer>

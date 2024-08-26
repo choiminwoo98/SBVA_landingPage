@@ -100,7 +100,7 @@ const SpeakersAndPanels: React.FC = () => {
       <div className="flex flex-col space-y-14">
         <div className="flex flex-col space-y-7 pt-[30px] ">
           <div className="flex items-center pl-5 cus:pl-0 cus:pb-[30px]  space-x-4 ">
-            <span className="text-[#00E300]  text-lg cus:text-[30px]  font-medium">
+            <span className="text-[#00E300]  text-lg cus:text-[30px]  font-medium font-poppins">
               Fireside Chat
             </span>
             <div className="flex-grow border-t relative left-5 cus:left-10 border-white opacity-20"></div>
@@ -120,7 +120,7 @@ const SpeakersAndPanels: React.FC = () => {
         </div>
         <div className="flex flex-col space-y-7 pt-[30px]   ">
           <div className="flex items-c pl-5 cus:pl-0 cus:pb-[30px] space-x-4">
-            <span className="text-[#00E300] text-lg cus:text-[30px] cus:pt-8 font-medium">
+            <span className="text-[#00E300] text-lg cus:text-[30px] cus:pt-8 font-medium font-poppins">
               Keynote
             </span>
             <div className="flex-grow border-t relative left-5 cus:left-10 top-3 cus:top-11 border-white opacity-20"></div>
@@ -143,7 +143,7 @@ const SpeakersAndPanels: React.FC = () => {
         </div>{" "}
         <div className="flex flex-col space-y-7 pt-[30px] ">
           <div className="flex items-c pl-5 cus:pl-0 cus:pb-[30px] space-x-4">
-            <span className="text-[#00E300] text-lg cus:text-[30px] cus:pt-8 font-medium">
+            <span className="text-[#00E300] text-lg cus:text-[30px] cus:pt-8 font-medium font-poppins">
               Panel Discussion{" "}
             </span>
             <div className="flex-grow border-t relative left-5 cus:left-10 top-3 cus:top-11 border-white opacity-20"></div>

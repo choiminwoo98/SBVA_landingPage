@@ -29,14 +29,14 @@ const SpeakerCard: React.FC<SpeakerProps> = ({
       />
       <span
         className={`text-[#00E300] text-sm cus:text-lg ${
-          language === "JP" ? "font-meiryo" : ""
+          language === "JP" ? "font-meiryo" : "font-poppins"
         }`}
       >
         {panel}
       </span>
       <h3
         className={`text-lg cus:text-2xl text-white ${
-          language === "JP" ? "font-meiryo" : ""
+          language === "JP" ? "font-meiryo" : "font-poppins"
         }`}
       >
         {name}

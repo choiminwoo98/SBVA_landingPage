@@ -83,18 +83,22 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`text-[18px] font-medium fixed top-0 w-screen left-0 right-0  bg-black bg-opacity-70 shadow-md z-50 font-poppins transition-transform duration-500 ease-in-out ${
-        scrollDirection === "down"
-          ? "transform -translate-y-full"
-          : "transform translate-y-0"
-      } ${!isMenuOpen ? "backdrop-blur-sm" : ""}`}
+      className={`text-[18px] font-medium fixed  top-0 w-screen left-0 right-0  bg-black bg-opacity-70 shadow-md z-50 font-poppins transition-transform duration-500 ease-in-out ${
+        !isMenuOpen
+          ? `backdrop-blur-sm ${
+              scrollDirection === "down"
+                ? "transform -translate-y-full"
+                : "transform translate-y-0"
+            }`
+          : ""
+      }`}
     >
       <div
-        className={`flex w-full h-20 lg:h-[100px] max-w-[1520px] px-5 sm:px-10  mx-auto items-center justify-between lg:whitespace-nowrap transition-transform duration-500 ease-in-out ${
+        className={`flex w-full h-20 lg:h-[100px] max-w-[1520px] px-5 sm:px-10 mx-auto items-center justify-between lg:whitespace-nowrap transition-transform duration-500 ease-in-out ${
           scrollDirection === "down"
             ? "transform -translate-y-full"
             : "transform translate-y-0"
-        } `}
+        }  `}
       >
         {/* Logo */}
         <div
@@ -183,11 +187,11 @@ const Header: React.FC = () => {
 
       {/* Full-Screen Menu */}
       <nav
-        className={`test:hidden h-full fixed top-0 left-0 w-full  bg-black transform ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        className={`test:hidden fixed  top-0 left-0 w-full  bg-black transform ${
+          isMenuOpen ? "translate-x-0 " : "translate-x-full"
         } transition-transform duration-300 ease-in-out z-40`}
       >
-        <div className="flex flex-col h-full space-y-10">
+        <div className="flex flex-col h-screen bg-black">
           {/* Top Section: Logo and Close Button */}
           <div className="flex items-center justify-between p-6">
             <div className="text-xl font-bold text-white">
@@ -210,7 +214,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Menu Items */}
-          <div className="flex flex-col items-start pl-6 space-y-8 text-white text-2xl font-medium ">
+          <div className=" flex flex-col py-5 items-start pl-6 pt-[60px] pb-[100px] space-y-10 text-white bg-black text-2xl font-medium ">
             {[
               "OVERVIEW",
               "PROGRAM",
@@ -232,7 +236,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Bottom Section: Language Switch */}
-          <div className="flex items-center justify-start gap-2 p-6 text-white text-xl">
+          <div className="flex bg-black items-center justify-start gap-2 p-6 text-white text-xl">
             <button
               className={`text-[18px] font-normal ${
                 language === "JP"
@@ -265,12 +269,6 @@ const Header: React.FC = () => {
       </nav>
 
       {/* Overlay Background */}
-      <div
-        className={`fixed  test:hidden inset-0 bg-black bg-opacity-50 z-30 transition-opacity ${
-          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-        onClick={toggleMenu}
-      ></div>
     </header>
   );
 };
