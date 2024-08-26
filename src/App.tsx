@@ -921,7 +921,7 @@ const App: React.FC = () => {
                         <span className="font-meiryo">アフターパーティー</span>
                       )}
                       <p className={`text-base cus:text-xl font-normal  `}>
-                        (optional)
+                        (Optional)
                       </p>
                     </span>
                   </div>
