@@ -1032,13 +1032,13 @@ const App: React.FC = () => {
                 <span className="font-meiryo">
                   2023年6月には「ミスルト(
                   <span className="font-poppins">Mistletoe</span>
-                  )」の孫泰蔵会長と 孫泰蔵会長と大蘿淳司Managing
+                  )」の孫泰蔵会長と孫泰蔵会長と大蘿淳司Managing
                   <span className="font-poppins">Director</span>
                   、そして <span className="font-poppins">SBVA</span>
-                  の <br className="hidden cus:block" />
+                  の<br className="hidden cus:block" />
                   <span className="font-poppins">CEO</span>である{" "}
                   <span className="font-poppins">JP Lee</span>
-                  が共同で設立したシンガポール拠点の投資会社「ディ・エッジ・オブ({" "}
+                  が共同で設立したシンガポール拠点の投資会社「ディ・エッジ・オブ(
                   <span className="font-poppins">The Edgeof</span>
                   )」 <br className="hidden cus:block" />
                   の傘下として独立し、
