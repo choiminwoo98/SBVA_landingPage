@@ -83,14 +83,18 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`text-[18px] font-medium fixed top-0 w-screen left-0 right-0  hadow-md z-50 font-poppins`}
+      className={`text-[18px] font-medium fixed top-0 w-screen left-0 right-0  bg-black bg-opacity-70 shadow-md z-50 font-poppins transition-transform duration-500 ease-in-out ${
+        scrollDirection === "down"
+          ? "transform -translate-y-full"
+          : "transform translate-y-0"
+      } ${!isMenuOpen ? "backdrop-blur-sm" : ""}`}
     >
       <div
-        className={`flex w-full h-20 lg:h-[100px] max-w-[1520px] bg-black bg-opacity-70 px-5 sm:px-10  mx-auto items-center justify-between lg:whitespace-nowrap transition-transform duration-500 ease-in-out ${
+        className={`flex w-full h-20 lg:h-[100px] max-w-[1520px] px-5 sm:px-10  mx-auto items-center justify-between lg:whitespace-nowrap transition-transform duration-500 ease-in-out ${
           scrollDirection === "down"
             ? "transform -translate-y-full"
             : "transform translate-y-0"
-        } ${!isMenuOpen ? "backdrop-blur-sm" : ""}`}
+        } `}
       >
         {/* Logo */}
         <div

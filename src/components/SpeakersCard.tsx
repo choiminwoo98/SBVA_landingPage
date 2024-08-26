@@ -28,7 +28,7 @@ const SpeakerCard: React.FC<SpeakerProps> = ({
         }}
       />
       <span
-        className={`text-[#00E300] text-sm cus:text-xl ${
+        className={`text-[#00E300] text-sm cus:text-lg ${
           language === "JP" ? "font-meiryo" : ""
         }`}
       >

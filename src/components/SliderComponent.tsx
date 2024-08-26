@@ -57,7 +57,7 @@ const cardData = [
     descriptionkr:
       "매스프레소는 ^+AI 기반 맞춤형 학습 플랫폼인 ^+‘콴다(QANDA)’를 운영합니다.",
     descriptionjp:
-      "MATHPRESSOは、^+AI技術を活用したオンライ^+ン学習プラットフォーム「QUANDA」を運営しています。",
+      "MATHPRESSOは、^+AI技術を活用したオンライ^+ン学習プラットフォーム+^QANDAを運営しています。",
     url: "https://qanda.ai/ja",
   },
 

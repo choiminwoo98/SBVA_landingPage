@@ -96,7 +96,7 @@ const SpeakersAndPanels: React.FC = () => {
   const { language } = useLanguage(); // 컨텍스트에서 현재 언어를 가져옵니다.
 
   return (
-    <div className="w-full">
+    <div className="w-full font-spoka">
       <div className="flex flex-col space-y-14">
         <div className="flex flex-col space-y-7 pt-[30px] ">
           <div className="flex items-center pl-5 cus:pl-0 cus:pb-[30px]  space-x-4 ">
@@ -138,7 +138,7 @@ const SpeakersAndPanels: React.FC = () => {
               </React.Fragment>
             ))}
 
-            <div className="w-[260px] invisible"></div>
+            <div className="w-[260px] hidden cus:block invisible"></div>
           </div>
         </div>{" "}
         <div className="flex flex-col space-y-7 pt-[30px] ">
