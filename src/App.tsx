@@ -920,7 +920,13 @@ const App: React.FC = () => {
                       ) : (
                         <span className="font-meiryo">アフターパーティー</span>
                       )}
-                      <p className="text-base relative top-1 cus:text-xl font-normal ">
+                      <p
+                        className={`text-base absolute cus:text-xl font-normal ${
+                          language === "KR"
+                            ? "top-6  left-[140px] cus:left-36"
+                            : "top-6 left-56 cus:left-60"
+                        } `}
+                      >
                         (optional)
                       </p>
                     </span>
