@@ -98,7 +98,7 @@ const SpeakersAndPanels: React.FC = () => {
   return (
     <div className="w-full font-spoka">
       <div className="flex flex-col space-y-14">
-        <div className="flex flex-col space-y-7 pt-[30px] ">
+        <div className="flex flex-col space-y-7 ">
           <div className="flex items-center pl-5 cus:pl-0 cus:pb-[30px]  space-x-4 ">
             <span className="text-[#00E300]  text-lg cus:text-[30px]  font-medium font-poppins">
               Fireside Chat
