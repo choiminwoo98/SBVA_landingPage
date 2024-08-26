@@ -633,7 +633,7 @@ const App: React.FC = () => {
                       )}
                     </span>
                     <div className="flex gap-5">
-                      <span className="text-lg">
+                      <span className="text-lg text-nowrap">
                         {language === "KR" ? (
                           "Miki Fukazawa "
                         ) : (
@@ -745,7 +745,7 @@ const App: React.FC = () => {
                         </span>
                       </div>
                       <div className="flex gap-3">
-                        <span className="text-lg">
+                        <span className="text-lg text-nowrap">
                           {" "}
                           {language === "KR" ? (
                             "Hideyuki Ebihara"
