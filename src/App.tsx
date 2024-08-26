@@ -81,10 +81,10 @@ const App: React.FC = () => {
               <div className="leading-[26px] cus:leading-[33px] font-spoka">
                 {" "}
                 {language === "KR" ? (
-                  "2024 Tokyo Forum은 일본 스타트업 생태계에 대한 심도 있는 이해를 돕고,"
+                  "2024 SBVA Tokyo Forum은 일본 스타트업 생태계에 대한 심도 있는 이해를 돕고,"
                 ) : (
                   <span className="font-meiryo">
-                    「2024 Tokyo
+                    「2024 SBVA Tokyo
                     Forum」は、日本のスタートアップエコシステムに対する深い理解を促進し、
                   </span>
                 )}
@@ -671,8 +671,8 @@ const App: React.FC = () => {
                       ) : (
                         <span className="cus:leading-[36px] font-meiryo">
                           日本現地のVCが語る業界の最新動向や
-                          <br className="hidden cus:block" /> 投資および
-                          Exit戦略
+                          <br className="hidden cus:block" />
+                          投資およびExit戦略
                         </span>
                       )}
                     </span>
@@ -1003,6 +1003,7 @@ const App: React.FC = () => {
                   <span className="font-poppins">SoftBank Group</span>
                   ) 산하의 창업투자회사인
                   <br className="hidden cus:block" />
+                  <span className="cus:hidden">&nbsp;</span>
                   소프트뱅크벤처스로 한국에 설립돼 국내외 다양한 스타트업에
                   투자해 오고 있습니다.
                 </>

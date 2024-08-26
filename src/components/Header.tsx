@@ -108,7 +108,9 @@ const Header: React.FC = () => {
           <a className="flex test:flex-col">
             <span className="block">2024 SBVA</span>
             <span className="test:block hidden"> TOKYO FORUM</span>
-            <span className="block test:hidden">&nbsp; TOKYO FORUM</span>
+            <span className="block test:hidden relative right-1">
+              &nbsp; TOKYO FORUM
+            </span>
           </a>
         </div>
 
