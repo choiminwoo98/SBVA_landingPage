@@ -694,7 +694,7 @@ const App: React.FC = () => {
                             <span>榊原 健太郎</span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-0 cus:top-1 cus:text-base">
+                        <span className="text-[#777777] text-sm relative top-0 cus:top-1 cus:text-base font-poppins">
                           CEO · SAMURAI INCUBATE
                         </span>
                       </div>
@@ -706,7 +706,7 @@ const App: React.FC = () => {
                             <span className="font-meiryo">都 虎吉</span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-1  cus:text-base">
+                        <span className="text-[#777777] text-sm relative top-1  cus:text-base font-poppins">
                           General Partner · Global Brain
                         </span>
                       </div>
@@ -718,7 +718,7 @@ const App: React.FC = () => {
                             <span className="font-meiryo">北尾 崇 </span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative cus:top-1  cus:text-base">
+                        <span className="text-[#777777] text-sm relative cus:top-1  cus:text-base font-poppins">
                           Partner/Director · CyberAgent Capital
                         </span>
                       </div>
@@ -730,7 +730,7 @@ const App: React.FC = () => {
                             <span className="font-meiryo">沼田 朋子</span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-1  cus:text-base">
+                        <span className="text-[#777777] text-sm relative top-1  cus:text-base font-poppins">
                           Chief Capitalist · JAFCO
                         </span>
                       </div>
@@ -753,7 +753,7 @@ const App: React.FC = () => {
                             <span className="font-meiryo">海老原 秀幸</span>
                           )}
                         </span>
-                        <span className="text-[#777777] text-sm relative top-1  cus:text-base">
+                        <span className="text-[#777777] text-sm relative top-1  cus:text-base font-poppins">
                           Partner · PKSHA CAPITAL
                         </span>
                       </div>
@@ -1029,7 +1029,7 @@ const App: React.FC = () => {
                   규모의 자산을 운용하고 있습니다.
                 </>
               ) : (
-                <span className="font-meiryo">
+                <span className="font-meiryo tracking-tighter">
                   2023年6月には「ミスルト(
                   <span className="font-poppins">Mistletoe</span>
                   )」の孫泰蔵会長と孫泰蔵会長と大蘿淳司Managing

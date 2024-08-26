@@ -45,7 +45,7 @@ const SpeakerCard: React.FC<SpeakerProps> = ({
         dangerouslySetInnerHTML={{
           __html: role.replace("+", "<br />"),
         }}
-        className="text-sm cus:text-base text-[#777777] w-full text-center"
+        className="text-sm cus:text-base text-[#777777] w-full font-poppins text-center"
       />
     </div>
   );

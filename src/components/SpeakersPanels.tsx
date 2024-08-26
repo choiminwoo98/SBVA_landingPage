@@ -105,7 +105,7 @@ const SpeakersAndPanels: React.FC = () => {
             </span>
             <div className="flex-grow border-t relative left-5 cus:left-10 border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3  cus:gap-x-0 cus:flex justify-between text-white flex-wrap  gap-y-[30px]">
+          <div className="grid grid-cols-2 md:grid-cols-3  cus:gap-x-0 cus:flex justify-between text-white flex-wrap  gap-y-[30px] cus:gap-y-[60px]">
             {speakers.map((speaker, index) => (
               <React.Fragment key={index}>
                 <SpeakerCard
@@ -125,7 +125,7 @@ const SpeakersAndPanels: React.FC = () => {
             </span>
             <div className="flex-grow border-t relative left-5 cus:left-10 top-3 cus:top-11 border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3  cus:gap-x-0 cus:flex justify-between text-white flex-wrap  gap-y-[30px]">
+          <div className="grid grid-cols-2 md:grid-cols-3  cus:gap-x-0 cus:flex justify-between text-white flex-wrap  gap-y-[30px] cus:gap-y-[60px]">
             {speakers2.map((speaker, index) => (
               <React.Fragment key={index}>
                 <SpeakerCard
@@ -148,7 +148,7 @@ const SpeakersAndPanels: React.FC = () => {
             </span>
             <div className="flex-grow border-t relative left-5 cus:left-10 top-3 cus:top-11 border-white opacity-20"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 cus:grid-cols-[auto_1fr_auto] cus:gap-x-0 text-white flex-wrap  gap-y-[30px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 cus:grid-cols-[auto_1fr_auto] cus:gap-x-0 text-white flex-wrap  gap-y-[30px] cus:gap-y-[60px]">
             {speakers3.map((speaker, index) => (
               <React.Fragment key={index}>
                 <SpeakerCard
