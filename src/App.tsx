@@ -49,6 +49,7 @@ const App: React.FC = () => {
             src="https://github.com/user-attachments/assets/8403fb60-eec5-4866-a177-51f1cc679c26"
             type="video/mp4"
           />
+          {/* <source src={require("./assets/video.mp4")} type="video/mp4" /> */}
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -481,14 +482,14 @@ const App: React.FC = () => {
               <span className="hidden font-poppins text-nowrap cus:block">
                 2024 SBVA Tokyo Forum
                 {language === "KR" ? (
-                  "신청하기"
+                  `${" 신청하기"}`
                 ) : (
                   <span className="font-meiryo">お申し込みはこちら</span>
                 )}
               </span>
               <div className="cus:hidden">
                 {language === "KR" ? (
-                  "신청하기"
+                  `${" 신청하기"}`
                 ) : (
                   <span className="font-meiryo">お申し込みはこちら</span>
                 )}
@@ -565,12 +566,12 @@ const App: React.FC = () => {
                       {language === "KR" ? (
                         <>
                           <span className="font-poppins">SBVA</span>의 성공적인
-                          일본 투자 사례 소개
+                          한일 투자 협력 사례
                         </>
                       ) : (
                         <span className="font-meiryo">
-                          日本における<span className="font-popins">SBVA</span>
-                          の投資成功事例
+                          <span className="font-popins">SBVA</span>
+                          の日本投資および日韓協業支援事例
                         </span>
                       )}
                     </span>
@@ -789,10 +790,14 @@ const App: React.FC = () => {
                     </span>
                     <div className="flex gap-3">
                       <span className="text-lg whitespace-nowrap ">
-                        Taizo Son
+                        {language === "KR" ? (
+                          "Taizo Son"
+                        ) : (
+                          <span className="font-meiryo">孫 泰蔵</span>
+                        )}
                       </span>{" "}
                       <span className="text-[#777777] text-sm relative top-1  font-poppins cus:text-base">
-                        Chairman · Mistletoe
+                        Founder · Mistletoe | Co-Founder · The Edgeof
                       </span>
                     </div>
                   </div>
@@ -1033,11 +1038,11 @@ const App: React.FC = () => {
                 <span className="font-meiryo tracking-tighter">
                   2023年6月には「ミスルト(
                   <span className="font-poppins">Mistletoe</span>
-                  )」の孫泰蔵会長と孫泰蔵会長と大蘿淳司Managing
-                  <span className="font-poppins">Director</span>
-                  、そして <span className="font-poppins">SBVA</span>
+                  )」の孫泰蔵会長と孫泰蔵会長と大蘿淳司
+                  <span className="font-poppins">Managing Director</span>
+                  、そして<span className="font-poppins">SBVA</span>
                   の<br className="hidden cus:block" />
-                  <span className="font-poppins">CEO</span>である{" "}
+                  <span className="font-poppins">CEO</span>である
                   <span className="font-poppins">JP Lee</span>
                   が共同で設立したシンガポール拠点の投資会社「ディ・エッジ・オブ(
                   <span className="font-poppins">The Edgeof</span>

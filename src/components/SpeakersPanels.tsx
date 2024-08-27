@@ -29,21 +29,19 @@ const SpeakersAndPanels: React.FC = () => {
   const speakers2 = [
     {
       image: "https://via.placeholder.com/150", // 이미지 URL 교체
-      krname: "Miki Fukazawa",
-      jpname: "深澤 実樹",
-      role: "VP/Head of Alliance &+ Investment Strategy Div. · SoftBank",
-      panel: "Keynote I",
+      krname: "Taizo Son",
+      jpname: "孫 泰蔵",
+      role: "Founder · Mistletoe |+ Co-Founder · The Edgeof",
       jppanel: "スピーカー",
-      url: "https://www.softbank.jp/en/corp/",
+      url: "https://jp.linkedin.com/in/taizo-son-b6086182",
     },
     {
       image: "https://via.placeholder.com/150", // 이미지 URL 교체
-      krname: "Taizo Son",
-      jpname: "孫 泰蔵",
-      role: "Chairman · Mistletoe",
-      panel: "Keynote II",
+      krname: "Miki Fukazawa",
+      jpname: "深澤 実樹",
+      role: "VP/Head of Alliance &+ Investment Strategy Div. · SoftBank",
       jppanel: "スピーカー",
-      url: "https://jp.linkedin.com/in/taizo-son-b6086182",
+      url: "https://www.softbank.jp/en/corp/",
     },
   ];
   const speakers3 = [
@@ -99,6 +97,28 @@ const SpeakersAndPanels: React.FC = () => {
     <div className="w-full font-spoka">
       <div className="flex flex-col space-y-14">
         <div className="flex flex-col space-y-7 ">
+          <div className="flex items-c pl-5 cus:pl-0 cus:pb-[30px] space-x-4">
+            <span className="text-[#00E300] text-lg cus:text-[30px] cus:pt-8 font-medium font-poppins">
+              Keynote
+            </span>
+            <div className="flex-grow border-t relative left-5 cus:left-10 top-3 cus:top-11 border-white opacity-20"></div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3  cus:gap-x-0 cus:flex justify-between text-white flex-wrap  gap-y-[30px] cus:gap-y-[60px]">
+            {speakers2.map((speaker, index) => (
+              <React.Fragment key={index}>
+                <SpeakerCard
+                  image={speaker.krname}
+                  name={language === "KR" ? speaker.krname : speaker.jpname}
+                  role={speaker.role}
+                  url={speaker.url}
+                />
+              </React.Fragment>
+            ))}
+
+            <div className="w-[260px] hidden cus:block invisible"></div>
+          </div>
+        </div>
+        <div className="flex flex-col space-y-7 pt-[30px] ">
           <div className="flex items-center pl-5 cus:pl-0 cus:pb-[30px]  space-x-4 ">
             <span className="text-[#00E300]  text-lg cus:text-[30px]  font-medium font-poppins">
               Fireside Chat
@@ -116,29 +136,6 @@ const SpeakersAndPanels: React.FC = () => {
                 />
               </React.Fragment>
             ))}
-          </div>
-        </div>
-        <div className="flex flex-col space-y-7 pt-[30px]   ">
-          <div className="flex items-c pl-5 cus:pl-0 cus:pb-[30px] space-x-4">
-            <span className="text-[#00E300] text-lg cus:text-[30px] cus:pt-8 font-medium font-poppins">
-              Keynote
-            </span>
-            <div className="flex-grow border-t relative left-5 cus:left-10 top-3 cus:top-11 border-white opacity-20"></div>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3  cus:gap-x-0 cus:flex justify-between text-white flex-wrap  gap-y-[30px] cus:gap-y-[60px]">
-            {speakers2.map((speaker, index) => (
-              <React.Fragment key={index}>
-                <SpeakerCard
-                  image={speaker.krname}
-                  name={language === "KR" ? speaker.krname : speaker.jpname}
-                  role={speaker.role}
-                  url={speaker.url}
-                  panel={speaker.panel}
-                />
-              </React.Fragment>
-            ))}
-
-            <div className="w-[260px] hidden cus:block invisible"></div>
           </div>
         </div>{" "}
         <div className="flex flex-col space-y-7 pt-[30px] ">
