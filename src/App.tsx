@@ -52,6 +52,16 @@ const App: React.FC = () => {
           {/* <source src={require("./assets/video.mp4")} type="video/mp4" /> */}
           Your browser does not support the video tag.
         </video>
+        {/* <iframe
+          src="https://www.youtube.com/embed/UGRdjxGLZ7g?autoplay=1&mute=1&loop=1&playlist=UGRdjxGLZ7g&controls=0&modestbranding=1&showinfo=0&rel=0"
+          title="[2024 SBVA Tokyo Forum] TypeA 배경영상"
+          frameBorder="0"
+          allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full object-cover"
+        ></iframe> */}
+
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         <div className="relative z-10 text-center flex flex-col text-[66px] cus:text-[70px] test:text-[120px] font-bold items-center justify-center text-white leading-80 cus:leading-[90px] test:leading-[170px]">
           <span>2024</span>
@@ -1035,7 +1045,7 @@ const App: React.FC = () => {
                   규모의 자산을 운용하고 있습니다.
                 </>
               ) : (
-                <span className="font-meiryo tracking-tighter">
+                <span className="font-meiryo tracking-[-0.035em]">
                   2023年6月には「ミスルト(
                   <span className="font-poppins">Mistletoe</span>
                   )」の孫泰蔵会長と孫泰蔵会長と大蘿淳司
