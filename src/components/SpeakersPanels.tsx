@@ -6,13 +6,6 @@ const SpeakersAndPanels: React.FC = () => {
   const speakers = [
     {
       image: "https://via.placeholder.com/150", // 이미지 URL 교체
-      krname: "JP Lee",
-      jpname: "JP Lee",
-      role: "CEO/Managing Partner · SBVA",
-      url: "https://sbvacorp.com/en/team/4",
-    },
-    {
-      image: "https://via.placeholder.com/150", // 이미지 URL 교체
       krname: "Yuta Uchiyama",
       jpname: "内山 雄太",
       role: "CEO · SODA",
@@ -24,6 +17,13 @@ const SpeakersAndPanels: React.FC = () => {
       jpname: "Youngki Kim",
       role: "CFO · KREAM",
       url: "https://www.kreamcorp.com/",
+    },
+    {
+      image: "https://via.placeholder.com/150", // 이미지 URL 교체
+      krname: "Jay Choi",
+      jpname: "Jay Choi",
+      role: "Partner · SBVA",
+      url: "https://sbvacorp.com/en/team/4",
     },
   ];
   const speakers2 = [

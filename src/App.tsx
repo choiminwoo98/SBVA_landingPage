@@ -537,14 +537,11 @@ const App: React.FC = () => {
                     <span className="text-2xl cus:text-[26px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
                         <>
-                          <span className="font-poppins">SBVA</span>와{" "}
-                          <span className="font-poppins">SBVA</span>의 투자
-                          전략에 대한 이해
+                          <span className="font-poppins">SBVA</span>에 대하여
                         </>
                       ) : (
                         <span className="font-meiryo">
-                          <span className="font-popins">SBVA</span>と
-                          <span className="font-popins">SBVA</span>の投資戦略
+                          <span className="font-popins">SBVA</span>について
                         </span>
                       )}
                     </span>
@@ -587,12 +584,6 @@ const App: React.FC = () => {
                     </span>
                     <div className="flex flex-col gap-2">
                       <div>
-                        <span className="text-lg font-poppins">JP Lee</span>
-                        <span className="text-[#777777] text-sm relative cus:text-base font-poppins ">
-                          &nbsp; &nbsp; CEO/Managing Partner · SBVA
-                        </span>
-                      </div>
-                      <div>
                         <span className="text-lg">
                           {language === "KR" ? (
                             "Yuta Uchiyama"
@@ -608,6 +599,12 @@ const App: React.FC = () => {
                         <span className="text-lg">Youngki Kim</span>
                         <span className="text-[#777777] text-sm relative cus:text-base font-poppins ">
                           &nbsp; &nbsp; CFO · KREAM
+                        </span>
+                      </div>
+                      <div>
+                        <span className="text-lg font-poppins">Jay Choi</span>
+                        <span className="text-[#777777] text-sm relative cus:text-base font-poppins ">
+                          &nbsp; &nbsp; Partner · SBVA
                         </span>
                       </div>
                     </div>
@@ -874,20 +871,21 @@ const App: React.FC = () => {
                     <span className="text-2xl cus:text-[26px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
                         <>
-                          <span className="font-poppins">SBVA</span>의 일본 투자
-                          포부
+                          <span className="font-poppins">SBVA</span>의 한일
+                          협력에 대한 포부
                         </>
                       ) : (
                         <span className="font-meiryo">
+                          日韓協力に対する
                           <span className="font-popins">SBVA</span>
-                          の抱負とご協力のお願い
+                          の抱負について
                         </span>
                       )}
                     </span>
                     <div>
-                      <span className="text-lg font-poppins">JP Lee</span>
+                      <span className="text-lg font-poppins">Edward Chung</span>
                       <span className="text-[#777777] text-sm relative top-0.5 cus:text-base font-poppins ">
-                        &nbsp; &nbsp; CEO/Managing Partner · SBVA
+                        &nbsp; &nbsp; Partner · SBVA
                       </span>
                     </div>
                   </div>
