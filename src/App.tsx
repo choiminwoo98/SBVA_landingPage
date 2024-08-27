@@ -831,7 +831,7 @@ const App: React.FC = () => {
                     <span className="text-2xl cus:text-[26px] font-semibold pt-2 pb-5">
                       {language === "KR" ? (
                         <>
-                          <span className="font-poppins">SBVA</span>포트폴리오
+                          <span className="font-poppins">SBVA</span> 포트폴리오
                           8개사 피칭
                         </>
                       ) : (
@@ -1045,10 +1045,10 @@ const App: React.FC = () => {
                   규모의 자산을 운용하고 있습니다.
                 </>
               ) : (
-                <span className="font-meiryo tracking-[-0.035em]">
+                <span className="font-meiryo">
                   2023年6月には「ミスルト(
                   <span className="font-poppins">Mistletoe</span>
-                  )」の孫泰蔵会長と孫泰蔵会長と大蘿淳司
+                  )」の孫泰蔵会長と大蘿淳司
                   <span className="font-poppins">Managing Director</span>
                   、そして<span className="font-poppins">SBVA</span>
                   の<br className="hidden cus:block" />
