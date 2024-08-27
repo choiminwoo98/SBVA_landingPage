@@ -23,7 +23,7 @@ const SpeakersAndPanels: React.FC = () => {
       krname: "Jay Choi",
       jpname: "Jay Choi",
       role: "Partner · SBVA",
-      url: "https://sbvacorp.com/en/team/4",
+      url: "https://sbvacorp.com/en/team/6",
     },
   ];
   const speakers2 = [
