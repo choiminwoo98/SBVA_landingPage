@@ -45,11 +45,11 @@ const App: React.FC = () => {
           playsInline
           controls={false}
         >
-          <source
+          {/* <source
             src="https://github.com/user-attachments/assets/8403fb60-eec5-4866-a177-51f1cc679c26"
             type="video/mp4"
-          />
-          {/* <source src={require("./assets/video.mp4")} type="video/mp4" /> */}
+          /> */}
+          <source src={require("./assets/video.mp4")} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* <iframe
