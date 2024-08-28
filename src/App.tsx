@@ -551,7 +551,7 @@ const App: React.FC = () => {
                       </span>
                       <span className="text-[#777777] top-1 text-sm relative cus:text-base font-poppins ">
                         CEO/Managing Partner · SBVA | Co-Founder/CEO · The
-                        Edgeof SoftBank
+                        Edgeof
                       </span>
                     </div>
                   </div>
