@@ -548,7 +548,8 @@ const App: React.FC = () => {
                     <div>
                       <span className="text-lg font-poppins">JP Lee</span>
                       <span className="text-[#777777] text-sm relative top-0.5 cus:text-base font-poppins ">
-                        &nbsp; &nbsp; CEO/Managing Partner · SBVA
+                        &nbsp; &nbsp; CEO/Managing Partner · SBVA |
+                        Co-Founder/CEO · The Edgeof
                       </span>
                     </div>
                   </div>
