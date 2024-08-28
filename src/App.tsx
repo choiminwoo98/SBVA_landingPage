@@ -545,11 +545,13 @@ const App: React.FC = () => {
                         </span>
                       )}
                     </span>
-                    <div>
-                      <span className="text-lg font-poppins">JP Lee</span>
-                      <span className="text-[#777777] text-sm relative top-0.5 cus:text-base font-poppins ">
-                        &nbsp; &nbsp; CEO/Managing Partner · SBVA |
-                        Co-Founder/CEO · The Edgeof
+                    <div className="flex gap-5">
+                      <span className="text-lg font-poppins text-nowrap">
+                        JP Lee
+                      </span>
+                      <span className="text-[#777777] top-1 text-sm relative cus:text-base font-poppins ">
+                        CEO/Managing Partner · SBVA | Co-Founder/CEO · The
+                        Edgeof SoftBank
                       </span>
                     </div>
                   </div>
