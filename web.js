@@ -3,10 +3,11 @@ const app = express();
 const path = require("path");
 const PORT = 8001;
 
-// www 접속을 비-www로 리다이렉트하는 미들웨어
+// 특정 URL (예: sbvaforum.com) 처리 미들웨어
 app.use((req, res, next) => {
-  if (req.headers.host.slice(0, 4) === "www.") {
-    const newHost = req.headers.host.slice(4);
+  if (req.headers.host === "www.sbvaforum.com") {
+    // 여기서 특정 처리를 합니다. 예를 들어, 비-www로 리다이렉트:
+    const newHost = "sbvaforum.com";
     return res.redirect(301, req.protocol + "://" + newHost + req.originalUrl);
   }
   next();
